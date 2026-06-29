@@ -1,0 +1,665 @@
+# Synergy Document Organization Report
+
+Mode: APPLIED
+
+Files analyzed: 645
+
+Duplicate or near-duplicate groups: 105
+
+## Folder Counts
+
+- `01_Wallet_Product_And_Implementation`: 162
+- `02_Network_Security_And_Cryptography`: 148
+- `03_Standards_And_Identifiers`: 81
+- `04_Validator_Operations_And_Rewards`: 87
+- `05_Testnet_Operations_And_Incident_Reports`: 82
+- `06_Token_Economics_And_Events`: 54
+- `99_Archive_And_Unclassified`: 31
+
+## Planned Moves
+
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/00A-ToC-Intro.docx` → `01_Wallet_Product_And_Implementation/00A_ToC_Intro.docx`
+- `live-network-all.txt` → `01_Wallet_Product_And_Implementation/32_GET_https_relay_synergy_network_io_api_v1_health_502_v0.txt`
+- `live-network.txt` → `01_Wallet_Product_And_Implementation/32_GET_https_relay_synergy_network_io_api_v1_health_502_v1.txt`
+- `Development Technical Formatted/Devnet Testing/67-api-test-scripts.md` → `01_Wallet_Product_And_Implementation/API_Test_Scripts_and_Sample_Calls.md`
+- `Tech-Specs/SynQ-Language-Tech-Spec/12-Appendix-A-Full-Grammar.docx` → `01_Wallet_Product_And_Implementation/Appendix_A_Full_Grammar.docx`
+- `Tech-Specs/SynQ-Language-Tech-Spec/14-Appendix-C-IR-Spec.docx` → `01_Wallet_Product_And_Implementation/Appendix_C_IR_Spec.docx`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/24-Appendix-D-S-XSig-Integration-Specifications.docx` → `01_Wallet_Product_And_Implementation/Appendix_D_S_XSig_Integration_Specifications.docx`
+- `Tech-Specs/SynQ-Language-Tech-Spec/15-Appendix-D-Standard-Library-API.docx` → `01_Wallet_Product_And_Implementation/Appendix_D_Standard_Library_API.docx`
+- `Tech-Specs/SXCP-Tech-Spec/14-Appendix-D-Transcripts-And-API-Reference.docx` → `01_Wallet_Product_And_Implementation/Appendix_D_Transcripts_And_API_Reference.docx`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/25-Appendix-E-UMA-Key-Management-&-Derivation-Commitments.docx` → `01_Wallet_Product_And_Implementation/Appendix_E_UMA_Key_Management_and_Derivation_Commitments.docx`
+- `cp-docs/control-panel/archive-manager.md` → `01_Wallet_Product_And_Implementation/Archive_Manager.md`
+- `ATLAS_REDESIGN_CHATGPT_PRO_HANDOFF.md` → `01_Wallet_Product_And_Implementation/Atlas_Redesign_Handoff_for_ChatGPT_Pro.md`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/settings/Backup_Wallet_Settings_Sequence.png` → `01_Wallet_Product_And_Implementation/Backup_Wallet_Settings_Sequence.png`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/settings/CLI_GUI_Toggle_Sequence.png` → `01_Wallet_Product_And_Implementation/CLI_GUI_Toggle_Sequence.png`
+- `cp-docs/reference/COMMANDS.docx` → `01_Wallet_Product_And_Implementation/COMMANDS.docx`
+- `Tech-Specs/SXCP-Tech-Spec/03-Core-Architecture.docx` → `01_Wallet_Product_And_Implementation/Core_Architecture.docx`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/wallets/Create_Wallet_Sequence.png` → `01_Wallet_Product_And_Implementation/Create_Wallet_Sequence.png`
+- `Non-Tech Formatted/Wallets/33-creating-wallet.docx` → `01_Wallet_Product_And_Implementation/Creating_a_Wallet_v0.docx`
+- `Non-Tech Formatted/Wallets/33-creating-wallet.md` → `01_Wallet_Product_And_Implementation/Creating_a_Wallet_v1.md`
+- `Tech-Specs/SXCP-Tech-Spec/04-Cross-Chain-Transaction-Lifecycle.docx` → `01_Wallet_Product_And_Implementation/Cross_Chain_Transaction_Lifecycle.docx`
+- `Claude.md` → `01_Wallet_Product_And_Implementation/Deliver_correct_complete_immediately_usable_answers_with_maximum_value_d.md`
+- `Development Technical Formatted/API SDK and Intergration/48-api-sdk-integration.md` → `01_Wallet_Product_And_Implementation/Developer_API_and_SDK_Integration_Guide.md`
+- `cp-docs/operator/firewall-privilege-escalation.md` → `01_Wallet_Product_And_Implementation/Firewall_Privilege_Escalation.md`
+- `cp-docs/developer/git-remote.md` → `01_Wallet_Product_And_Implementation/Git_Remote_Setup.md`
+- `Tech-Specs/SXCP-Tech-Spec/10-Governance-Compliance-And-Ops.docx` → `01_Wallet_Product_And_Implementation/Governance_Compliance_And_Ops.docx`
+- `more new docs/testnet-public-query-and-traffic-commands.md` → `01_Wallet_Product_And_Implementation/How_to_query_and_exercise_the_Synergy_Testnet_from_any_machine.md`
+- `more new docs/how-to-set-up-indexer-explorer-node.md` → `01_Wallet_Product_And_Implementation/How_to_set_up_an_Indexer_and_Explorer_node.md`
+- `Tech-Specs/AI-AIVM-Spec/04-Integrations.docx` → `01_Wallet_Product_And_Implementation/Integrations.docx`
+- `Tech-Specs/SXCP-Tech-Spec/07-Interfaces-And-Data-Formats.docx` → `01_Wallet_Product_And_Implementation/Interfaces_And_Data_Formats.docx`
+- `Development Technical Formatted/API SDK and Intergration/45-interoperability-proof-validation.docx` → `01_Wallet_Product_And_Implementation/Interoperability_Proof_and_Technical_Validation_v0.docx`
+- `Development Technical Formatted/API SDK and Intergration/45-interoperability-proof-validation.md` → `01_Wallet_Product_And_Implementation/Interoperability_Proof_and_Technical_Validation_v1.md`
+- `Tech-Specs/SXCP-Tech-Spec/01-Introduction-And-Scope.docx` → `01_Wallet_Product_And_Implementation/Introduction_And_Scope.docx`
+- `Non-Tech Formatted/Legal and Policy/24-nft-digital-assets.docx` → `01_Wallet_Product_And_Implementation/LightMeme_AI_NFT_and_Digital_Asset_Terms_v0.docx`
+- `Non-Tech Formatted/Legal and Policy/24-nft-digital-assets.md` → `01_Wallet_Product_And_Implementation/LightMeme_AI_NFT_and_Digital_Asset_Terms_v1.md`
+- `files/Legal/nft-digital-assets.md` → `01_Wallet_Product_And_Implementation/LightMeme_AI_NFT_and_Digital_Asset_Terms_v2.md`
+- `files/Legal/privacy-policy.md` → `01_Wallet_Product_And_Implementation/LightMeme_AI_Privacy_Policy.md`
+- `files/Legal/security-data-breach.md` → `01_Wallet_Product_And_Implementation/LightMeme_AI_Security_and_Data_Breach_Policy.md`
+- `files/Legal/terms-conditions.md` → `01_Wallet_Product_And_Implementation/LightMeme_AI_Terms_and_Conditions.md`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/sns/Link_SNS_Wallet_Sequence.png` → `01_Wallet_Product_And_Implementation/Link_SNS_Wallet_Sequence.png`
+- `Non-Tech Formatted/Wallets/35-first-transaction.docx` → `01_Wallet_Product_And_Implementation/Making_Your_First_Transaction_v0.docx`
+- `Non-Tech Formatted/Wallets/35-first-transaction.md` → `01_Wallet_Product_And_Implementation/Making_Your_First_Transaction_v1.md`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/wallets/Manage_Wallets_Sequence.png` → `01_Wallet_Product_And_Implementation/Manage_Wallets_Sequence.png`
+- `Master Network, Ports, and Nginx Configuration Manual.docx` → `01_Wallet_Product_And_Implementation/Master_Network_Ports_and_Nginx_Configuration_Manual.docx`
+- `model_card_template.md` → `01_Wallet_Product_And_Implementation/Model_Card_Template.md`
+- `cp-docs/control-panel/node-control-panel-v2-pr-readiness.md` → `01_Wallet_Product_And_Implementation/Node_Control_Panel_v2_PR_Readiness.md`
+- `Development Technical Formatted/Devnet Testing/72-node-syncing-snapshot.md` → `01_Wallet_Product_And_Implementation/Node_Syncing_and_Snapshot_Tools.md`
+- `cp-docs/operator/non-genesis-validator-control-panel-setup.md` → `01_Wallet_Product_And_Implementation/Non_Genesis_Validator_Setup_With_Synergy_Node_Control_Panel.md`
+- `Non-Tech Formatted/Wallets/36-obtaining-syn-tokens.md` → `01_Wallet_Product_And_Implementation/Obtaining_SYN_Tokens.md`
+- `Tech-Specs/SXCP-Tech-Spec/06-PQC-Integration-Control-Plane.docx` → `01_Wallet_Product_And_Implementation/PQC_Integration_Control_Plane.docx`
+- `Development Technical Formatted/Architechure and Protocol/59-synergy-wallet-architecture.docx` → `01_Wallet_Product_And_Implementation/Part_VIII_Synergy_Wallet_Architecture_v0.docx`
+- `Development Technical Formatted/Architechure and Protocol/59-synergy-wallet-architecture.md` → `01_Wallet_Product_And_Implementation/Part_VIII_Synergy_Wallet_Architecture_v1.md`
+- `synergy-network-whitepaper/07-synergy-wallet-architecture.docx` → `01_Wallet_Product_And_Implementation/Part_VIII_Synergy_Wallet_Architecture_v2.docx`
+- `synergy-network-whitepaper/07-synergy-wallet-architecture.md` → `01_Wallet_Product_And_Implementation/Part_VIII_Synergy_Wallet_Architecture_v3.md`
+- `Development Technical Formatted/Architechure and Protocol/57-interoperability-and-execution-protocols.docx` → `01_Wallet_Product_And_Implementation/Part_V_Interoperability_and_Execution_Protocols_v0.docx`
+- `Development Technical Formatted/Architechure and Protocol/57-interoperability-and-execution-protocols.md` → `01_Wallet_Product_And_Implementation/Part_V_Interoperability_and_Execution_Protocols_v1.md`
+- `synergy-network-whitepaper/05-interoperability-and-execution-protocols.docx` → `01_Wallet_Product_And_Implementation/Part_V_Interoperability_and_Execution_Protocols_v2.docx`
+- `synergy-network-whitepaper/05-interoperability-and-execution-protocols.md` → `01_Wallet_Product_And_Implementation/Part_V_Interoperability_and_Execution_Protocols_v3.md`
+- `Non-Tech Formatted/Legal and Policy/26-privacy-policy.docx` → `01_Wallet_Product_And_Implementation/Privacy_Policy_v0.docx`
+- `Non-Tech Formatted/Legal and Policy/26-privacy-policy.md` → `01_Wallet_Product_And_Implementation/Privacy_Policy_v1.md`
+- `Tech-Specs/SXCP-Tech-Spec/08-Pseudocode-And-State-Machines.docx` → `01_Wallet_Product_And_Implementation/Pseudocode_And_State_Machines.docx`
+- `Tech-Specs/AI-AIVM-Spec/01-Purpose-And-Scope.docx` → `01_Wallet_Product_And_Implementation/Purpose_And_Scope.docx`
+- `ROLE_BOUND_IMPLEMENTATION_MATRIX.md` → `01_Wallet_Product_And_Implementation/Role_Bound_Implementation_Matrix.md`
+- `Development Technical Formatted/API SDK and Intergration/50-sdk-documentation.md` → `01_Wallet_Product_And_Implementation/SDK_Documentation.md`
+- `Tech-Specs/SXCP-Tech-Spec/11-Appendix-A-Glossary.docx` → `01_Wallet_Product_And_Implementation/SUIP_S_XSig_Spec_Appendix_A_Glossary_Version_v0_1_draft_Date_2025_10_14.docx`
+- `Tech-Specs/SXCP-Tech-Spec/12-Appendix-B-Notation.docx` → `01_Wallet_Product_And_Implementation/SUIP_S_XSig_Spec_Appendix_B_Notation_Version_v0_1_draft_Date_2025_10_14.docx`
+- `Tech-Specs/SXCP-Tech-Spec/13-Appendix-C-Threat-Matrices.docx` → `01_Wallet_Product_And_Implementation/SUIP_S_XSig_Spec_Appendix_C_Threat_Matrices_Version_v0_1_draft_Date_2025.docx`
+- `cp-docs/historical/runtime-reports/sxcp-external-infra-audit-20260209T135545Z.txt` → `01_Wallet_Product_And_Implementation/SXCP_External_Infra_Audit_v0.txt`
+- `cp-docs/historical/runtime-reports/sxcp-external-infra-audit-20260210T145457Z.txt` → `01_Wallet_Product_And_Implementation/SXCP_External_Infra_Audit_v1.txt`
+- `cp-docs/historical/runtime-reports/sxcp-external-infra-audit-20260226T200414Z.txt` → `01_Wallet_Product_And_Implementation/SXCP_External_Infra_Audit_v2.txt`
+- `files/SXCP Litepaper.docx` → `01_Wallet_Product_And_Implementation/SXCP_Litepaper.docx`
+- `SYNERGY_TESTNET_CONTROL_PANEL_USER_MANUAL.docx` → `01_Wallet_Product_And_Implementation/SYNERGY_TESTNET_CONTROL_PANEL_USER_MANUAL_v0.docx`
+- `more new docs/guides/SYNERGY_TESTNET_CONTROL_PANEL_USER_MANUAL.docx` → `01_Wallet_Product_And_Implementation/SYNERGY_TESTNET_CONTROL_PANEL_USER_MANUAL_v1.docx`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/11-Section-11-Epoch-Transitions.docx` → `01_Wallet_Product_And_Implementation/Section_Epoch_Transitions.docx`
+- `Tech-Specs/SynQ-Language-Tech-Spec/10-Section-10-Examples-&-Patterns.docx` → `01_Wallet_Product_And_Implementation/Section_Examples_and_Patterns.docx`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/17-Section-17-Implementation-Roadmap.docx` → `01_Wallet_Product_And_Implementation/Section_Implementation_Roadmap.docx`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/06-Section-06-Leader-and-Committee-Selection.docx` → `01_Wallet_Product_And_Implementation/Section_Leader_and_Committee_Selection.docx`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/03-Section-03-Protocol-Architecture-Overview.docx` → `01_Wallet_Product_And_Implementation/Section_Protocol_Architecture_Overview.docx`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/09-Section-09-Slashing-Conditions-and-Evidence.docx` → `01_Wallet_Product_And_Implementation/Section_Slashing_Conditions_and_Evidence.docx`
+- `Tech-Specs/SXCP-Tech-Spec/05-Security-And-Economics.docx` → `01_Wallet_Product_And_Implementation/Security_And_Economics.docx`
+- `Non-Tech Formatted/Legal and Policy/29-security-data-breach.docx` → `01_Wallet_Product_And_Implementation/Security_and_Data_Breach_Policy_v0.docx`
+- `Non-Tech Formatted/Legal and Policy/29-security-data-breach.md` → `01_Wallet_Product_And_Implementation/Security_and_Data_Breach_Policy_v1.md`
+- `cp-docs/developer/github-ssh-key.md` → `01_Wallet_Product_And_Implementation/Setting_Up_SSH_Key_for_GitHub.md`
+- `cp-docs/operator/public-testing-readiness-checklist.md` → `01_Wallet_Product_And_Implementation/Synergy_Control_Panel_Public_Testing_Readiness_Checklist.md`
+- `SynergyDesignSystem.md` → `01_Wallet_Product_And_Implementation/Synergy_Design_System_Specification.md`
+- `Development Technical Formatted/Node Validator, Network Ops/86-node-deployment-summary.docx` → `01_Wallet_Product_And_Implementation/Synergy_Devnet_Node_Deployment_Summary_v0.docx`
+- `Development Technical Formatted/Node Validator, Network Ops/86-node-deployment-summary.md` → `01_Wallet_Product_And_Implementation/Synergy_Devnet_Node_Deployment_Summary_v1.md`
+- `files/Synergy Network Enhanced Wallet Security Specification.pdf` → `01_Wallet_Product_And_Implementation/Synergy_Network_Enhanced_Wallet_Security_Specification.pdf`
+- `MAINNET_READINESS_CHECKLIST.md` → `01_Wallet_Product_And_Implementation/Synergy_Network_Mainnet_Readiness_Checklist.md`
+- `network_configs.md` → `01_Wallet_Product_And_Implementation/Synergy_Network_Master_Network_Ports_and_Nginx_Configuration.md`
+- `RPC-manuals/README.md` → `01_Wallet_Product_And_Implementation/Synergy_Network_RPC_Manuals.md`
+- `more new docs/wallet-usage.md` → `01_Wallet_Product_And_Implementation/Synergy_Network_Wallet_Usage_Guide.md`
+- `checklist.md` → `01_Wallet_Product_And_Implementation/Synergy_Node_Control_Panel_UX_UI_Overhaul_Checklist.md`
+- `SYNERGY_TESTNET_CONTROL_PANEL_USER_MANUAL.md` → `01_Wallet_Product_And_Implementation/Synergy_Node_Control_Panel_User_Manual_v0.md`
+- `more new docs/guides/SYNERGY_TESTNET_CONTROL_PANEL_USER_MANUAL.md` → `01_Wallet_Product_And_Implementation/Synergy_Node_Control_Panel_User_Manual_v1.md`
+- `DEBUG-REPORT-2026-04-12-v2.md` → `01_Wallet_Product_And_Implementation/Synergy_Testnet_Beta_Debug_Report_v2.md`
+- `cp-docs/reference/COMMANDS.md` → `01_Wallet_Product_And_Implementation/Synergy_Testnet_Command_Reference.md`
+- `more new docs/TESTNET_COMMANDS.md` → `01_Wallet_Product_And_Implementation/Synergy_Testnet_Command_Reference_1.md`
+- `more new docs/COMMANDS.md` → `01_Wallet_Product_And_Implementation/Synergy_Testnet_Commands_Reference.md`
+- `NODE_DEPLOYMENT_SUMMARY.md` → `01_Wallet_Product_And_Implementation/Synergy_Testnet_Node_Deployment_Summary_v0.md`
+- `more new docs/guides/NODE_DEPLOYMENT_SUMMARY.md` → `01_Wallet_Product_And_Implementation/Synergy_Testnet_Node_Deployment_Summary_v1.md`
+- `Development Technical Formatted/Devnet Testing/66-posy-cluster-testing-guide.docx` → `01_Wallet_Product_And_Implementation/Synergy_Testnet_PoSy_Cluster_Rotation_and_Consensus_Testing_Guide_v0.docx`
+- `Development Technical Formatted/Devnet Testing/66-posy-cluster-testing-guide.md` → `01_Wallet_Product_And_Implementation/Synergy_Testnet_PoSy_Cluster_Rotation_and_Consensus_Testing_Guide_v1.md`
+- `POSY_CLUSTER_TESTING_GUIDE.md` → `01_Wallet_Product_And_Implementation/Synergy_Testnet_PoSy_Cluster_Rotation_and_Consensus_Testing_Guide_v2.md`
+- `more new docs/guides/POSY_CLUSTER_TESTING_GUIDE.md` → `01_Wallet_Product_And_Implementation/Synergy_Testnet_PoSy_Cluster_Rotation_and_Consensus_Testing_Guide_v3.md`
+- `QUICK_REFERENCE.md` → `01_Wallet_Product_And_Implementation/Synergy_Testnet_Quick_Reference_v0.md`
+- `more new docs/guides/QUICK_REFERENCE.md` → `01_Wallet_Product_And_Implementation/Synergy_Testnet_Quick_Reference_v1.md`
+- `Development Technical Formatted/Node Validator, Network Ops/95-rpc-node-setup-guide.md` → `01_Wallet_Product_And_Implementation/Synergy_Testnet_RPC_Node_Setup_Guide_v0.md`
+- `RPC_NODE_SETUP_GUIDE.md` → `01_Wallet_Product_And_Implementation/Synergy_Testnet_RPC_Node_Setup_Guide_v1.md`
+- `more new docs/guides/RPC_NODE_SETUP_GUIDE.md` → `01_Wallet_Product_And_Implementation/Synergy_Testnet_RPC_Node_Setup_Guide_v2.md`
+- `Synergy_Wallet_Specification_v3.pdf` → `01_Wallet_Product_And_Implementation/Synergy_Wallet_Specification.pdf`
+- `Development Technical Formatted/Individual Tech Specs/84-synergy-wallet-spec-v3.md` → `01_Wallet_Product_And_Implementation/Synergy_Wallet_Technical_Specification.md`
+- `new docs/Synergy dApp Connection Manual.pdf` → `01_Wallet_Product_And_Implementation/Synergy_dApp_Connection_Manual.pdf`
+- `Synergy dApp Connection Manual.docx` → `01_Wallet_Product_And_Implementation/Synergy_dApp_Connection_Manual_v0.docx`
+- `Synergy_dApp_Connection_Manual.docx` → `01_Wallet_Product_And_Implementation/Synergy_dApp_Connection_Manual_v1.docx`
+- `Tech-Specs/SXCP-Tech-Spec/02-System-Model-And-Assumptions.docx` → `01_Wallet_Product_And_Implementation/System_Model_And_Assumptions.docx`
+- `Tech-Specs/SXCP-Tech-Spec/09-Testing-And-Rollout.docx` → `01_Wallet_Product_And_Implementation/Testing_And_Rollout.docx`
+- `more new docs/testnet-control-panel-go-live-checklist.md` → `01_Wallet_Product_And_Implementation/Testnet_Control_Panel_Go_Live_Checklist.md`
+- `more new docs/testnet-dns-records-to-create.md` → `01_Wallet_Product_And_Implementation/Testnet_DNS_Baseline_and_Remaining_Actions.md`
+- `Development Technical Formatted/Devnet Testing/75-testnet-faucet-contract.docx` → `01_Wallet_Product_And_Implementation/Testnet_Faucet_Contract_Web_UI_v0.docx`
+- `Development Technical Formatted/Devnet Testing/75-testnet-faucet-contract.md` → `01_Wallet_Product_And_Implementation/Testnet_Faucet_Contract_Web_UI_v1.md`
+- `cp-docs/developer/testnet-validator-debug-cheatsheet-linux.md` → `01_Wallet_Product_And_Implementation/Testnet_Validator_Debug_Cheat_Sheet_Linux.md`
+- `cp-docs/developer/testnet-validator-debug-cheatsheet-windows.md` → `01_Wallet_Product_And_Implementation/Testnet_Validator_Debug_Cheat_Sheet_Windows_PowerShell.md`
+- `cp-docs/developer/testnet-validator-debug-cheatsheet-macos.md` → `01_Wallet_Product_And_Implementation/Testnet_Validator_Debug_Cheat_Sheet_macOS.md`
+- `cp-docs/developer/testnet-validator-update-workflow.md` → `01_Wallet_Product_And_Implementation/Testnet_Validator_Update_Workflow.md`
+- `Tech-Specs/AI-AIVM-Spec/00-ToC-Intro.docx` → `01_Wallet_Product_And_Implementation/ToC_Intro.docx`
+- `Tech-Specs/SXCP-Tech-Spec/00-ToC-Intro.docx` → `01_Wallet_Product_And_Implementation/ToC_Intro_1.docx`
+- `Non-Tech Formatted/Wallets/39-token-migration-guide.docx` → `01_Wallet_Product_And_Implementation/Token_Migration_Guide_v0.docx`
+- `Non-Tech Formatted/Wallets/39-token-migration-guide.md` → `01_Wallet_Product_And_Implementation/Token_Migration_Guide_v1.md`
+- `Development Technical Formatted/Devnet Testing/77-validator-setup-cli.docx` → `01_Wallet_Product_And_Implementation/Validator_Setup_Scripts_and_CLI_Tools_v0.docx`
+- `Development Technical Formatted/Devnet Testing/77-validator-setup-cli.md` → `01_Wallet_Product_And_Implementation/Validator_Setup_Scripts_and_CLI_Tools_v1.md`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/wallets/View_Wallet_Sequence.png` → `01_Wallet_Product_And_Implementation/View_Wallet_Sequence.png`
+- `Non-Tech Formatted/Wallets/43-wallet-usage.md` → `01_Wallet_Product_And_Implementation/Wallet_Usage_Guide.md`
+- `Non-Tech Formatted/Wallets/42-wallet-user-guide.docx` → `01_Wallet_Product_And_Implementation/Wallet_User_Guide_v0.docx`
+- `Non-Tech Formatted/Wallets/42-wallet-user-guide.md` → `01_Wallet_Product_And_Implementation/Wallet_User_Guide_v1.md`
+- `testnet-beta-launch-docs/atlas-and-explorer-deployment-readiness-template.docx` → `01_Wallet_Product_And_Implementation/atlas_and_explorer_deployment_readiness_template.docx`
+- `testnet-beta-launch-docs/bootstrap-contract-template.docx` → `01_Wallet_Product_And_Implementation/bootstrap_contract_template.docx`
+- `testnet-beta-launch-docs/bootstrap-service-provisioning-and-validation-template.docx` → `01_Wallet_Product_And_Implementation/bootstrap_service_provisioning_and_validation_template.docx`
+- `Development Technical Formatted/API SDK and Intergration/52-deployment-tools.docx` → `01_Wallet_Product_And_Implementation/cd_cli_andand_cargo_build_release_v0.docx`
+- `Development Technical Formatted/API SDK and Intergration/52-deployment-tools.md` → `01_Wallet_Product_And_Implementation/cd_cli_andand_cargo_build_release_v1.md`
+- `Development Technical Formatted/Devnet Testing/74-testnet-deployment-guide.docx` → `01_Wallet_Product_And_Implementation/cd_testnet_4_Build_and_Launch_Node_cargo_build_release_v0.docx`
+- `Development Technical Formatted/Devnet Testing/74-testnet-deployment-guide.md` → `01_Wallet_Product_And_Implementation/cd_testnet_4_Build_and_Launch_Node_cargo_build_release_v1.md`
+- `Development Technical Formatted/API SDK and Intergration/48-api-sdk-integration.docx` → `01_Wallet_Product_And_Implementation/const_sdk_new_SynergySDK_https_rpc_testnet_synergy_network_io_4_2_Python.docx`
+- `Development Technical Formatted/API SDK and Intergration/50-sdk-documentation.docx` → `01_Wallet_Product_And_Implementation/const_wallet_Wallet_fromMnemonic_seed_words.docx`
+- `testnet-beta-launch-docs/control-panel-import-and-node-records-template.docx` → `01_Wallet_Product_And_Implementation/control_panel_import_and_node_records_template.docx`
+- `dApp_Connection_Missing_Features_Checklist.docx` → `01_Wallet_Product_And_Implementation/dApp_Connection_Missing_Features_Checklist.docx`
+- `Development Technical Formatted/Devnet Testing/68-dev-rpc-endpoints.docx` → `01_Wallet_Product_And_Implementation/dev_rpc_endpoints.docx`
+- `testnet-beta-launch-docs/funded-wallet-and-contract-export-log-template.docx` → `01_Wallet_Product_And_Implementation/funded_wallet_and_contract_export_log_template.docx`
+- `RPC-manuals/RPC_manual_build_summary.json` → `01_Wallet_Product_And_Implementation/generated_2026_05_26.json`
+- `Non-Tech Formatted/Wallets/36-obtaining-syn-tokens.docx` → `01_Wallet_Product_And_Implementation/jsonrpc_2_0.docx`
+- `Non-Tech Formatted/Wallets/43-wallet-usage.docx` → `01_Wallet_Product_And_Implementation/jsonrpc_2_0_1.docx`
+- `new docs/node_networking_quick_reference.docx` → `01_Wallet_Product_And_Implementation/node_networking_quick_reference.docx`
+- `Development Technical Formatted/Devnet Testing/72-node-syncing-snapshot.docx` → `01_Wallet_Product_And_Implementation/node_syncing_snapshot.docx`
+- `Non-Tech Formatted/Non Technical/04-real-world-playbooks.docx` → `01_Wallet_Product_And_Implementation/real_world_playbooks.docx`
+- `files/real-world use cases.docx` → `01_Wallet_Product_And_Implementation/real_world_use_cases.docx`
+- `Development Technical Formatted/Architechure and Protocol/snrg-denomination-precision-spec.docx` → `01_Wallet_Product_And_Implementation/snrg_denomination_precision_spec.docx`
+- `Development Technical Formatted/Node Validator, Network Ops/95-rpc-node-setup-guide.docx` → `01_Wallet_Product_And_Implementation/sudo_apt_update_andand_sudo_apt_install_y.docx`
+- `Development Technical Formatted/API SDK and Intergration/46-uma-resolution.docx` → `01_Wallet_Product_And_Implementation/synergy_cli_register_uma_chain_eth_address_0x_v0.docx`
+- `Development Technical Formatted/API SDK and Intergration/46-uma-resolution.md` → `01_Wallet_Product_And_Implementation/synergy_cli_register_uma_chain_eth_address_0x_v1.md`
+- `Development Technical Formatted/Individual Tech Specs/84-synergy-wallet-spec-v3.docx` → `01_Wallet_Product_And_Implementation/synergy_wallet_spec.docx`
+- `Non-Tech Formatted/Non Technical/03-use-case-whitepaper.docx` → `01_Wallet_Product_And_Implementation/use_case_whitepaper.docx`
+- `testnet-beta-launch-docs/wallet-import-package-and-verification-template.docx` → `01_Wallet_Product_And_Implementation/wallet_import_package_and_verification_template.docx`
+- `new docs/xp final final version.docx` → `01_Wallet_Product_And_Implementation/xp_version.docx`
+- `Non-Tech Formatted/Non Technical/06-mission-statement.docx` → `02_Network_Security_And_Cryptography/0060FF_SynQ_Smart_Contract.docx`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/00B-Document-Overview.docx` → `02_Network_Security_And_Cryptography/00B_Document_Overview.docx`
+- `Development Technical Formatted/API SDK and Intergration/44-aivm-guide.md` → `02_Network_Security_And_Cryptography/AIVM_Guide.md`
+- `Tech-Specs/AI-AIVM-Spec/10-Appendix-B-Threat-Matrices.docx` → `02_Network_Security_And_Cryptography/AI_AIVM_Spec_Appendix_B_Threat_Matrices_Version_v0_1_draft_Date_2025_10.docx`
+- `files/AMA-presentation.pptx` → `02_Network_Security_And_Cryptography/AMA_presentation.pptx`
+- `files/Aegis Litepaper.docx` → `02_Network_Security_And_Cryptography/Aegis_Litepaper.docx`
+- `Development Technical Formatted/Individual Tech Specs/78-aegis-pqc-core-patent.docx` → `02_Network_Security_And_Cryptography/Aegis_PPA_Specification_v0.docx`
+- `Development Technical Formatted/Individual Tech Specs/78-aegis-pqc-core-patent.md` → `02_Network_Security_And_Cryptography/Aegis_PPA_Specification_v1.md`
+- `files/Aegis PPA Specification.docx` → `02_Network_Security_And_Cryptography/Aegis_PPA_Specification_v2.docx`
+- `Aegis_updated.docx` → `02_Network_Security_And_Cryptography/Aegis_PPA_Specification_v3.docx`
+- `more new docs/aegis/Aegis PQC Core Technical Brief.docx` → `02_Network_Security_And_Cryptography/Aegis_PQC_Core_Technical_Brief.docx`
+- `more new docs/Aegis-PQCore-Manual.pdf` → `02_Network_Security_And_Cryptography/Aegis_PQCore_Manual.pdf`
+- `more new docs/Aegis-PQCore-Manual-A4.pdf` → `02_Network_Security_And_Cryptography/Aegis_PQCore_Manual_A4.pdf`
+- `more new docs/Aegis_TechSpec.docx` → `02_Network_Security_And_Cryptography/Aegis_TechSpec.docx`
+- `more new docs/aegis/Aegis Verbal Walkthrough.docx` → `02_Network_Security_And_Cryptography/Aegis_Verbal_Walkthrough.docx`
+- `synergy-network-whitepaper/11-appendices.docx` → `02_Network_Security_And_Cryptography/Appendix_A_Formal_Definitions_Domains_and_Invariants_v0.docx`
+- `synergy-network-whitepaper/11-appendices.md` → `02_Network_Security_And_Cryptography/Appendix_A_Formal_Definitions_Domains_and_Invariants_v1.md`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/22-Appendix-B-References.docx` → `02_Network_Security_And_Cryptography/Appendix_B_References.docx`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/23-Appendix-C-Glossary.docx` → `02_Network_Security_And_Cryptography/Appendix_C_Glossary.docx`
+- `Tech-Specs/SynQ-Language-Tech-Spec/16-Appendix-E-Formal-Proof-Sketches.docx` → `02_Network_Security_And_Cryptography/Appendix_E_Formal_Proof_Sketches.docx`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/26-Appendix-F-Emergency-Governance-Procedures.docx` → `02_Network_Security_And_Cryptography/Appendix_F_Emergency_Governance_Procedures.docx`
+- `Tech-Specs/AI-AIVM-Spec/02-Architecture-Overview.docx` → `02_Network_Security_And_Cryptography/Architecture_Overview.docx`
+- `more new docs/crypto-theft-solutions-implementation-matrix.md` → `02_Network_Security_And_Cryptography/Crypto_Theft_Solutions_Implementation_Matrix.md`
+- `Non-Tech Formatted/Governance and Participation/17-emergency-rollback.docx` → `02_Network_Security_And_Cryptography/Emergency_Rollback_and_Parameter_Changes_v0.docx`
+- `Non-Tech Formatted/Governance and Participation/17-emergency-rollback.md` → `02_Network_Security_And_Cryptography/Emergency_Rollback_and_Parameter_Changes_v1.md`
+- `files/How can businesses use the Synergy Network.docx` → `02_Network_Security_And_Cryptography/How_can_businesses_use_the_Synergy_Network.docx`
+- `files/How would businesses benefit from using the Synergy Network.docx` → `02_Network_Security_And_Cryptography/How_would_businesses_benefit_from_using_the_Synergy_Network.docx`
+- `more new docs/aegis/Information Control Document.docx` → `02_Network_Security_And_Cryptography/Information_Control_Document.docx`
+- `Development Technical Formatted/Architechure and Protocol/64-synq-language.docx` → `02_Network_Security_And_Cryptography/KyberKeyPair_768_kyberKey_CRYSTALS_Kyber_768.docx`
+- `Non-Tech Formatted/Legal and Policy/21-community-guidelines.docx` → `02_Network_Security_And_Cryptography/LightMeme_AI_Community_Guidelines_and_User_Conduct_v0.docx`
+- `Non-Tech Formatted/Legal and Policy/21-community-guidelines.md` → `02_Network_Security_And_Cryptography/LightMeme_AI_Community_Guidelines_and_User_Conduct_v1.md`
+- `files/Legal/community-guidelines.md` → `02_Network_Security_And_Cryptography/LightMeme_AI_Community_Guidelines_and_User_Conduct_v2.md`
+- `Non-Tech Formatted/Legal and Policy/27-risk-disclosure.docx` → `02_Network_Security_And_Cryptography/LightMeme_AI_Risk_Disclosure_Statement_v0.docx`
+- `Non-Tech Formatted/Legal and Policy/27-risk-disclosure.md` → `02_Network_Security_And_Cryptography/LightMeme_AI_Risk_Disclosure_Statement_v1.md`
+- `files/Legal/risk-disclosure.md` → `02_Network_Security_And_Cryptography/LightMeme_AI_Risk_Disclosure_Statement_v2.md`
+- `Development Technical Formatted/Architechure and Protocol/54-system-architecture.docx` → `02_Network_Security_And_Cryptography/Part_II_Synergy_Network_Architecture_Overview_v0.docx`
+- `Development Technical Formatted/Architechure and Protocol/54-system-architecture.md` → `02_Network_Security_And_Cryptography/Part_II_Synergy_Network_Architecture_Overview_v1.md`
+- `synergy-network-whitepaper/02-system-architecture.docx` → `02_Network_Security_And_Cryptography/Part_II_Synergy_Network_Architecture_Overview_v2.docx`
+- `synergy-network-whitepaper/02-system-architecture.md` → `02_Network_Security_And_Cryptography/Part_II_Synergy_Network_Architecture_Overview_v3.md`
+- `Development Technical Formatted/Architechure and Protocol/56-aegis-pqc-core.docx` → `02_Network_Security_And_Cryptography/Part_IV_Aegis_Post_Quantum_Cryptographic_Core_v0.docx`
+- `Development Technical Formatted/Architechure and Protocol/56-aegis-pqc-core.md` → `02_Network_Security_And_Cryptography/Part_IV_Aegis_Post_Quantum_Cryptographic_Core_v1.md`
+- `synergy-network-whitepaper/04-aegis-pqc-core.docx` → `02_Network_Security_And_Cryptography/Part_IV_Aegis_Post_Quantum_Cryptographic_Core_v2.docx`
+- `synergy-network-whitepaper/04-aegis-pqc-core.md` → `02_Network_Security_And_Cryptography/Part_IV_Aegis_Post_Quantum_Cryptographic_Core_v3.md`
+- `Development Technical Formatted/Architechure and Protocol/60-threat-model-security-patent-relevant-effects.docx` → `02_Network_Security_And_Cryptography/Part_IX_Threat_Model_Security_and_Patent_Relevant_Effects_v0.docx`
+- `Development Technical Formatted/Architechure and Protocol/60-threat-model-security-patent-relevant-effects.md` → `02_Network_Security_And_Cryptography/Part_IX_Threat_Model_Security_and_Patent_Relevant_Effects_v1.md`
+- `synergy-network-whitepaper/09-threat-model-security-patent-relevant-effects.docx` → `02_Network_Security_And_Cryptography/Part_IX_Threat_Model_Security_and_Patent_Relevant_Effects_v2.docx`
+- `synergy-network-whitepaper/09-threat-model-security-patent-relevant-effects.md` → `02_Network_Security_And_Cryptography/Part_IX_Threat_Model_Security_and_Patent_Relevant_Effects_v3.md`
+- `Non-Tech Formatted/Non Technical/01-context-motivation-design.docx` → `02_Network_Security_And_Cryptography/Part_I_Context_Motivation_and_Design_Philosophy_v0.docx`
+- `synergy-network-whitepaper/01-context-motivation-design.docx` → `02_Network_Security_And_Cryptography/Part_I_Context_Motivation_and_Design_Philosophy_v1.docx`
+- `synergy-network-whitepaper/01-context-motivation-design.md` → `02_Network_Security_And_Cryptography/Part_I_Context_Motivation_and_Design_Philosophy_v2.md`
+- `synergy-network-whitepaper/08-governance-economics-and-operations.docx` → `02_Network_Security_And_Cryptography/Part_VIII_Governance_Economics_and_Operations_v0.docx`
+- `synergy-network-whitepaper/08-governance-economics-and-operations.md` → `02_Network_Security_And_Cryptography/Part_VIII_Governance_Economics_and_Operations_v1.md`
+- `Development Technical Formatted/Architechure and Protocol/58-smart-contract-language-and-execution.docx` → `02_Network_Security_And_Cryptography/Part_VI_Smart_Contract_Language_and_Execution_v0.docx`
+- `Development Technical Formatted/Architechure and Protocol/58-smart-contract-language-and-execution.md` → `02_Network_Security_And_Cryptography/Part_VI_Smart_Contract_Language_and_Execution_v1.md`
+- `synergy-network-whitepaper/06-smart-contract-language-and-execution.docx` → `02_Network_Security_And_Cryptography/Part_VI_Smart_Contract_Language_and_Execution_v2.docx`
+- `synergy-network-whitepaper/06-smart-contract-language-and-execution.md` → `02_Network_Security_And_Cryptography/Part_VI_Smart_Contract_Language_and_Execution_v3.md`
+- `synergy-network-whitepaper/10-roadmap-and-strategic-outlook.md` → `02_Network_Security_And_Cryptography/Part_X_Roadmap_and_Strategic_Outlook.md`
+- `files/PoSyProvisionalApp.docx` → `02_Network_Security_And_Cryptography/PoSyProvisionalApp.docx`
+- `Development Technical Formatted/Individual Tech Specs/79-posy-consensus-patent.docx` → `02_Network_Security_And_Cryptography/PoSy_PPA_Specification_v0.docx`
+- `Development Technical Formatted/Individual Tech Specs/79-posy-consensus-patent.md` → `02_Network_Security_And_Cryptography/PoSy_PPA_Specification_v1.md`
+- `files/PoSy PPA Specification.docx` → `02_Network_Security_And_Cryptography/PoSy_PPA_Specification_v2.docx`
+- `more new docs/PoSy_TechSpec.docx` → `02_Network_Security_And_Cryptography/PoSy_PPA_Specification_v3.docx`
+- `synergy-network-whitepaper/PoSy_updated.docx` → `02_Network_Security_And_Cryptography/PoSy_PPA_Specification_v4.docx`
+- `Non-Tech Formatted/Core Concepts/08-post-quantum-crypto.docx` → `02_Network_Security_And_Cryptography/Post_Quantum_Cryptography_v0.docx`
+- `Non-Tech Formatted/Core Concepts/08-post-quantum-crypto.md` → `02_Network_Security_And_Cryptography/Post_Quantum_Cryptography_v1.md`
+- `files/Practical Use Cases of Synergy Network.docx` → `02_Network_Security_And_Cryptography/Practical_Use_Cases_of_Synergy_Network.docx`
+- `files/100 Reasons to Choose Synergy Network.docx` → `02_Network_Security_And_Cryptography/Reasons_to_Choose_Synergy_Network.docx`
+- `Development Technical Formatted/Individual Tech Specs/80-sxcp-patent.docx` → `02_Network_Security_And_Cryptography/SXCP_PPA_Specification_Aligned_FULL_v0.docx`
+- `Development Technical Formatted/Individual Tech Specs/80-sxcp-patent.md` → `02_Network_Security_And_Cryptography/SXCP_PPA_Specification_Aligned_FULL_v1.md`
+- `SXCP_PPA_Specification_Aligned_FULL_v2_updated.docx` → `02_Network_Security_And_Cryptography/SXCP_PPA_Specification_Aligned_FULL_v2.docx`
+- `files/SXCP Simplified.docx` → `02_Network_Security_And_Cryptography/SXCP_Simplified.docx`
+- `more new docs/SXCP_TechSpec.docx` → `02_Network_Security_And_Cryptography/SXCP_TechSpec.docx`
+- `Tech-Specs/SynQ-Language-Tech-Spec/04-Section-04-Concurrency-&-State.docx` → `02_Network_Security_And_Cryptography/Section_Concurrency_and_State.docx`
+- `Tech-Specs/SynQ-Language-Tech-Spec/03-Section-03-Cryptography-&-Security-Primitives.docx` → `02_Network_Security_And_Cryptography/Section_Cryptography_and_Security_Primitives.docx`
+- `Tech-Specs/SynQ-Language-Tech-Spec/02-Section-02-Formal-Semantics-&-Type-System.docx` → `02_Network_Security_And_Cryptography/Section_Formal_Semantics_and_Type_System.docx`
+- `Tech-Specs/SynQ-Language-Tech-Spec/01-Section-01-Language-Goals-&-Non-Goals.docx` → `02_Network_Security_And_Cryptography/Section_Language_Goals_and_Non_Goals.docx`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/16-Section-16-Open-Questions-and-Future-Work.docx` → `02_Network_Security_And_Cryptography/Section_Open_Questions_and_Future_Work.docx`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/12-Section-12-Protocol-Parameters-and-Tuning.docx` → `02_Network_Security_And_Cryptography/Section_Protocol_Parameters_and_Tuning.docx`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/18-Section-18-Security-Considerations.docx` → `02_Network_Security_And_Cryptography/Section_Security_Considerations.docx`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/04-Section-04-Security-Properties.docx` → `02_Network_Security_And_Cryptography/Section_Security_Properties.docx`
+- `Tech-Specs/AI-AIVM-Spec/05-Security-And-Abuse-Resistance.docx` → `02_Network_Security_And_Cryptography/Security_And_Abuse_Resistance.docx`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/global/Security_Flowchart.png` → `02_Network_Security_And_Cryptography/Security_Flowchart.png`
+- `more new docs/security-implementation-program.md` → `02_Network_Security_And_Cryptography/Security_Implementation_Program.md`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/settings/Security_Preferences_Sequence.png` → `02_Network_Security_And_Cryptography/Security_Preferences_Sequence.png`
+- `files/SynQ Litepaper.docx` → `02_Network_Security_And_Cryptography/SynQ_Litepaper.docx`
+- `files/SynQ PPA Drawings.docx` → `02_Network_Security_And_Cryptography/SynQ_PPA_Drawings.docx`
+- `files/SynQ PPA Specification.docx` → `02_Network_Security_And_Cryptography/SynQ_PPA_Specification.docx`
+- `Development Technical Formatted/Architechure and Protocol/64-synq-language.md` → `02_Network_Security_And_Cryptography/SynQ_Programming_Language_Specification_v0.md`
+- `more new docs/synq-language.md` → `02_Network_Security_And_Cryptography/SynQ_Programming_Language_Specification_v1.md`
+- `more new docs/SynQ_TechSpec.docx` → `02_Network_Security_And_Cryptography/SynQ_TechSpec.docx`
+- `threat_model.md` → `02_Network_Security_And_Cryptography/Synergy_AIVM_Threat_Model.md`
+- `new docs/Synergy_CrossChain_Identity_Layer_Specification.docx` → `02_Network_Security_And_Cryptography/Synergy_CrossChain_Identity_Layer_Specification.docx`
+- `Development Technical Formatted/Architechure and Protocol/Synergy DAG Validator Cluster Integration - Part 3 Deployment Operations and Deliverables.docx` → `02_Network_Security_And_Cryptography/Synergy_DAG_Validator_Cluster_Integration_Part_Deployment_Operations_and.docx`
+- `Development Technical Formatted/Architechure and Protocol/Synergy DAG Validator Cluster Integration - Part 2 Implementation Roadmap and Security.docx` → `02_Network_Security_And_Cryptography/Synergy_DAG_Validator_Cluster_Integration_Part_Implementation_Roadmap_an.docx`
+- `new docs/Synergy_DAG_Validator_Cluster_Integration_Plan.docx` → `02_Network_Security_And_Cryptography/Synergy_DAG_Validator_Cluster_Integration_Plan.docx`
+- `files/synergy_ama_lecture_notes.txt` → `02_Network_Security_And_Cryptography/Synergy_Network_AMA_Complete_Lecture_Materials.txt`
+- `cp-docs/reference/address-format.md` → `02_Network_Security_And_Cryptography/Synergy_Network_Address_Formatting.md`
+- `synergy-network-whitepaper/whitepaper-alignment-gap-report.md` → `02_Network_Security_And_Cryptography/Synergy_Network_Alignment_Gap_Report_and_Peer_Review_Transformation_Guid.md`
+- `new docs/Synergy Network Cluster-Local Certified DAG Integration and Security Specification.docx` → `02_Network_Security_And_Cryptography/Synergy_Network_Cluster_Local_Certified_DAG_Integration_and_Security_Spe.docx`
+- `more new docs/Synergy_Network_DAG_Architecture_and_Security_Specification_v1_0.docx` → `02_Network_Security_And_Cryptography/Synergy_Network_DAG_Architecture_and_Security_Specification.docx`
+- `Development Technical Formatted/Individual Tech Specs/82-node-technical-spec.docx` → `02_Network_Security_And_Cryptography/Synergy_Network_Node_Technical_Specification_v0.docx`
+- `Development Technical Formatted/Individual Tech Specs/82-node-technical-spec.md` → `02_Network_Security_And_Cryptography/Synergy_Network_Node_Technical_Specification_v1.md`
+- `Synergy_Network_Node_Technical_Specification.docx` → `02_Network_Security_And_Cryptography/Synergy_Network_Node_Technical_Specification_v2.docx`
+- `new docs/Synergy Network Node spec.docx` → `02_Network_Security_And_Cryptography/Synergy_Network_Node_spec.docx`
+- `new docs/Synergy_Network_RPC_Specification_Part_1_Core_and_Security_Controlled_Interfaces.pdf` → `02_Network_Security_And_Cryptography/Synergy_Network_RPC_Specification_Part_Core_and_Security_Controlled_Inte.pdf`
+- `new docs/Synergy_Network_Roadmap (1).docx` → `02_Network_Security_And_Cryptography/Synergy_Network_Roadmap.docx`
+- `more new docs/Synergy_Network_Security_Implementation_Specification_v1_1_DAG_Extended.docx` → `02_Network_Security_And_Cryptography/Synergy_Network_Security_Implementation_Specification_DAG_Extended.docx`
+- `Synergy_Network_Security_Specification_v1.3.pdf` → `02_Network_Security_And_Cryptography/Synergy_Network_Security_Specification.pdf`
+- `Synergy_Network_Security_Specification.docx` → `02_Network_Security_And_Cryptography/Synergy_Network_Security_Specification_v0.docx`
+- `Synergy_Network_Security_Specification_v1.2.docx` → `02_Network_Security_And_Cryptography/Synergy_Network_Security_Specification_v1.docx`
+- `Synergy_Network_Security_Specification_v1.3 2.docx` → `02_Network_Security_And_Cryptography/Synergy_Network_Security_Specification_v2.docx`
+- `Synergy_Network_Security_Specification_v1.3.docx` → `02_Network_Security_And_Cryptography/Synergy_Network_Security_Specification_v3.docx`
+- `Synergy_Network_Security_Specification_v1.4 2.docx` → `02_Network_Security_And_Cryptography/Synergy_Network_Security_Specification_v4.docx`
+- `Synergy_Network_Security_Specification_v1.4.docx` → `02_Network_Security_And_Cryptography/Synergy_Network_Security_Specification_v5.docx`
+- `synergy-network-whitepaper/00-b-front-matter.docx` → `02_Network_Security_And_Cryptography/Synergy_Network_v0.docx`
+- `synergy-network-whitepaper/00-b-front-matter.md` → `02_Network_Security_And_Cryptography/Synergy_Network_v1.md`
+- `more new docs/RPC-and-API-docs/Synergy_Node_Role_Functions_Tech.docx` → `02_Network_Security_And_Cryptography/Synergy_Node_Role_Functions_Tech.docx`
+- `more new docs/node-role-functions.docx` → `02_Network_Security_And_Cryptography/Synergy_Node_Role_Functions_v0.docx`
+- `more new docs/node-role-functions.md` → `02_Network_Security_And_Cryptography/Synergy_Node_Role_Functions_v1.md`
+- `more new docs/RPC-and-API-docs/Synergy_RPC_DAG_Specification_Review_and_Recommended_Updates.docx` → `02_Network_Security_And_Cryptography/Synergy_RPC_DAG_Specification_Review_and_Recommended_Updates.docx`
+- `new docs/Synergy Testnet-Beta Cluster-Local DAG Sublayer Integration and DAG Security Enforcement Plan.docx` → `02_Network_Security_And_Cryptography/Synergy_Testnet_Beta_Cluster_Local_DAG_Sublayer_Integration_and_DAG_Secu.docx`
+- `more new docs/Synergy Testnet-Beta Cluster-Local DAG Sublayer Integration and DAG Security Enforcement Plan.pdf` → `02_Network_Security_And_Cryptography/Synergy_Testnet_Beta_Cluster_Local_DAG_Sublayer_Integration_and_DAG_Secu_v0.pdf`
+- `new docs/Synergy Testnet-Beta Cluster-Local DAG Sublayer Integration and DAG Security Enforcement Plan.pdf` → `02_Network_Security_And_Cryptography/Synergy_Testnet_Beta_Cluster_Local_DAG_Sublayer_Integration_and_DAG_Secu_v1.pdf`
+- `QUICK_START.md` → `02_Network_Security_And_Cryptography/Synergy_Testnet_Quick_Start_v0.md`
+- `more new docs/guides/QUICK_START.md` → `02_Network_Security_And_Cryptography/Synergy_Testnet_Quick_Start_v1.md`
+- `Development Technical Formatted/Devnet Testing/69-devnet-guide.docx` → `02_Network_Security_And_Cryptography/Synergy_Testnet_Setup_and_Management_Guide_v0.docx`
+- `Development Technical Formatted/Devnet Testing/69-devnet-guide.md` → `02_Network_Security_And_Cryptography/Synergy_Testnet_Setup_and_Management_Guide_v1.md`
+- `TESTNET_GUIDE.md` → `02_Network_Security_And_Cryptography/Synergy_Testnet_Setup_and_Management_Guide_v2.md`
+- `more new docs/guides/TESTNET_GUIDE.md` → `02_Network_Security_And_Cryptography/Synergy_Testnet_Setup_and_Management_Guide_v3.md`
+- `Development Technical Formatted/Node Validator, Network Ops/89-validator-onboarding-guide.docx` → `02_Network_Security_And_Cryptography/Synergy_Testnet_Team_Validator_Onboarding_Guide_v0.docx`
+- `Development Technical Formatted/Node Validator, Network Ops/89-validator-onboarding-guide.md` → `02_Network_Security_And_Cryptography/Synergy_Testnet_Team_Validator_Onboarding_Guide_v1.md`
+- `Development Technical Formatted/Node Validator, Network Ops/90-validator-guide-ubuntu.docx` → `02_Network_Security_And_Cryptography/Synergy_Testnet_Team_Validator_Onboarding_Guide_v2.docx`
+- `Development Technical Formatted/Node Validator, Network Ops/90-validator-guide-ubuntu.md` → `02_Network_Security_And_Cryptography/Synergy_Testnet_Team_Validator_Onboarding_Guide_v3.md`
+- `VALIDATOR_ONBOARDING_GUIDE.md` → `02_Network_Security_And_Cryptography/Synergy_Testnet_Team_Validator_Onboarding_Guide_v4.md`
+- `more new docs/guides/VALIDATOR_ONBOARDING_GUIDE.md` → `02_Network_Security_And_Cryptography/Synergy_Testnet_Team_Validator_Onboarding_Guide_v5.md`
+- `more new docs/guides/validator-guide-ubuntu.md` → `02_Network_Security_And_Cryptography/Synergy_Testnet_Team_Validator_Onboarding_Guide_v6.md`
+- `validator-guide-ubuntu.md` → `02_Network_Security_And_Cryptography/Synergy_Testnet_Team_Validator_Onboarding_Guide_v7.md`
+- `more new docs/aegis/Technical Q&A.docx` → `02_Network_Security_And_Cryptography/Technical_QandA.docx`
+- `Tech-Specs/SynQ-Language-Tech-Spec/00-ToC-Intro.docx` → `02_Network_Security_And_Cryptography/ToC_Intro.docx`
+- `synergy-network-whitepaper/00-a-toc.docx` → `02_Network_Security_And_Cryptography/a_toc.docx`
+- `Non-Tech Formatted/Non Technical/00-front-matter.docx` → `02_Network_Security_And_Cryptography/front_matter.docx`
+- `synergy-network-whitepaper/00-a-toc.md` → `02_Network_Security_And_Cryptography/img_src_media_image1_png_style_width_4_47222in_height_4_47222in_alt_A_bl.md`
+- `Development Technical Formatted/API SDK and Intergration/44-aivm-guide.docx` → `02_Network_Security_And_Cryptography/pip_install_transformers_torch.docx`
+- `Development Technical Formatted/Technical Diagrams/pqc_gas_costs.png` → `02_Network_Security_And_Cryptography/pqc_gas_costs_v0.png`
+- `Tech-Specs/SynQ-Language-Tech-Spec/pqc_gas_costs.png` → `02_Network_Security_And_Cryptography/pqc_gas_costs_v1.png`
+- `pqc-name-formatting.docx` → `02_Network_Security_And_Cryptography/pqc_name_formatting.docx`
+- `synergy-network-whitepaper/10-roadmap-and-strategic-outlook.docx` → `02_Network_Security_And_Cryptography/roadmap_and_strategic_outlook.docx`
+- `clean-file-tree.txt` → `02_Network_Security_And_Cryptography/synergy_testnet_beta.txt`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/21-Appendix-A-Notation-Index.docx` → `03_Standards_And_Identifiers/Appendix_A_Notation_Index.docx`
+- `Tech-Specs/SynQ-Language-Tech-Spec/13-Appendix-B-ABI-Spec.docx` → `03_Standards_And_Identifiers/Appendix_B_ABI_Spec.docx`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/27-Appendix-G-Test-Vector-Catalog-(Consensus-&-S-XSig).docx` → `03_Standards_And_Identifiers/Appendix_G_Test_Vector_Catalog_Consensus_and_S_XSig.docx`
+- `CHANGELOG 2.md` → `03_Standards_And_Identifiers/Changelog.md`
+- `Non-Tech Formatted/Legal and Policy/22-cookie-policy.docx` → `03_Standards_And_Identifiers/Cookie_Policy_v0.docx`
+- `Non-Tech Formatted/Legal and Policy/22-cookie-policy.md` → `03_Standards_And_Identifiers/Cookie_Policy_v1.md`
+- `Non-Tech Formatted/Governance and Participation/18-dao-voting-analytics.docx` → `03_Standards_And_Identifiers/DAO_Voting_Analytics_v0.docx`
+- `Non-Tech Formatted/Governance and Participation/18-dao-voting-analytics.md` → `03_Standards_And_Identifiers/DAO_Voting_Analytics_v1.md`
+- `Development Technical Formatted/Devnet Testing/70-genesis-block-config.docx` → `03_Standards_And_Identifiers/Genesis_Block_Parameters_and_Configuration_v0.docx`
+- `Development Technical Formatted/Devnet Testing/70-genesis-block-config.md` → `03_Standards_And_Identifiers/Genesis_Block_Parameters_and_Configuration_v1.md`
+- `Non-Tech Formatted/Core Concepts/07-introduction.docx` → `03_Standards_And_Identifiers/Introduction_to_Synergy_Network_v0.docx`
+- `Non-Tech Formatted/Core Concepts/07-introduction.md` → `03_Standards_And_Identifiers/Introduction_to_Synergy_Network_v1.md`
+- `files/Legal/cookie-policy.md` → `03_Standards_And_Identifiers/LightMeme_AI_Cookie_Policy.md`
+- `Master Network, Ports, and Nginx Configuration Manual.pdf` → `03_Standards_And_Identifiers/Master_Network_Ports_and_Nginx_Configuration_Manual.pdf`
+- `Development Technical Formatted/Architechure and Protocol/55-proof-of-synergy-consensus.md` → `03_Standards_And_Identifiers/Part_III_Proof_of_Synergy_PoSy_Consensus_v0.md`
+- `synergy-network-whitepaper/03-proof-of-synergy-consensus.md` → `03_Standards_And_Identifiers/Part_III_Proof_of_Synergy_PoSy_Consensus_v1.md`
+- `Development Technical Formatted/Architechure and Protocol/62-snrg-denomination-precision-spec.md` → `03_Standards_And_Identifiers/SNRG_Denomination_and_Precision_Specification_SNTS_04_v0.md`
+- `SNRG_Denomination_Precision_Spec.md` → `03_Standards_And_Identifiers/SNRG_Denomination_and_Precision_Specification_SNTS_04_v1.md`
+- `Development Technical Formatted/Devnet Testing/73-sample-testnet-transactions.docx` → `03_Standards_And_Identifiers/Sample_Testnet_Transactions_v0.docx`
+- `Development Technical Formatted/Devnet Testing/73-sample-testnet-transactions.md` → `03_Standards_And_Identifiers/Sample_Testnet_Transactions_v1.md`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/07-Section-07-Block-Structure-and-Quorum-Certificates.docx` → `03_Standards_And_Identifiers/Section_Block_Structure_and_Quorum_Certificates.docx`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/19-Section-19-Compatibility-and-Interoperability.docx` → `03_Standards_And_Identifiers/Section_Compatibility_and_Interoperability.docx`
+- `Tech-Specs/SynQ-Language-Tech-Spec/11-Section-11-Deployment-&-Lifecycle.docx` → `03_Standards_And_Identifiers/Section_Deployment_and_Lifecycle.docx`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/13-Section-13-Implementation-Interfaces.docx` → `03_Standards_And_Identifiers/Section_Implementation_Interfaces.docx`
+- `Tech-Specs/SynQ-Language-Tech-Spec/05-Section-05-Interoperability-&-System-Contracts.docx` → `03_Standards_And_Identifiers/Section_Interoperability_and_System_Contracts.docx`
+- `Tech-Specs/SynQ-Language-Tech-Spec/09-Section-09-Testing-&-Verification.docx` → `03_Standards_And_Identifiers/Section_Testing_and_Verification.docx`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/10-Section-10-Timeout-and-View-Change-Mechanisms.docx` → `03_Standards_And_Identifiers/Section_Timeout_and_View_Change_Mechanisms.docx`
+- `Tech-Specs/SynQ-Language-Tech-Spec/08-Section-08-Toolchain.docx` → `03_Standards_And_Identifiers/Section_Toolchain.docx`
+- `operator_playbook.md` → `03_Standards_And_Identifiers/Synergy_AIVM_Operator_Playbook.md`
+- `synergy-aivm-whitepaper.md` → `03_Standards_And_Identifiers/Synergy_AIVM_Whitepaper.md`
+- `Synergy_Beta_Testnet_Technical_Specification.docx` → `03_Standards_And_Identifiers/Synergy_Beta_Testnet_Technical_Specification_v0.docx`
+- `new docs/Synergy_Beta_Testnet_Technical_Specification.docx` → `03_Standards_And_Identifiers/Synergy_Beta_Testnet_Technical_Specification_v1.docx`
+- `Development Technical Formatted/Architechure and Protocol/Synergy DAG Validator Cluster Integration - Part 1 Architecture and Design.docx` → `03_Standards_And_Identifiers/Synergy_DAG_Validator_Cluster_Integration_Part_Architecture_and_Design.docx`
+- `Development Technical Formatted/Node Validator, Network Ops/87-relayer-node-setup-guide.docx` → `03_Standards_And_Identifiers/Synergy_Devnet_Relayer_Node_Setup_Guide_v0.docx`
+- `Development Technical Formatted/Node Validator, Network Ops/87-relayer-node-setup-guide.md` → `03_Standards_And_Identifiers/Synergy_Devnet_Relayer_Node_Setup_Guide_v1.md`
+- `more new docs/Synergy_Genesis_Block_Master_Spec copy.docx` → `03_Standards_And_Identifiers/Synergy_Genesis_Block_Master_Spec_v0.docx`
+- `more new docs/Synergy_Genesis_Block_Master_Spec.docx` → `03_Standards_And_Identifiers/Synergy_Genesis_Block_Master_Spec_v1.docx`
+- `more new docs/Synergy_Genesis_Contract_Specifications.docx` → `03_Standards_And_Identifiers/Synergy_Genesis_Contract_Specifications.docx`
+- `Non-Tech Formatted/Core Concepts/10-synergy-naming-system.docx` → `03_Standards_And_Identifiers/Synergy_Naming_System_SNS_v0.docx`
+- `Non-Tech Formatted/Core Concepts/10-synergy-naming-system.md` → `03_Standards_And_Identifiers/Synergy_Naming_System_SNS_v1.md`
+- `Synergy Network Address Formatting Standard 2.pdf` → `03_Standards_And_Identifiers/Synergy_Network_Address_Formatting_Standard_v0.pdf`
+- `Synergy Network Address Formatting Standard.pdf` → `03_Standards_And_Identifiers/Synergy_Network_Address_Formatting_Standard_v1.pdf`
+- `more new docs/guides/Synergy Network Address Formatting Standard.pdf` → `03_Standards_And_Identifiers/Synergy_Network_Address_Formatting_Standard_v2.pdf`
+- `Development Technical Formatted/Individual Tech Specs/81-network-configuration-spec.docx` → `03_Standards_And_Identifiers/Synergy_Network_Network_Configuration_Specification_v0.docx`
+- `Development Technical Formatted/Individual Tech Specs/81-network-configuration-spec.md` → `03_Standards_And_Identifiers/Synergy_Network_Network_Configuration_Specification_v1.md`
+- `Synergy_Network_Network_Configuration_Specification.docx` → `03_Standards_And_Identifiers/Synergy_Network_Network_Configuration_Specification_v2.docx`
+- `more new docs/RPC-and-API-docs/Synergy_Network_RPC_Manual_Canonical_Index.docx` → `03_Standards_And_Identifiers/Synergy_Network_RPC_Manual_Canonical_Index.docx`
+- `more new docs/RPC-and-API-docs/Synergy_Network_RPC_Specification_Part_1_Core_and_Security_Controlled_Interfaces.docx` → `03_Standards_And_Identifiers/Synergy_Network_RPC_Specification_Part_Core_and_Security_Controlled_Inte.docx`
+- `new docs/Synergy_Network_RPC_Specification_Part_1_Core_and_Security_Controlled_Interfaces.docx` → `03_Standards_And_Identifiers/Synergy_Network_RPC_Specification_Part_Core_and_Security_Controlled_Inte_1.docx`
+- `more new docs/RPC-and-API-docs/Synergy_Network_RPC_Specification_Part_4_Wallet_dApp_EVM_SynQ_and_AIVM_Integration.docx` → `03_Standards_And_Identifiers/Synergy_Network_RPC_Specification_Part_Wallet_dApp_EVM_SynQ_and_AIVM_Int.docx`
+- `Synergy_Protocol_Naming_Encoding_Standards.pdf` → `03_Standards_And_Identifiers/Synergy_Protocol_Naming_Encoding_Standards.pdf`
+- `Synergy_Protocol_Naming_Encoding_Standards copy.docx` → `03_Standards_And_Identifiers/Synergy_Protocol_Naming_Encoding_Standards_v0.docx`
+- `Synergy_Protocol_Naming_Encoding_Standards.docx` → `03_Standards_And_Identifiers/Synergy_Protocol_Naming_Encoding_Standards_v1.docx`
+- `Synergy Standards Specification 2.docx` → `03_Standards_And_Identifiers/Synergy_Standards_Specification_v0.docx`
+- `Synergy Standards Specification.docx` → `03_Standards_And_Identifiers/Synergy_Standards_Specification_v1.docx`
+- `DEBUG-REPORT-2026-04-12.md` → `03_Standards_And_Identifiers/Synergy_Testnet_Beta_Debug_Report.md`
+- `more new docs/rpc-methods-todo.md` → `03_Standards_And_Identifiers/Synergy_Testnet_RPC_Methods_To_Implement.md`
+- `more new docs/RPC-and-API-docs/rpc-methods.docx` → `03_Standards_And_Identifiers/Synergy_Testnet_RPC_Methods_v0.docx`
+- `more new docs/rpc-methods.docx` → `03_Standards_And_Identifiers/Synergy_Testnet_RPC_Methods_v1.docx`
+- `more new docs/rpc-methods.md` → `03_Standards_And_Identifiers/Synergy_Testnet_RPC_Methods_v2.md`
+- `RELAYER_NODE_SETUP_GUIDE.md` → `03_Standards_And_Identifiers/Synergy_Testnet_Relayer_Node_Setup_Guide_v0.md`
+- `more new docs/guides/RELAYER_NODE_SETUP_GUIDE.md` → `03_Standards_And_Identifiers/Synergy_Testnet_Relayer_Node_Setup_Guide_v1.md`
+- `more new docs/synergy-testnet-validator-onboarding.md` → `03_Standards_And_Identifiers/Synergy_Testnet_Validator_Onboarding.md`
+- `testnet-beta-launch-docs/genesis-build-validation-inspection-record-template.docx` → `03_Standards_And_Identifiers/genesis_build_validation_inspection_record_template.docx`
+- `testnet-beta-launch-docs/genesis-validator-provisioning-and-readiness-template.docx` → `03_Standards_And_Identifiers/genesis_validator_provisioning_and_readiness_template.docx`
+- `testnet-beta-launch-docs/independent-hash-verification-acknowledgement-template.docx` → `03_Standards_And_Identifiers/independent_hash_verification_acknowledgement_template.docx`
+- `Development Technical Formatted/Architechure and Protocol/~$-snrg-denomination-precision-spec.docx` → `03_Standards_And_Identifiers/nergy_Network_Terminal_Node_Operations_Command_Catalog_v0.docx`
+- `more new docs/RPC-and-API-docs/~$nergy_Network_Terminal_Node_Operations_Command_Catalog.docx` → `03_Standards_And_Identifiers/nergy_Network_Terminal_Node_Operations_Command_Catalog_v1.docx`
+- `more new docs/RPC-and-API-docs/~$nergy_Operator_Rewards_Standard_v1_0.docx` → `03_Standards_And_Identifiers/nergy_Network_Terminal_Node_Operations_Command_Catalog_v2.docx`
+- `synergy-network-whitepaper/~$nergy_Protocol_Naming_Encoding_Standards.docx` → `03_Standards_And_Identifiers/nergy_Network_Terminal_Node_Operations_Command_Catalog_v3.docx`
+- `~$nergy Standards Specification.docx` → `03_Standards_And_Identifiers/nergy_Network_Terminal_Node_Operations_Command_Catalog_v4.docx`
+- `~$nergy_Network_Security_Specification_v1.4.docx` → `03_Standards_And_Identifiers/nergy_Network_Terminal_Node_Operations_Command_Catalog_v5.docx`
+- `~$nergy_Protocol_Naming_Encoding_Standards.docx` → `03_Standards_And_Identifiers/nergy_Network_Terminal_Node_Operations_Command_Catalog_v6.docx`
+- `Development Technical Formatted/Node Validator, Network Ops/85-config-guide.docx` → `03_Standards_And_Identifiers/network_config_toml_Network_settings_v0.docx`
+- `Development Technical Formatted/Node Validator, Network Ops/85-config-guide.md` → `03_Standards_And_Identifiers/network_config_toml_Network_settings_v1.md`
+- `more new docs/config-guide.md` → `03_Standards_And_Identifiers/network_config_toml_Network_settings_v2.md`
+- `testnet-beta-launch-docs/operational-network-manifest-template.docx` → `03_Standards_And_Identifiers/operational_network_manifest_template.docx`
+- `Development Technical Formatted/Architechure and Protocol/55-proof-of-synergy-consensus.docx` → `03_Standards_And_Identifiers/proof_of_synergy_consensus_v0.docx`
+- `synergy-network-whitepaper/03-proof-of-synergy-consensus.docx` → `03_Standards_And_Identifiers/proof_of_synergy_consensus_v1.docx`
+- `Development Technical Formatted/Individual Tech Specs/83-protocol-naming-encoding-standards.docx` → `03_Standards_And_Identifiers/protocol_naming_encoding_standards_v0.docx`
+- `Development Technical Formatted/Individual Tech Specs/83-protocol-naming-encoding-standards.md` → `03_Standards_And_Identifiers/protocol_naming_encoding_standards_v1.md`
+- `Development Technical Formatted/Node Validator, Network Ops/91-becoming-validator.md` → `04_Validator_Operations_And_Rewards/Becoming_a_Validator.md`
+- `new docs/Beta Testnet Launch Runbook and Cross-Chain Identity Layer Blueprint.docx` → `04_Validator_Operations_And_Rewards/Beta_Testnet_Launch_Runbook_and_Cross_Chain_Identity_Layer_Blueprint.docx`
+- `docs/runbooks/community-validator-onboarding.md` → `04_Validator_Operations_And_Rewards/Community_Validator_Onboarding_Runbook.md`
+- `docs/runbooks/consensus-state-checkpoint-hardening.md` → `04_Validator_Operations_And_Rewards/Consensus_State_Checkpoint_Hardening_Runbook.md`
+- `cp-docs/control-panel/onboarding-v2.md` → `04_Validator_Operations_And_Rewards/Control_Panel_Onboarding_v2.md`
+- `cp-docs/README.md` → `04_Validator_Operations_And_Rewards/Documentation_Index.md`
+- `cp-docs/architecture/dynamic-cluster-registry.md` → `04_Validator_Operations_And_Rewards/Dynamic_Cluster_Registry.md`
+- `docs/architecture/dynamic-validator-clusters.md` → `04_Validator_Operations_And_Rewards/Dynamic_Validator_Clusters.md`
+- `Non-Tech Formatted/Governance and Participation/12-governance-model.docx` → `04_Validator_Operations_And_Rewards/Governance_Model_Overview_v0.docx`
+- `Non-Tech Formatted/Governance and Participation/12-governance-model.md` → `04_Validator_Operations_And_Rewards/Governance_Model_Overview_v1.md`
+- `Development Technical Formatted/Node Validator, Network Ops/92-hardware-requirements.docx` → `04_Validator_Operations_And_Rewards/Hardware_Requirements_v0.docx`
+- `Development Technical Formatted/Node Validator, Network Ops/92-hardware-requirements.md` → `04_Validator_Operations_And_Rewards/Hardware_Requirements_v1.md`
+- `cp-docs/control-panel/incidents-and-evidence.md` → `04_Validator_Operations_And_Rewards/Incidents_And_Evidence.md`
+- `Development Technical Formatted/Devnet Testing/71-network-monitoring-dashboard.md` → `04_Validator_Operations_And_Rewards/Network_Monitoring_Dashboard_Access.md`
+- `Development Technical Formatted/Node Validator, Network Ops/93-node-monitoring.md` → `04_Validator_Operations_And_Rewards/Node_Monitoring.md`
+- `files/PoSy Litepaper.docx` → `04_Validator_Operations_And_Rewards/PoSy_Litepaper.docx`
+- `Non-Tech Formatted/Core Concepts/09-proof-of-synergy.md` → `04_Validator_Operations_And_Rewards/Proof_of_Synergy_PoSy.md`
+- `Non-Tech Formatted/Governance and Participation/15-proposal-system.docx` → `04_Validator_Operations_And_Rewards/Proposal_System_and_Lifecycle_v0.docx`
+- `Non-Tech Formatted/Governance and Participation/15-proposal-system.md` → `04_Validator_Operations_And_Rewards/Proposal_System_and_Lifecycle_v1.md`
+- `Development Technical Formatted/Node Validator, Network Ops/96-running-full-node.md` → `04_Validator_Operations_And_Rewards/Running_a_Full_Node.md`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/14-Section-14-Detailed-Pseudocode.docx` → `04_Validator_Operations_And_Rewards/Section_Detailed_Pseudocode.docx`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/08-Section-08-Economic-Incentives-and-Reward-Distribution.docx` → `04_Validator_Operations_And_Rewards/Section_Economic_Incentives_and_Reward_Distribution.docx`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/05-Section-05-Mathematical-Foundations.docx` → `04_Validator_Operations_And_Rewards/Section_Mathematical_Foundations.docx`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/02-Section-02-Notation-Reference-Guide.docx` → `04_Validator_Operations_And_Rewards/Section_Notation_Reference_Guide.docx`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/20-Section-20-Role-Specialization-and-Sharding.docx` → `04_Validator_Operations_And_Rewards/Section_Role_Specialization_and_Sharding.docx`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/01-Section-01-System-Model-&-Foundational-Assumptions.docx` → `04_Validator_Operations_And_Rewards/Section_System_Model_and_Foundational_Assumptions.docx`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/validators/Start_Validator_Sequence.png` → `04_Validator_Operations_And_Rewards/Start_Validator_Sequence.png`
+- `cp-docs/control-panel/state-sync-repair.md` → `04_Validator_Operations_And_Rewards/State_Sync_Repair.md`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/validators/Stop_Validator_Sequence.png` → `04_Validator_Operations_And_Rewards/Stop_Validator_Sequence.png`
+- `governance_and_policy.md` → `04_Validator_Operations_And_Rewards/Synergy_AIVM_Governance_and_Policy.md`
+- `more new docs/Synergy_DAG_Validator_Cluster_Integration_Plan.pdf` → `04_Validator_Operations_And_Rewards/Synergy_DAG_Validator_Cluster_Integration_Plan_v0.pdf`
+- `new docs/Synergy_DAG_Validator_Cluster_Integration_Plan.pdf` → `04_Validator_Operations_And_Rewards/Synergy_DAG_Validator_Cluster_Integration_Plan_v1.pdf`
+- `Development Technical Formatted/Architechure and Protocol/61-rpc-methods.md` → `04_Validator_Operations_And_Rewards/Synergy_Devnet_RPC_Methods_v0.md`
+- `rpc-methods.md` → `04_Validator_Operations_And_Rewards/Synergy_Devnet_RPC_Methods_v1.md`
+- `more new docs/aivm-guide.md` → `04_Validator_Operations_And_Rewards/Synergy_Network_AIVM_Artificial_Intelligence_Virtual_Machine_Guide.md`
+- `more new docs/explorer-guide.md` → `04_Validator_Operations_And_Rewards/Synergy_Network_Block_Explorer_Guide.md`
+- `more new docs/staking-guide.md` → `04_Validator_Operations_And_Rewards/Synergy_Network_Staking_Guide.md`
+- `files/Synergy Network Token System.docx` → `04_Validator_Operations_And_Rewards/Synergy_Network_Token_System_v0.docx`
+- `more new docs/token-system.docx` → `04_Validator_Operations_And_Rewards/Synergy_Network_Token_System_v1.docx`
+- `more new docs/token-system.md` → `04_Validator_Operations_And_Rewards/Synergy_Network_Token_System_v2.md`
+- `more new docs/token-system.pdf` → `04_Validator_Operations_And_Rewards/Synergy_Network_Token_System_v3.pdf`
+- `files/Synergy Network Whitepaper.docx` → `04_Validator_Operations_And_Rewards/Synergy_Network_Whitepaper.docx`
+- `cp-docs/control-panel-capability-map-2026-05-02.md` → `04_Validator_Operations_And_Rewards/Synergy_Node_Control_Panel_Capability_Map.md`
+- `more new docs/RPC-and-API-docs/Synergy_Node_Role_Functions_Nontech.docx` → `04_Validator_Operations_And_Rewards/Synergy_Node_Role_Functions_Nontech_v0.docx`
+- `more new docs/node-role-functions-operator.docx` → `04_Validator_Operations_And_Rewards/Synergy_Node_Role_Functions_Nontech_v1.docx`
+- `more new docs/node-role-functions-operator.md` → `04_Validator_Operations_And_Rewards/Synergy_Node_Role_Functions_Nontech_v2.md`
+- `more new docs/RPC-and-API-docs/Synergy_Operator_Rewards_Standard_v1_0.docx` → `04_Validator_Operations_And_Rewards/Synergy_Operator_Rewards_Standard_v0.docx`
+- `new docs/Synergy_Operator_Rewards_Standard_v1_0.docx` → `04_Validator_Operations_And_Rewards/Synergy_Operator_Rewards_Standard_v1.docx`
+- `Development Technical Formatted/Architechure and Protocol/63-synergy-points-system.docx` → `04_Validator_Operations_And_Rewards/Synergy_Points_System_v0.docx`
+- `Development Technical Formatted/Architechure and Protocol/63-synergy-points-system.md` → `04_Validator_Operations_And_Rewards/Synergy_Points_System_v1.md`
+- `COORDINATOR_GUIDE.md` → `04_Validator_Operations_And_Rewards/Synergy_Testnet_Coordinator_Operations_Guide_v0.md`
+- `more new docs/guides/COORDINATOR_GUIDE.md` → `04_Validator_Operations_And_Rewards/Synergy_Testnet_Coordinator_Operations_Guide_v1.md`
+- `Development Technical Formatted/Node Validator, Network Ops/98-validator-setup-complete.docx` → `04_Validator_Operations_And_Rewards/Synergy_Testnet_Validator_System_READY_FOR_TEAM_ONBOARDING_v0.docx`
+- `Development Technical Formatted/Node Validator, Network Ops/98-validator-setup-complete.md` → `04_Validator_Operations_And_Rewards/Synergy_Testnet_Validator_System_READY_FOR_TEAM_ONBOARDING_v1.md`
+- `VALIDATOR_SETUP_COMPLETE.md` → `04_Validator_Operations_And_Rewards/Synergy_Testnet_Validator_System_READY_FOR_TEAM_ONBOARDING_v2.md`
+- `more new docs/guides/VALIDATOR_SETUP_COMPLETE.md` → `04_Validator_Operations_And_Rewards/Synergy_Testnet_Validator_System_READY_FOR_TEAM_ONBOARDING_v3.md`
+- `README.md` → `04_Validator_Operations_And_Rewards/Synergy_Validator_Workspace.md`
+- `Non-Tech Formatted/Governance and Participation/16-treasury-management.docx` → `04_Validator_Operations_And_Rewards/Treasury_Management_v0.docx`
+- `Non-Tech Formatted/Governance and Participation/16-treasury-management.md` → `04_Validator_Operations_And_Rewards/Treasury_Management_v1.md`
+- `Development Technical Formatted/Node Validator, Network Ops/94-node-troubleshooting.md` → `04_Validator_Operations_And_Rewards/Troubleshooting.md`
+- `Non-Tech Formatted/Core Concepts/11-validator-clusters.docx` → `04_Validator_Operations_And_Rewards/Validator_Clusters_v0.docx`
+- `Non-Tech Formatted/Core Concepts/11-validator-clusters.md` → `04_Validator_Operations_And_Rewards/Validator_Clusters_v1.md`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/global/Validator_States.png` → `04_Validator_Operations_And_Rewards/Validator_States.png`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/validators/View_Validator_Rewards_Sequence.png` → `04_Validator_Operations_And_Rewards/View_Validator_Rewards_Sequence.png`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/validators/Vote_Validator_Proposal_Sequence.png` → `04_Validator_Operations_And_Rewards/Vote_Validator_Proposal_Sequence.png`
+- `Non-Tech Formatted/Governance and Participation/14-voting-mechanism.docx` → `04_Validator_Operations_And_Rewards/Voting_Mechanism_v0.docx`
+- `Non-Tech Formatted/Governance and Participation/14-voting-mechanism.md` → `04_Validator_Operations_And_Rewards/Voting_Mechanism_v1.md`
+- `more new docs/testnet-genesis.json` → `04_Validator_Operations_And_Rewards/accounts.json`
+- `Non-Tech Formatted/Non Technical/02-business-model.docx` → `04_Validator_Operations_And_Rewards/business_model.docx`
+- `Development Technical Formatted/Devnet Testing/71-network-monitoring-dashboard.docx` → `04_Validator_Operations_And_Rewards/cd_monitoring.docx`
+- `Development Technical Formatted/Node Validator, Network Ops/96-running-full-node.docx` → `04_Validator_Operations_And_Rewards/cd_testnet.docx`
+- `testnet-beta-launch-docs/checksum-record-template.docx` → `04_Validator_Operations_And_Rewards/checksum_record_template.docx`
+- `more new docs/validator-template.json` → `04_Validator_Operations_And_Rewards/comment_SYNERGY_NETWORK_VALIDATOR_DATASET_TEMPLATE.json`
+- `testnet-beta-launch-docs/custody-verification-acknowledgement-template.docx` → `04_Validator_Operations_And_Rewards/custody_verification_acknowledgement_template.docx`
+- `files/full-protocol-whitepaper.docx` → `04_Validator_Operations_And_Rewards/full_protocol_whitepaper.docx`
+- `testnet-beta-launch-docs/independent-machine-comparison-record-template.docx` → `04_Validator_Operations_And_Rewards/independent_machine_comparison_record_template.docx`
+- `Development Technical Formatted/Architechure and Protocol/61-rpc-methods.docx` → `04_Validator_Operations_And_Rewards/jsonrpc_2_0.docx`
+- `Development Technical Formatted/API SDK and Intergration/53-api-reference-full.docx` → `04_Validator_Operations_And_Rewards/jsonrpc_2_0_method_synergy_methodName_params_id_1_v0.docx`
+- `Development Technical Formatted/API SDK and Intergration/53-api-reference-full.md` → `04_Validator_Operations_And_Rewards/jsonrpc_2_0_method_synergy_methodName_params_id_1_v1.md`
+- `Non-Tech Formatted/Wallets/37-staking-guide.docx` → `04_Validator_Operations_And_Rewards/jsonrpc_2_0_v0.docx`
+- `Non-Tech Formatted/Wallets/37-staking-guide.md` → `04_Validator_Operations_And_Rewards/jsonrpc_2_0_v1.md`
+- `Development Technical Formatted/Node Validator, Network Ops/91-becoming-validator.docx` → `04_Validator_Operations_And_Rewards/name_MyValidator.docx`
+- `Development Technical Formatted/Node Validator, Network Ops/94-node-troubleshooting.docx` → `04_Validator_Operations_And_Rewards/node_troubleshooting.docx`
+- `testnet-beta-launch-docs/operator-workspace-and-installer-bundle-manifest-template.docx` → `04_Validator_Operations_And_Rewards/operator_workspace_and_installer_bundle_manifest_template.docx`
+- `Non-Tech Formatted/Core Concepts/09-proof-of-synergy.docx` → `04_Validator_Operations_And_Rewards/proof_of_synergy.docx`
+- `docs/runbooks/qrpc-read-isolation.md` → `04_Validator_Operations_And_Rewards/qRPC_Read_Isolation_Runbook.md`
+- `Development Technical Formatted/Node Validator, Network Ops/93-node-monitoring.docx` → `04_Validator_Operations_And_Rewards/static_configs.docx`
+- `docs/runbooks/archive-canonical-reseed.md` → `05_Testnet_Operations_And_Incident_Reports/Archive_Canonical_Reseed_Runbook.md`
+- `docs/runbooks/deterministic-chaos-harness.md` → `05_Testnet_Operations_And_Incident_Reports/Deterministic_Chaos_Harness_Runbook.md`
+- `Development Technical Formatted/Devnet Testing/68-dev-rpc-endpoints.md` → `05_Testnet_Operations_And_Incident_Reports/Developer_RPC_WS_Endpoints.md`
+- `docs/runbooks/emergency-validator-recovery.md` → `05_Testnet_Operations_And_Incident_Reports/Emergency_Validator_Recovery_Runbook.md`
+- `docs/runbooks/future-validator-runtime-rollout-plan.md` → `05_Testnet_Operations_And_Incident_Reports/Future_Validator_Runtime_Rollout_Plan.md`
+- `Development Technical Formatted/API SDK and Intergration/49-aivm-gpt-oss-usage.docx` → `05_Testnet_Operations_And_Incident_Reports/H_Content_Type_application_json_v0.docx`
+- `Development Technical Formatted/API SDK and Intergration/49-aivm-gpt-oss-usage.md` → `05_Testnet_Operations_And_Incident_Reports/H_Content_Type_application_json_v1.md`
+- `Development Technical Formatted/Devnet Testing/67-api-test-scripts.docx` → `05_Testnet_Operations_And_Incident_Reports/H_Content_Type_application_json_v2.docx`
+- `Non-Tech Formatted/Wallets/34-explorer-guide.docx` → `05_Testnet_Operations_And_Incident_Reports/H_Content_Type_application_json_v3.docx`
+- `Non-Tech Formatted/Wallets/34-explorer-guide.md` → `05_Testnet_Operations_And_Incident_Reports/H_Content_Type_application_json_v4.md`
+- `more new docs/aivm-gpt-oss-usage.md` → `05_Testnet_Operations_And_Incident_Reports/H_Content_Type_application_json_v5.md`
+- `cp-docs/historical/runtime-reports/README.md` → `05_Testnet_Operations_And_Incident_Reports/Historical_Runtime_Reports.md`
+- `cp-docs/control-panel/v2-overhaul-closeout.md` → `05_Testnet_Operations_And_Incident_Reports/Node_Control_Panel_v2_Overhaul_Closeout.md`
+- `cp-docs/node-role-functions.md` → `05_Testnet_Operations_And_Incident_Reports/Node_Role_Functions.md`
+- `docs/runbooks/node-terminal-command-catalog.md` → `05_Testnet_Operations_And_Incident_Reports/Node_Terminal_Command_Catalog.md`
+- `Tech-Specs/AI-AIVM-Spec/08-Operations.docx` → `05_Testnet_Operations_And_Incident_Reports/Operations.docx`
+- `docs/runbooks/protocol-state-sync-repair.md` → `05_Testnet_Operations_And_Incident_Reports/Protocol_State_Sync_Repair_Runbook.md`
+- `docs/runbooks/public-rpc-atlas-backend-safety.md` → `05_Testnet_Operations_And_Incident_Reports/Public_RPC_And_Atlas_Backend_Safety.md`
+- `more new docs/public-rpc-gateway-setup.md` → `05_Testnet_Operations_And_Incident_Reports/Public_RPC_Gateway_Setup_74_208_227_23.md`
+- `docs/runbooks/release-rollout.md` → `05_Testnet_Operations_And_Incident_Reports/Release_Rollout_Runbook.md`
+- `more new docs/SAM-Snapshot-Center-Task.md` → `05_Testnet_Operations_And_Incident_Reports/SAM_Snapshot_Center_Task.md`
+- `Tech-Specs/Proof-of-Synergy-Consensus-Spec/15-Section-15-Testing-and-Validation-Plan.docx` → `05_Testnet_Operations_And_Incident_Reports/Section_Testing_and_Validation_Plan.docx`
+- `docs/runbooks/strict-fleet-status.md` → `05_Testnet_Operations_And_Incident_Reports/Strict_Fleet_Status_Runbook.md`
+- `more new docs/synq-testnet-admission-readiness-20260615.md` → `05_Testnet_Operations_And_Incident_Reports/SynQ_Testnet_Admission_Readiness_Proof_2026_06_15.md`
+- `more new docs/Synergy_DAG_Validator_Cluster_Integration_Merged_Report.docx` → `05_Testnet_Operations_And_Incident_Reports/Synergy_DAG_Validator_Cluster_Integration_Merged_Report_v0.docx`
+- `new docs/Synergy_DAG_Validator_Cluster_Integration.docx` → `05_Testnet_Operations_And_Incident_Reports/Synergy_DAG_Validator_Cluster_Integration_Merged_Report_v1.docx`
+- `Development Technical Formatted/Node Validator, Network Ops/97-setup-guide.md` → `05_Testnet_Operations_And_Incident_Reports/Synergy_Network_Devnet_Setup_Guide.md`
+- `more new docs/RPC-and-API-docs/Synergy_Network_RPC_Specification_Part_3_DAG_Architecture_Availability_Forensics_and_Operations.docx` → `05_Testnet_Operations_And_Incident_Reports/Synergy_Network_RPC_Specification_Part_DAG_Architecture_Availability_For.docx`
+- `more new docs/RPC-and-API-docs/Synergy_Network_RPC_Specification_Part_2_Runtime_Governance_Cross_Chain_and_Operations.docx` → `05_Testnet_Operations_And_Incident_Reports/Synergy_Network_RPC_Specification_Part_Runtime_Governance_Cross_Chain_an.docx`
+- `new docs/Synergy_Network_RPC_Specification_Part_2_Runtime_Governance_Cross_Chain_and_Operations.pdf` → `05_Testnet_Operations_And_Incident_Reports/Synergy_Network_RPC_Specification_Part_Runtime_Governance_Cross_Chain_an.pdf`
+- `more new docs/RPC-and-API-docs/Synergy_Network_Terminal_Node_Operations_Command_Catalog.docx` → `05_Testnet_Operations_And_Incident_Reports/Synergy_Network_Terminal_Node_Operations_Command_Catalog.docx`
+- `more new docs/RPC-and-API-docs/Synergy_Network_Terminal_Node_Operations_Command_Catalog.backup-20260627-before-expanded-node-roles.docx` → `05_Testnet_Operations_And_Incident_Reports/Synergy_Network_Terminal_Node_Operations_Command_Catalog_backup_before_e.docx`
+- `more new docs/README.md` → `05_Testnet_Operations_And_Incident_Reports/Synergy_Network_Testnet_Developer_Guide.md`
+- `CONTROL_PANEL_INSTALL_AND_NEW_VALIDATOR_ONBOARDING.md` → `05_Testnet_Operations_And_Incident_Reports/Synergy_Node_Control_Panel_Install_And_New_Validator_Onboarding_v0.md`
+- `more new docs/guides/CONTROL_PANEL_INSTALL_AND_NEW_VALIDATOR_ONBOARDING.md` → `05_Testnet_Operations_And_Incident_Reports/Synergy_Node_Control_Panel_Install_And_New_Validator_Onboarding_v1.md`
+- `SYNERGY_TESTNET_CONTROL_PANEL_QUICK_OPS_CHEAT_SHEET.md` → `05_Testnet_Operations_And_Incident_Reports/Synergy_Node_Control_Panel_Quick_Ops_Cheat_Sheet_v0.md`
+- `more new docs/guides/SYNERGY_TESTNET_CONTROL_PANEL_QUICK_OPS_CHEAT_SHEET.md` → `05_Testnet_Operations_And_Incident_Reports/Synergy_Node_Control_Panel_Quick_Ops_Cheat_Sheet_v1.md`
+- `more new docs/testnet-1264-preflight-v12.2.25-20260520.md` → `05_Testnet_Operations_And_Incident_Reports/Synergy_Testnet_1264_Preflight_for_v12_2_25_Rollout.md`
+- `more new docs/testnet-1264-preflight-20260520.md` → `05_Testnet_Operations_And_Incident_Reports/Synergy_Testnet_1264_Read_Only_Preflight.md`
+- `more new docs/testnet-1264-live-rollout.md` → `05_Testnet_Operations_And_Incident_Reports/Synergy_Testnet_Chain_1264_Live_Rollout.md`
+- `more new docs/testnet-1264-preflight-2026-05-19.md` → `05_Testnet_Operations_And_Incident_Reports/Synergy_Testnet_Chain_1264_Preflight.md`
+- `more new docs/testnet-1264-topology.md` → `05_Testnet_Operations_And_Incident_Reports/Synergy_Testnet_Chain_1264_Topology.md`
+- `more new docs/observability-dashboard-guide.md` → `05_Testnet_Operations_And_Incident_Reports/Synergy_Testnet_Observability_Dashboard_Guide.md`
+- `more new docs/testnet-1264-readiness-audit.md` → `05_Testnet_Operations_And_Incident_Reports/Synergy_Testnet_v2_Chain_1264_Readiness_Audit.md`
+- `dApp_Connection_Missing_Features_Checklist.md` → `05_Testnet_Operations_And_Incident_Reports/Synergy_dApp_Connection_Readiness_Tracker.md`
+- `cp-docs/testnet-migration.md` → `05_Testnet_Operations_And_Incident_Reports/Technical_Specification_Testnet_Transport_Migration.md`
+- `more new docs/testnet-temporary-manual-snapshot-publisher.md` → `05_Testnet_Operations_And_Incident_Reports/Temporary_Manual_Snapshot_Publisher.md`
+- `Development Technical Formatted/API SDK and Intergration/51-testing-frameworks.md` → `05_Testnet_Operations_And_Incident_Reports/Testing_Frameworks_and_Example_Contracts.md`
+- `forge-console.md` → `05_Testnet_Operations_And_Incident_Reports/Total_messages_14_Errors_12_Warnings_0.md`
+- `Development Technical Formatted/Devnet Testing/76-troubleshoot-testnet-deployment.md` → `05_Testnet_Operations_And_Incident_Reports/Troubleshooting_Testnet_Deployment.md`
+- `more new docs/validator-6-onboarding-support-recovery-20260614.md` → `05_Testnet_Operations_And_Incident_Reports/Validator_6_Onboarding_Support_Recovery_2026_06_14.md`
+- `cp-docs/architecture/validator-appliance-runtime.md` → `05_Testnet_Operations_And_Incident_Reports/Validator_Appliance_Runtime.md`
+- `docs/architecture/validator-appliance-runtime.md` → `05_Testnet_Operations_And_Incident_Reports/Validator_Appliance_Runtime_Architecture.md`
+- `docs/pr-checklists/validator-self-heal-and-posy-cluster-hardening.md` → `05_Testnet_Operations_And_Incident_Reports/Validator_Self_Heal_And_PoSy_Cluster_Hardening_PR_Checklist.md`
+- `docs/runbooks/validator-state-store-migration.md` → `05_Testnet_Operations_And_Incident_Reports/Validator_State_Store_Migration_Runbook.md`
+- `docs/runbooks/validator-state-sync.md` → `05_Testnet_Operations_And_Incident_Reports/Validator_State_Sync_Runbook.md`
+- `docs/runbooks/validator-supervisor-state-machine.md` → `05_Testnet_Operations_And_Incident_Reports/Validator_Supervisor_State_Machine_Runbook.md`
+- `testnet-beta-launch-docs/artifact-inventory-manifest-template.docx` → `05_Testnet_Operations_And_Incident_Reports/artifact_inventory_manifest_template.docx`
+- `Development Technical Formatted/Devnet Testing/76-troubleshoot-testnet-deployment.docx` → `05_Testnet_Operations_And_Incident_Reports/cat_logs_synergy_node_log.docx`
+- `Development Technical Formatted/Devnet Testing/65-devnet-startup-guide.docx` → `05_Testnet_Operations_And_Incident_Reports/cd_Desktop_Synergy_synergy_devnet_v0.docx`
+- `Development Technical Formatted/Devnet Testing/65-devnet-startup-guide.md` → `05_Testnet_Operations_And_Incident_Reports/cd_Desktop_Synergy_synergy_devnet_v1.md`
+- `TESTNET_STARTUP_GUIDE.md` → `05_Testnet_Operations_And_Incident_Reports/cd_Desktop_Synergy_synergy_devnet_v2.md`
+- `more new docs/guides/TESTNET_STARTUP_GUIDE.md` → `05_Testnet_Operations_And_Incident_Reports/cd_Desktop_Synergy_synergy_devnet_v3.md`
+- `Development Technical Formatted/Node Validator, Network Ops/97-setup-guide.docx` → `05_Testnet_Operations_And_Incident_Reports/cd_synergy_devnet_2_Install_Rust_if_not_already_installed_curl_proto_htt_v0.docx`
+- `more new docs/setup-guide.md` → `05_Testnet_Operations_And_Incident_Reports/cd_synergy_devnet_2_Install_Rust_if_not_already_installed_curl_proto_htt_v1.md`
+- `atlas-tokens-mobile-snapshot.md` → `05_Testnet_Operations_And_Incident_Reports/generic_ref_e3_box_0_0_1920_1274.md`
+- `testnet-beta-launch-docs/final-go-no-go-record-template.docx` → `05_Testnet_Operations_And_Incident_Reports/go_no_go_record_template.docx`
+- `Development Technical Formatted/API SDK and Intergration/47-api-reference-rpc.docx` → `05_Testnet_Operations_And_Incident_Reports/jsonrpc_2_0_v0.docx`
+- `Development Technical Formatted/API SDK and Intergration/47-api-reference-rpc.md` → `05_Testnet_Operations_And_Incident_Reports/jsonrpc_2_0_v1.md`
+- `testnet-beta-launch-docs/launch-acceptance-checklist-signoff-template.docx` → `05_Testnet_Operations_And_Incident_Reports/launch_acceptance_checklist_signoff_template.docx`
+- `testnet-beta-launch-docs/launch-day-evidence-pack-template.docx` → `05_Testnet_Operations_And_Incident_Reports/launch_day_evidence_pack_template.docx`
+- `Development Technical Formatted/API SDK and Intergration/51-testing-frameworks.docx` → `05_Testnet_Operations_And_Incident_Reports/mod_tests.docx`
+- `testnet-beta-launch-docs/ordered-startup-acknowledgement-template.docx` → `05_Testnet_Operations_And_Incident_Reports/ordered_startup_acknowledgement_template.docx`
+- `more new docs/testnet-dns-final.csv` → `05_Testnet_Operations_And_Incident_Reports/provider_zone_name_type_content_ttl_proxy_status_action_notes.csv`
+- `testnet-beta-launch-docs/public-surface-verification-record-template.docx` → `05_Testnet_Operations_And_Incident_Reports/public_surface_verification_record_template.docx`
+- `testnet-beta-launch-docs/published-endpoint-matrix-template.docx` → `05_Testnet_Operations_And_Incident_Reports/published_endpoint_matrix_template.docx`
+- `cp-docs/reference/release-notes-v3.0.0.docx` → `05_Testnet_Operations_And_Incident_Reports/release_notes.docx`
+- `testnet-beta-launch-docs/remaining-steps-template-index.docx` → `05_Testnet_Operations_And_Incident_Reports/remaining_steps_template_index.docx`
+- `Development Technical Formatted/Node Validator, Network Ops/88-troubleshooting.docx` → `05_Testnet_Operations_And_Incident_Reports/sudo_systemctl_status_synergy_validator_v0.docx`
+- `Development Technical Formatted/Node Validator, Network Ops/88-troubleshooting.md` → `05_Testnet_Operations_And_Incident_Reports/sudo_systemctl_status_synergy_validator_v1.md`
+- `more new docs/troubleshooting.md` → `05_Testnet_Operations_And_Incident_Reports/sudo_systemctl_status_synergy_validator_v2.md`
+- `testnet-beta-launch-docs/sxcp-runtime-status-and-verification-template.docx` → `05_Testnet_Operations_And_Incident_Reports/sxcp_runtime_status_and_verification_template.docx`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/tokens/Attach_SNS_Token_Sequence.png` → `06_Token_Economics_And_Events/Attach_SNS_Token_Sequence.png`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/tokens/Burn_Token_Sequence.png` → `06_Token_Economics_And_Events/Burn_Token_Sequence.png`
+- `Non-Tech Formatted/Governance and Participation/13-dao-constitution.docx` → `06_Token_Economics_And_Events/DAO_Constitution_v0.docx`
+- `Non-Tech Formatted/Governance and Participation/13-dao-constitution.md` → `06_Token_Economics_And_Events/DAO_Constitution_v1.md`
+- `Non-Tech Formatted/Governance and Participation/19-governance-org-chart.md` → `06_Token_Economics_And_Events/Governance_Organizational_Chart.md`
+- `Non-Tech Formatted/Legal and Policy/20-aml-kyc.docx` → `06_Token_Economics_And_Events/LightMeme_AI_Anti_Money_Laundering_AML_and_Know_Your_Customer_KYC_Policy_v0.docx`
+- `Non-Tech Formatted/Legal and Policy/20-aml-kyc.md` → `06_Token_Economics_And_Events/LightMeme_AI_Anti_Money_Laundering_AML_and_Know_Your_Customer_KYC_Policy_v1.md`
+- `files/Legal/aml-kyc.md` → `06_Token_Economics_And_Events/LightMeme_AI_Anti_Money_Laundering_AML_and_Know_Your_Customer_KYC_Policy_v2.md`
+- `Non-Tech Formatted/Legal and Policy/31-general-disclaimer.docx` → `06_Token_Economics_And_Events/LightMeme_AI_General_Disclaimer_v0.docx`
+- `Non-Tech Formatted/Legal and Policy/31-general-disclaimer.md` → `06_Token_Economics_And_Events/LightMeme_AI_General_Disclaimer_v1.md`
+- `files/Legal/standalone-disclaimer.md` → `06_Token_Economics_And_Events/LightMeme_AI_General_Disclaimer_v2.md`
+- `Non-Tech Formatted/Legal and Policy/25-nft-minting-terms.docx` → `06_Token_Economics_And_Events/LightMeme_AI_NFT_Minting_Terms_v0.docx`
+- `Non-Tech Formatted/Legal and Policy/25-nft-minting-terms.md` → `06_Token_Economics_And_Events/LightMeme_AI_NFT_Minting_Terms_v1.md`
+- `files/Legal/nft-minting-terms.md` → `06_Token_Economics_And_Events/LightMeme_AI_NFT_Minting_Terms_v2.md`
+- `files/Legal/sale-refund.md` → `06_Token_Economics_And_Events/LightMeme_AI_Refund_and_Token_Sale_Policy.md`
+- `files/Legal/staking-presale-terms.md` → `06_Token_Economics_And_Events/LightMeme_AI_Staking_and_Presale_Terms.md`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/sns/Link_SNS_Token_Sequence.png` → `06_Token_Economics_And_Events/Link_SNS_Token_Sequence.png`
+- `files/Methods of Fundraising.docx` → `06_Token_Economics_And_Events/Methods_of_Fundraising.docx`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/tokens/Mint_Token_Sequence.png` → `06_Token_Economics_And_Events/Mint_Token_Sequence.png`
+- `Non-Tech Formatted/Non Technical Diagrams/Presale Token Purchase Process (SNRG).png` → `06_Token_Economics_And_Events/Presale_Token_Purchase_Process_SNRG.png`
+- `docs/architecture/proof-of-synergy-validator-lifecycle.md` → `06_Token_Economics_And_Events/Proof_Of_Synergy_Validator_Lifecycle.md`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/tokens/Push_Token_Metadata_Sequence.png` → `06_Token_Economics_And_Events/Push_Token_Metadata_Sequence.png`
+- `Non-Tech Formatted/Legal and Policy/28-sale-refund.docx` → `06_Token_Economics_And_Events/Refund_and_Token_Sale_Policy_v0.docx`
+- `Non-Tech Formatted/Legal and Policy/28-sale-refund.md` → `06_Token_Economics_And_Events/Refund_and_Token_Sale_Policy_v1.md`
+- `Tech-Specs/SynQ-Language-Tech-Spec/06-Section-06-Compilation-Targets-&-Runtime.docx` → `06_Token_Economics_And_Events/Section_Compilation_Targets_and_Runtime.docx`
+- `Tech-Specs/SynQ-Language-Tech-Spec/07-Section-07-Standard-Library.docx` → `06_Token_Economics_And_Events/Section_Standard_Library.docx`
+- `Non-Tech Formatted/Legal and Policy/30-staking-presale-terms.docx` → `06_Token_Economics_And_Events/Staking_and_Presale_Terms_v0.docx`
+- `Non-Tech Formatted/Legal and Policy/30-staking-presale-terms.md` → `06_Token_Economics_And_Events/Staking_and_Presale_Terms_v1.md`
+- `more new docs/api-reference.md` → `06_Token_Economics_And_Events/Synergy_Network_API_Reference.md`
+- `files/Synergy_Founding_Team_Status.md` → `06_Token_Economics_And_Events/Synergy_Network_Founding_Team_Roles_Overview.md`
+- `new docs/Synergy Network Tokenomics.pdf` → `06_Token_Economics_And_Events/Synergy_Network_Tokenomics.pdf`
+- `Non-Tech Formatted/Wallets/32-tokenomics.docx` → `06_Token_Economics_And_Events/Synergy_Network_Tokenomics_v0.docx`
+- `Non-Tech Formatted/Wallets/32-tokenomics.md` → `06_Token_Economics_And_Events/Synergy_Network_Tokenomics_v1.md`
+- `new docs/Synergy Network Tokenomics.docx` → `06_Token_Economics_And_Events/Synergy_Network_Tokenomics_v2.docx`
+- `files/Synergy Token Whitepaper.docx` → `06_Token_Economics_And_Events/Synergy_Token_Whitepaper.docx`
+- `Non-Tech Formatted/Wallets/41-transaction-fees.docx` → `06_Token_Economics_And_Events/Tip_0_0002_SYN.docx`
+- `Non-Tech Formatted/Wallets/38-token-economics.docx` → `06_Token_Economics_And_Events/Token_Economics_v0.docx`
+- `Non-Tech Formatted/Wallets/38-token-economics.md` → `06_Token_Economics_And_Events/Token_Economics_v1.md`
+- `Non-Tech Formatted/Wallets/40-token-system.md` → `06_Token_Economics_And_Events/Token_System.md`
+- `Non-Tech Formatted/Non Technical Diagrams/Token–Treasury–Governance Flow Diagram.png` → `06_Token_Economics_And_Events/Token_Treasury_Governance_Flow_Diagram.png`
+- `Non-Tech Formatted/Wallets/41-transaction-fees.md` → `06_Token_Economics_And_Events/Transaction_Fees.md`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/tokens/View_Token_Sequence.png` → `06_Token_Economics_And_Events/View_Token_Sequence.png`
+- `more new docs/allocation-template.csv` → `06_Token_Economics_And_Events/address_amount_nanosnrg_category_locked_lock_type_vesting_cliff_days_ves.csv`
+- `more new docs/genesis-blueprint.json` → `06_Token_Economics_And_Events/comment_SYNERGY_NETWORK_GENESIS_JSON_STRUCTURE_BLUEPRINT.json`
+- `keystone-live-wallet-modal-depth.md` → `06_Token_Economics_And_Events/generic_ref_e2_v0.md`
+- `keystone-live-wallet-modal.md` → `06_Token_Economics_And_Events/generic_ref_e2_v1.md`
+- `keystone-local-snapshot.md` → `06_Token_Economics_And_Events/generic_ref_e2_v2.md`
+- `keystone-wallet-snapshot.md` → `06_Token_Economics_And_Events/generic_ref_e2_v3.md`
+- `Non-Tech Formatted/Governance and Participation/19-governance-org-chart.docx` → `06_Token_Economics_And_Events/governance_org_chart.docx`
+- `Non-Tech Formatted/Wallets/40-token-system.docx` → `06_Token_Economics_And_Events/jsonrpc_2_0.docx`
+- `more new docs/RPC-and-API-docs/rpc-methods-todo.docx` → `06_Token_Economics_And_Events/rpc_methods_todo_v0.docx`
+- `more new docs/rpc-methods-todo.docx` → `06_Token_Economics_And_Events/rpc_methods_todo_v1.docx`
+- `more new docs/testnet-genesis-snts-corrected.json` → `06_Token_Economics_And_Events/schema_version_v1.json`
+- `Non-Tech Formatted/Non Technical/05-website-content-brief.docx` → `06_Token_Economics_And_Events/website_content_brief.docx`
+- `AIVM.png` → `99_Archive_And_Unclassified/AIVM.png`
+- `Tech-Specs/AI-AIVM-Spec/09-Appendix-A-Glossary.docx` → `99_Archive_And_Unclassified/AI_AIVM_Spec_Appendix_A_Glossary_Version_v0_1_draft_Date_2025_10_14_Auth.docx`
+- `Tech-Specs/AI-AIVM-Spec/11-Appendix-C-Evaluation-Datasets.docx` → `99_Archive_And_Unclassified/AI_AIVM_Spec_Appendix_C_Evaluation_Datasets_Version_v0_1_draft_Date_2025.docx`
+- `Tech-Specs/AI-AIVM-Spec/06-APIs-And-Schemas.docx` → `99_Archive_And_Unclassified/APIs_And_Schemas.docx`
+- `Tech-Specs/AI-AIVM-Spec/12-Appendix-D-Example-Advisory-Traces.docx` → `99_Archive_And_Unclassified/Appendix_D_Example_Advisory_Traces.docx`
+- `changelog.md` → `99_Archive_And_Unclassified/Changelog.md`
+- `Non-Tech Formatted/Non Technical Diagrams/DAO Governance Sequence (End-to-End Decision Process).png` → `99_Archive_And_Unclassified/DAO_Governance_Sequence_End_to_End_Decision_Process.png`
+- `Development Technical Formatted/Technical Diagrams/Data Governance Map (Data Handling & Retention Compliance).png` → `99_Archive_And_Unclassified/Data_Governance_Map_Data_Handling_and_Retention_Compliance.png`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/global/Data_Mapping.png` → `99_Archive_And_Unclassified/Data_Mapping.png`
+- `Development Technical Formatted/Technical Diagrams/Development & Delivery Flow (Labs Operations Process).png` → `99_Archive_And_Unclassified/Development_and_Delivery_Flow_Labs_Operations_Process.png`
+- `Non-Tech Formatted/Non Technical Diagrams/Governance Oversight Swimlane (Division of Roles & Accountability).png` → `99_Archive_And_Unclassified/Governance_Oversight_Swimlane_Division_of_Roles_and_Accountability.png`
+- `Non-Tech Formatted/Non Technical Diagrams/Grant Lifecycle Sequence (Grants Management Transparency).png` → `99_Archive_And_Unclassified/Grant_Lifecycle_Sequence_Grants_Management_Transparency.png`
+- `Non-Tech Formatted/Legal and Policy/23-copyright-notice.docx` → `99_Archive_And_Unclassified/LightMeme_AI_Copyright_Notice_v0.docx`
+- `Non-Tech Formatted/Legal and Policy/23-copyright-notice.md` → `99_Archive_And_Unclassified/LightMeme_AI_Copyright_Notice_v1.md`
+- `files/Legal/copyright-notice.md` → `99_Archive_And_Unclassified/LightMeme_AI_Copyright_Notice_v2.md`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/global/Master_Tree_Diagram.png` → `99_Archive_And_Unclassified/Master_Tree_Diagram.png`
+- `Tech-Specs/AI-AIVM-Spec/03-Model-Governance-And-MLOps.docx` → `99_Archive_And_Unclassified/Model_Governance_And_MLOps.docx`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/sns/Register_SNS_Sequence.png` → `99_Archive_And_Unclassified/Register_SNS_Sequence.png`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/governance/Submit_Proposal_Sequence.png` → `99_Archive_And_Unclassified/Submit_Proposal_Sequence.png`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/global/Swimlane_Tool_Interactions.png` → `99_Archive_And_Unclassified/Swimlane_Tool_Interactions.png`
+- `Tech-Specs/AI-AIVM-Spec/07-Testing-And-Evaluation.docx` → `99_Archive_And_Unclassified/Testing_And_Evaluation.docx`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/settings/Theme_Toggle_Sequence.png` → `99_Archive_And_Unclassified/Theme_Toggle_Sequence.png`
+- `live-console-warnings.md` → `99_Archive_And_Unclassified/Total_messages_0_Errors_0_Warnings_0.md`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/settings/View_Logs_Sequence.png` → `99_Archive_And_Unclassified/View_Logs_Sequence.png`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/governance/View_Proposals_Sequence.png` → `99_Archive_And_Unclassified/View_Proposals_Sequence.png`
+- `Development Technical Formatted/Technical Diagrams/synergy-utility-diagrams/uma/View_UMA_Sequence.png` → `99_Archive_And_Unclassified/View_UMA_Sequence.png`
+- `Development Technical Formatted/Technical Diagrams/Web Portal Architecture & Data Flow.png` → `99_Archive_And_Unclassified/Web_Portal_Architecture_and_Data_Flow.png`
+- `more new docs/~$ken-system.docx` → `99_Archive_And_Unclassified/ken_system.docx`
+- `research.pdf` → `99_Archive_And_Unclassified/research.pdf`
+- `files/synergy_ama_lecture_notes.pdf` → `99_Archive_And_Unclassified/synergy_ama_lecture_notes.pdf`
+- `synergy-network-whitepaper/synergy-network-full-whitepaper.pdf` → `99_Archive_And_Unclassified/synergy_network_full_whitepaper.pdf`
