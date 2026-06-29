@@ -1,0 +1,149 @@
+chain_id = "338639"
+genesis_time = "2026-04-01T12:00:00Z"
+bond_denom = "SNRG"
+treasury_signers = [
+  "synw15s4zhgtnncqqpqf9kttnrh7cvymgyjclc0mj",
+  "synw1sf4fg46esvqekp69q40xs8jfvh4s5r9mphjh",
+  "synw1tlkwp3jqln72aerwh5mpp3c8usxzplf5ugnz",
+  "synw1qjkshj3t6whfsckefry58z9wtpqv8nxnh4ze",
+]
+
+[[validators]]
+validator_id = "validator-1"
+name = "Synergy Genesis Validator 1"
+address = "synv114cvu472rkdgpmzvkj70zk9tu8cqqlu4x9ra"
+operator_address = "synv114cvu472rkdgpmzvkj70zk9tu8cqqlu4x9ra"
+reward_address = "synv114cvu472rkdgpmzvkj70zk9tu8cqqlu4x9ra"
+address_type = "synv1"
+pubkey_file = "/Users/devpup/Desktop/Testnet-Beta/synergy-testnet-beta/config/genesis-validators/node-01.identity.json"
+power = "100"
+amount = "50000000000000"
+commission_rate_bps = 500
+
+[[validators]]
+validator_id = "validator-2"
+name = "Synergy Genesis Validator 2"
+address = "synv11wrj74dnkc802jfl4e7j7jd2azj2zk2eqvgu"
+operator_address = "synv11wrj74dnkc802jfl4e7j7jd2azj2zk2eqvgu"
+reward_address = "synv11wrj74dnkc802jfl4e7j7jd2azj2zk2eqvgu"
+address_type = "synv1"
+pubkey_file = "/Users/devpup/Desktop/Testnet-Beta/synergy-testnet-beta/config/genesis-validators/node-02.identity.json"
+power = "100"
+amount = "50000000000000"
+commission_rate_bps = 500
+
+[[validators]]
+validator_id = "validator-3"
+name = "Synergy Genesis Validator 3"
+address = "synv11v2r4gnp5py3ae5ft6646lxpqphdv58k8tyu"
+operator_address = "synv11v2r4gnp5py3ae5ft6646lxpqphdv58k8tyu"
+reward_address = "synv11v2r4gnp5py3ae5ft6646lxpqphdv58k8tyu"
+address_type = "synv1"
+pubkey_file = "/Users/devpup/Desktop/Testnet-Beta/synergy-testnet-beta/config/genesis-validators/node-03.identity.json"
+power = "100"
+amount = "50000000000000"
+commission_rate_bps = 500
+
+[[validators]]
+validator_id = "validator-4"
+name = "Synergy Genesis Validator 4"
+address = "synv118u0v2gxn4zew5j886hwz32tkaujsvhykf49"
+operator_address = "synv118u0v2gxn4zew5j886hwz32tkaujsvhykf49"
+reward_address = "synv118u0v2gxn4zew5j886hwz32tkaujsvhykf49"
+address_type = "synv1"
+pubkey_file = "/Users/devpup/Desktop/Testnet-Beta/synergy-testnet-beta/config/genesis-validators/node-04.identity.json"
+power = "100"
+amount = "50000000000000"
+commission_rate_bps = 500
+
+[[validators]]
+validator_id = "validator-5"
+name = "Synergy Genesis Validator 5"
+address = "synv11mvlgy72uq7kuh200qnxv67zrqjugz267k46"
+operator_address = "synv11mvlgy72uq7kuh200qnxv67zrqjugz267k46"
+reward_address = "synv11mvlgy72uq7kuh200qnxv67zrqjugz267k46"
+address_type = "synv1"
+pubkey_file = "/Users/devpup/Downloads/1775600725339-b5391f4b-d9ec-4d7f-bccf-be1c9e031d2c-synv1.pub.json"
+power = "100"
+amount = "50000000000000"
+commission_rate_bps = 500
+
+[[balances]]
+address = "synu1m0sx2cywed2l2wq8lwnz8r7zwn6dmgqt3apz"
+amount = "17500000000000000000"
+label = "Foundation/Treasury"
+
+[[balances]]
+address = "synw1hrm96txgnalsjjrx5yjfxuyqkt4mxf8j0tsr"
+amount = "7500000000000000000"
+label = "Team"
+
+[[balances]]
+address = "synw1xwwrtdg84jcj4kcj423lcma67fnqlr2zq9fd"
+amount = "10000000000000000000"
+label = "Ecosystem"
+
+[[balances]]
+address = "synw1nr0mf40j2fzs3f09602xwhmyjdk7dv0m35v4"
+amount = "12500000000000000000"
+label = "Public Sale"
+
+[[balances]]
+address = "synw1y9vkp3pfdq88vs32v5378dvq23py2k9kkavm"
+amount = "2500000000000000000"
+label = "Faucet"
+
+[[contracts]]
+name = "ValidatorRegistry"
+address = "synq104vnaq39r0py025muvt4zfzva6lq35v3dqcl"
+bytecode = "AA=="
+code_hash = "d841ace5ae7c6749a7167a62268c7cc0d90155188c41c592f0627e322f89dc75"
+
+[[contracts]]
+name = "SynergyOracle"
+address = "synq1aa6nr35ymf8wthmwqrwex3268majzvh4d8zp"
+bytecode = "AA=="
+code_hash = "86a66a9c1929b4f6460e3b292afbffb1e6052e5f2574e28c9655899e229867b7"
+
+[[contracts]]
+name = "Staking"
+address = "synq1h4c7ck4a5m6yfz334jvrnkk9g36zqu70ez6v"
+bytecode = "AA=="
+code_hash = "c52ed228ed7ee9ee8bc51fba913cec3c40d0f98d2f5e32368e78ba86c2266a4b"
+
+[[contracts]]
+name = "Governance"
+address = "synq1ldqask8hhrplxfsej9cmme7s8545z5lslvzm"
+bytecode = "AA=="
+code_hash = "38168b2ac43d07bfa790d96455def19d9f6b12d1f40d4c760ca2791b4476fa43"
+
+[[contracts]]
+name = "Treasury"
+address = "synq1csn86fyarm3pw99l2tr526czg56umpwm744w"
+bytecode = "AA=="
+code_hash = "0cddf13457c606500aa08d27aa85b17591879a35875f0fa08a5ffba7ca483b46"
+
+[[contracts]]
+name = "RewardDistributor"
+address = "synq1wxm7skspall8ruqjpyq9pnkfxjswlawkn4mt"
+bytecode = "AA=="
+code_hash = "6b0c84278ff2cb7d13b70e175ed657fb16d8e29f0fae750009c7a34fbe30ce22"
+
+[[contracts]]
+name = "Slashing"
+address = "synq1s7q7240zyqzlhzzk6epdn8sus4gdgr37zn34"
+bytecode = "AA=="
+code_hash = "2aabc92e03612f11a30ccb4c4ad9a248fce3b5d05ab0f0194e022e1fb4b1c683"
+
+[[contracts]]
+name = "Identity"
+address = "synq16c7tddneaqz27saffctwrdnyfm9s5mrsdmlq"
+bytecode = "AA=="
+code_hash = "48c6e3fc0cbeabbab1fa1f221e38e8f8f6023db7417554ca11de6783cd162b9c"
+
+[system_addresses]
+fee_collector = "synf13wz4ns5dzmagc25rwfxkzvnctalmwc65vld4"
+oracle_admin = "synw1ktxszhz4w3y0tpf6nq2lxf3xkym5sy62jdzc"
+guardian = "synw1sf4fg46esvqekp69q40xs8jfvh4s5r9mphjh"
+authority = "synw1tlkwp3jqln72aerwh5mpp3c8usxzplf5ugnz"
+pool = "synw1qjkshj3t6whfsckefry58z9wtpqv8nxnh4ze"

@@ -1,0 +1,183 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - link "Keystone home" [ref=e4] [cursor=pointer]:
+      - /url: "#home"
+      - img "Keystone" [ref=e5]
+      - generic [ref=e6]: Synergy Testnet / block 175,511
+    - navigation "Primary" [ref=e193]:
+      - link "Home" [ref=e194] [cursor=pointer]:
+        - /url: "#home"
+      - link "Proposals" [ref=e195] [cursor=pointer]:
+        - /url: "#proposals"
+      - link "Treasury" [ref=e196] [cursor=pointer]:
+        - /url: "#treasury"
+      - link "Security" [ref=e197] [cursor=pointer]:
+        - /url: "#security"
+    - generic [ref=e7]:
+      - generic "Search live governance transactions" [ref=e8]:
+        - generic [ref=e9]: /
+        - searchbox "Search governance transactions" [ref=e10]
+      - button "Refresh" [ref=e11] [cursor=pointer]
+      - button "Connect Wallet" [active] [ref=e12] [cursor=pointer]
+  - main [ref=e13]:
+    - generic [ref=e14]:
+      - article [ref=e15]:
+        - generic [ref=e16]:
+          - heading "Keystone Governance" [level=1] [ref=e17]
+          - paragraph [ref=e18]: The Synergy Network DAO portal for live testnet proposals, votes, wallet identity, and signed governance transactions.
+          - generic [ref=e19]:
+            - link "Review Proposals" [ref=e20] [cursor=pointer]:
+              - /url: "#proposals"
+            - button "Connect Synergy Wallet" [ref=e21] [cursor=pointer]
+        - generic "Keystone network mark" [ref=e22]:
+          - img "Keystone icon" [ref=e23]
+          - generic [ref=e24]:
+            - generic [ref=e25]: Chain 0x4f0
+            - generic [ref=e26]: Network synergy-testnet-v2
+            - generic [ref=e27]: Governance synq....lvzm
+            - generic [ref=e28]: Reserve synw....2l4r
+      - complementary [ref=e29]:
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - generic [ref=e32]: Live Governance
+            - heading "Testnet State" [level=2] [ref=e33]
+          - generic [ref=e34]: 588ms RPC
+        - generic [ref=e166]: No governance proposal transactions found in blocks 169,512-175,511.
+    - generic [ref=e37]:
+      - article [ref=e38]:
+        - generic [ref=e39]: Proposal Transactions
+        - strong [ref=e40]: "0"
+      - article [ref=e41]:
+        - generic [ref=e42]: Vote Transactions
+        - strong [ref=e43]: "0"
+      - article [ref=e44]:
+        - generic [ref=e45]: Latest Block
+        - strong [ref=e46]: 175,511
+      - article [ref=e47]:
+        - generic [ref=e48]: DAO Reserve
+        - strong [ref=e49]: 720,000,000 SNRG
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - generic [ref=e52]:
+          - generic [ref=e53]:
+            - generic [ref=e54]: Proposal Creation
+            - heading "Submit DAO Action" [level=2] [ref=e55]
+          - generic [ref=e56]: Bond 1,000 SNRG
+        - generic [ref=e57]:
+          - generic [ref=e58]:
+            - generic [ref=e59]: Title
+            - textbox "Title" [ref=e60]
+          - generic [ref=e61]:
+            - generic [ref=e62]: Summary
+            - textbox "Summary" [ref=e63]
+          - generic [ref=e64]:
+            - generic [ref=e65]
+            - generic [ref=e68]
+          - generic [ref=e71]:
+            - generic [ref=e72]: Target Address
+            - textbox "Target Address" [ref=e73]: synq1ldqask8hhrplxfsej9cmme7s8545z5lslvzm
+          - generic [ref=e74]:
+            - generic [ref=e75]: Execution Payload
+            - textbox "Execution Payload" [ref=e76]
+          - button "Submit Proposal" [disabled] [ref=e77]
+          - generic [ref=e78]: Live governance state refreshed from Synergy Testnet.
+      - generic [ref=e79]:
+        - generic [ref=e80]:
+          - generic [ref=e81]:
+            - generic [ref=e82]: Proposal Registry
+            - heading "Live Voting Queue" [level=2] [ref=e83]
+          - tablist "Proposal filter" [ref=e84]:
+            - button "All" [ref=e85] [cursor=pointer]
+            - button "Pending" [ref=e86] [cursor=pointer]
+            - button "Active" [ref=e87] [cursor=pointer]
+            - button "Closed" [ref=e88] [cursor=pointer]
+            - button "Recorded" [ref=e89] [cursor=pointer]
+        - generic [ref=e167]: No proposal transactions match this view across blocks 169,512-175,511.
+      - complementary [ref=e92]:
+        - generic [ref=e93]:
+          - generic [ref=e95]:
+            - generic [ref=e96]: Connected Identity
+            - heading "Wallet" [level=2] [ref=e97]
+          - generic [ref=e168]:
+            - paragraph [ref=e169]: Connect Synergy Wallet to submit proposals and vote with real Synergy Testnet SNRG.
+            - button "Connect Wallet" [ref=e170] [cursor=pointer]
+        - generic [ref=e102]:
+          - generic [ref=e104]:
+            - generic [ref=e105]: Governance Ledger
+            - heading "Event Feed" [level=2] [ref=e106]
+          - generic [ref=e171]: No governance proposal or vote transactions found in the scanned block range.
+    - generic [ref=e109]:
+      - generic [ref=e110]:
+        - generic [ref=e111]: Transaction Preflight
+        - heading "Every action is a real signed Synergy Testnet transaction." [level=2] [ref=e112]
+        - paragraph [ref=e113]: Proposal creation sends the DAO proposal bond to the governance contract. Voting sends the minimum testnet SNRG vote value to the DAO reserve account.
+      - article [ref=e114]:
+        - generic [ref=e172]: Synergy Testnet Requirements
+        - heading "Token-gated governance" [level=3] [ref=e173]
+        - generic [ref=e174]:
+          - generic [ref=e175]:
+            - term [ref=e176]: Proposal value
+            - definition [ref=e177]: 1,000 SNRG
+          - generic [ref=e178]:
+            - term [ref=e179]: Proposal total
+            - definition [ref=e180]: 1,000.02 SNRG with current gas
+          - generic [ref=e181]:
+            - term [ref=e182]: Vote value
+            - definition [ref=e183]: 0.000000001 SNRG
+          - generic [ref=e184]:
+            - term [ref=e185]: Vote total
+            - definition [ref=e186]: 0.004000001 SNRG with current gas
+          - generic [ref=e187]:
+            - term [ref=e188]: Gas price
+            - definition [ref=e189]: 40 nWei
+          - generic [ref=e190]:
+            - term [ref=e191]: RPC
+            - definition [ref=e192]: https://testnet-core-rpc.synergy-network.io
+    - generic [ref=e136]:
+      - generic [ref=e137]:
+        - generic [ref=e138]:
+          - generic [ref=e139]: Treasury & Governance Accounts
+          - heading "Balances read from Synergy Testnet RPC." [level=2] [ref=e140]
+        - generic [ref=e141]: Blocks 169,512-175,511
+      - generic [ref=e142]:
+        - article [ref=e143]:
+          - generic [ref=e144]: DAO Reserve
+          - strong [ref=e145]: 720,000,000 SNRG
+          - paragraph [ref=e146]: synw1pqwglyfjynrxt7ms9nvggntav6x3lx9c2l4r
+        - article [ref=e147]:
+          - generic [ref=e148]: Governance Contract
+          - strong [ref=e149]: 0 SNRG
+          - paragraph [ref=e150]: synq1ldqask8hhrplxfsej9cmme7s8545z5lslvzm
+        - article [ref=e151]:
+          - generic [ref=e152]: Proposal Bond
+          - strong [ref=e153]: 1,000 SNRG
+          - paragraph [ref=e154]: Required on-chain value for proposal submission.
+    - generic [ref=e155]:
+      - generic [ref=e156]:
+        - generic [ref=e157]: Keystone
+        - heading "DAO control surface for Synergy Network." [level=2] [ref=e158]
+        - paragraph [ref=e159]: Keystone reads governance directly from Synergy Testnet and writes proposal and vote transactions through Synergy Wallet.
+      - img "Keystone governance infographic" [ref=e160]
+  - dialog "Connect Synergy Wallet" [ref=e198]:
+    - generic [ref=e199]:
+      - generic [ref=e200]:
+        - generic [ref=e201]:
+          - strong [ref=e202]: Connect Synergy Wallet
+          - generic [ref=e203]: ready
+        - button "Close wallet dialog" [ref=e204] [cursor=pointer]: Close
+      - generic [ref=e207]:
+        - heading "Synergy Wallet" [level=2] [ref=e208]
+        - paragraph [ref=e209]: Connect with the Synergy Wallet browser provider or mobile bridge.
+        - generic [ref=e210]:
+          - button "Browser Provider" [disabled] [ref=e211]
+          - button "Mobile QR" [ref=e212] [cursor=pointer]
+        - generic [ref=e213]:
+          - generic [ref=e214]:
+            - term [ref=e215]: Network
+            - definition [ref=e216]: Synergy Testnet
+          - generic [ref=e217]:
+            - term [ref=e218]: Chain
+            - definition [ref=e219]: 1264 / 0x4f0
+          - generic [ref=e220]:
+            - term [ref=e221]: Bridge
+            - definition [ref=e222]: https://keystone.synergy-network.io/api/wallet-pairing

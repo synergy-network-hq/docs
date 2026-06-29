@@ -1,0 +1,5249 @@
+synergy-testnet-beta
+├── .claude
+│   └── settings.local.json
+├── .github
+│   └── workflows
+│       └── build-binaries.yml
+├── .gitignore
+├── Aegis_TechSpec.docx
+├── aegis-pqvm
+│   ├── .github
+│   │   └── workflows
+│   │       ├── fuzz-ci.yml
+│   │       ├── kat-cross-platform.yml
+│   │       ├── module-security-baseline.yml
+│   │       └── release-provenance.yml
+│   ├── archive
+│   │   └── legacy_algorithms
+│   │       ├── classicmceliece
+│   │       │   ├── build.rs
+│   │       │   ├── Cargo.toml
+│   │       │   ├── pqcore -> ../pqclean
+│   │       │   ├── README.md
+│   │       │   └── src
+│   │       │       ├── ffi.rs
+│   │       │       ├── lib.rs
+│   │       │       ├── mceliece348864.rs
+│   │       │       ├── mceliece348864f.rs
+│   │       │       ├── mceliece460896.rs
+│   │       │       ├── mceliece460896f.rs
+│   │       │       ├── mceliece6688128.rs
+│   │       │       ├── mceliece6688128f.rs
+│   │       │       ├── mceliece6960119.rs
+│   │       │       ├── mceliece6960119f.rs
+│   │       │       ├── mceliece8192128.rs
+│   │       │       └── mceliece8192128f.rs
+│   │       ├── hqc
+│   │       │   ├── build.rs
+│   │       │   ├── Cargo.toml
+│   │       │   ├── pqcore -> ../pqclean
+│   │       │   ├── README.md
+│   │       │   └── src
+│   │       │       ├── ffi.rs
+│   │       │       ├── hqc128.rs
+│   │       │       ├── hqc192.rs
+│   │       │       ├── hqc256.rs
+│   │       │       └── lib.rs
+│   │       └── sphincsplus
+│   │           ├── build.rs
+│   │           ├── Cargo.toml
+│   │           ├── pqcore -> ../pqclean
+│   │           ├── README.md
+│   │           └── src
+│   │               ├── ffi.rs
+│   │               ├── lib.rs
+│   │               ├── sphincssha2128fsimple.rs
+│   │               ├── sphincssha2128ssimple.rs
+│   │               ├── sphincssha2192fsimple.rs
+│   │               ├── sphincssha2192ssimple.rs
+│   │               ├── sphincssha2256fsimple.rs
+│   │               ├── sphincssha2256ssimple.rs
+│   │               ├── sphincsshake128fsimple.rs
+│   │               ├── sphincsshake128ssimple.rs
+│   │               ├── sphincsshake192fsimple.rs
+│   │               ├── sphincsshake192ssimple.rs
+│   │               ├── sphincsshake256fsimple.rs
+│   │               └── sphincsshake256ssimple.rs
+│   ├── build.rs
+│   ├── Cargo.toml
+│   ├── docs
+│   │   ├── benchmark
+│   │   │   ├── pqvm_benchmarks.csv
+│   │   │   ├── pqvm_benchmarks.json
+│   │   │   └── PQVM_COMPARATIVE_BENCHMARK_REPORT.md
+│   │   ├── compliance
+│   │   │   ├── ACVP_HARNESS.md
+│   │   │   └── CMVP_BOUNDARY_AND_SELFTEST.md
+│   │   ├── developer
+│   │   │   └── DEVELOPER_GUIDE.md
+│   │   ├── manual
+│   │   │   ├── USER_MANUAL.md
+│   │   │   └── USER_MANUAL.pdf
+│   │   ├── release
+│   │   │   ├── LICENSE_READY_PACKAGE_BUNDLE.md
+│   │   │   ├── PROVENANCE_AND_SIGNING.md
+│   │   │   └── RELEASE_POLICY.md
+│   │   ├── security
+│   │   │   ├── INDEPENDENT_SECURITY_SIGNOFF.md
+│   │   │   ├── SECURITY_CASE_BUNDLE.md
+│   │   │   ├── SIDE_CHANNEL_REVIEW.md
+│   │   │   ├── THREAT_MODEL.md
+│   │   │   └── TRACEABILITY_MATRIX.md
+│   │   └── specification
+│   │       └── TECHNICAL_SPECIFICATION.md
+│   ├── examples
+│   │   ├── evm_precompile_example.rs
+│   │   ├── key_lifecycle_example.rs
+│   │   └── substrate_pallet_example.rs
+│   ├── fuzz
+│   │   ├── .gitignore
+│   │   ├── artifacts
+│   │   │   ├── abi_decode
+│   │   │   └── dispatch_deterministic
+│   │   ├── Cargo.toml
+│   │   ├── corpus
+│   │   │   ├── abi_decode
+│   │   │   │   ├── 0a0002c5d806916d0142d785536ab464fd6bcf0e
+│   │   │   │   ├── 0a4da0f0e4e2160c3599fd595210a6c7245ce86a
+│   │   │   │   ├── 0ac027f245d4b5758aa37f035a6cdc2edac5e8d7
+│   │   │   │   ├── 0dba6145f3e1316bfdf3f6c82c7c9befce0abb61
+│   │   │   │   ├── 0dcf6f20b750b067e1b2904026c0e4d64c8426dd
+│   │   │   │   ├── 11cea0276fe80d8287688c0af720b6826850e7b2
+│   │   │   │   ├── 13ea9bcfd7ff373ab088d779842447eb7a7fad91
+│   │   │   │   ├── 15f3d967002d3b9f9f9b00d7e4b19b47e422f112
+│   │   │   │   ├── 19a4152767a7287fa122f5efebf6e4f8c213dbbb
+│   │   │   │   ├── 253b38851d4dd39db287ca28d986aba458836cd2
+│   │   │   │   ├── 26779b26c7e579fb94cef41afe712b0632816996
+│   │   │   │   ├── 274ef06b893d97caf6dc68314facdda7c23b73a5
+│   │   │   │   ├── 2dd1a8ec897fec23e049cc90dc8f7978992f85d3
+│   │   │   │   ├── 2e04bf6310d31e61557503c05c97516e9170453d
+│   │   │   │   ├── 2ff31e663b1c17135c7764f986a160c7146a2658
+│   │   │   │   ├── 30602e2f98fc80c23445dadbaec87ad339fb2b33
+│   │   │   │   ├── 312837da23081eeec0676fc29c13be252a74f29e
+│   │   │   │   ├── 34f3ad26b5f4a398b26bbf1a28161348cc89e928
+│   │   │   │   ├── 3ecac364d89a4cf7bb09502786f64b8372717426
+│   │   │   │   ├── 3f9a8f3dd38aeedc32986d0422bfeb8c2d2623be
+│   │   │   │   ├── 4409917d7ed8dca27a04ed00df48f782a6437118
+│   │   │   │   ├── 442b2be26b5330b5509d95add3b724e99b1567d2
+│   │   │   │   ├── 480d4aa55a6c0b10af9941e69c204cf91edc862e
+│   │   │   │   ├── 49268c1cf5f668fa5e93363577318395e7daa172
+│   │   │   │   ├── 51489cc9b539b6dd86ee4404e96f78ba6a030623
+│   │   │   │   ├── 54d4b6df519e528f8f0d50c706735505f5dfe831
+│   │   │   │   ├── 5db8c16cf79ea9d63b24f0e389c4b26f5c145b91
+│   │   │   │   ├── 5e4984db29507841a6d40352a5a8794527cfbf06
+│   │   │   │   ├── 5eb55aca13f4d9d116cce05241d482670f6814d5
+│   │   │   │   ├── 628fee00a1ccbc732db1350401ba2d36fd16684a
+│   │   │   │   ├── 6352e8a00a0de81ee120584db563f6daecc9011a
+│   │   │   │   ├── 63f4355362d3c55c1b2772f362e661a1386aeafb
+│   │   │   │   ├── 65d422cc2f54898221416e0a959a6bf6d8f6e590
+│   │   │   │   ├── 6e704a2f10db97a76aeae7c1f53964e4b843a52e
+│   │   │   │   ├── 6fc08014c9c9cb6c8c3f484ce9aa2eab138720d0
+│   │   │   │   ├── 706739be8411c4984936a22109a50b0a4043fa07
+│   │   │   │   ├── 71442c615e2217a8668b5e8f13607886a6b4a1c1
+│   │   │   │   ├── 76a0590f99386af475776bc1bc2a52cba5b0828f
+│   │   │   │   ├── 8ab05718a0dcde452fd74c643986a01dd857e38c
+│   │   │   │   ├── 8b383467abbc51e1babadd4d1f695819e1d1f957
+│   │   │   │   ├── 9cd3c92372d3c607695a18a1e1d8092f8f98bcbc
+│   │   │   │   ├── 9de2a00cf6ba22dcff53f78f6caca47d9cf2a5c2
+│   │   │   │   ├── a51f9c0815a4d866a5286e32f8ccf032d64aab2b
+│   │   │   │   ├── ad2ebce29596ac37994dd4351b5374589878c2f7
+│   │   │   │   ├── b8c1b63e4d287b9441f962be4513c854887796d1
+│   │   │   │   ├── ba59a12a2d2c2d936b700d035fc51c4d4421e9cc
+│   │   │   │   ├── be5ef71b3ed43824656039a96345f8cb1f31ba26
+│   │   │   │   ├── bfd12e764e5a0d2b7a112d2f9ae97a116dc47b14
+│   │   │   │   ├── c32259548fcb299420ec582cbbdce166e0ca18cb
+│   │   │   │   ├── c3afd86e01b8d41befe3372a233e8e779c6ee6d2
+│   │   │   │   ├── c531e831c45510448d596421f80885d4fa56e550
+│   │   │   │   ├── c6b405c864c950186564249dcb70fa3572258494
+│   │   │   │   ├── c739c930ab0efad38d0a071dce84e6067f27f811
+│   │   │   │   ├── d0939f90b0cc1b27121c94429d44402023ed42ac
+│   │   │   │   ├── d80e09d37d6172319657743e3deec4c09697fdf8
+│   │   │   │   ├── e1717d3500873aabbc9958cf86257c7c48a9c6d9
+│   │   │   │   ├── e47252d8a4082d056266926721cebdac896f0c44
+│   │   │   │   ├── e695765e2a5c6a5ef68d16e9cf6f22b452838e56
+│   │   │   │   ├── e93419e05f41365d2a6bf6de548255749c9d737e
+│   │   │   │   ├── eeccaa25004f905f4e1317f093d4f23eeb90fa46
+│   │   │   │   ├── f2c8f41017f2d558b86882b32cc3a1a7a7f4e5d9
+│   │   │   │   ├── f548b9a49f2169171ace687393435225afb16397
+│   │   │   │   └── fb74db541879bf5e78d73b2282bb5cd0948b046b
+│   │   │   └── dispatch_deterministic
+│   │   │       ├── 00418e3fa87b900a7c19aaff312d363c8f1d446a
+│   │   │       ├── 0429d4429d931af7d01b97bbe454a94d666b9786
+│   │   │       ├── 053519428a67918192a13fc41899aff51d70766d
+│   │   │       ├── 10bc63026b67a2b68723af127a33e7c5be65742e
+│   │   │       ├── 22c7b58ad4298921c43959d91c1d5592d07b952e
+│   │   │       ├── 2356145c8b6033621b77a4326b22a05012098261
+│   │   │       ├── 253b38851d4dd39db287ca28d986aba458836cd2
+│   │   │       ├── 2b7632006e1f2da61df33ee9a9f75431573ff1de
+│   │   │       ├── 2eae5bba4e4879c09bb85fcc7a7918fc71141501
+│   │   │       ├── 3650d6afa082fffad57a7d36f862efc6d2f93f5a
+│   │   │       ├── 3c872a08f6ef47f10b8acae021c513425f6ce89d
+│   │   │       ├── 40afa7c84170c8e1a5182ff0ad42cd86f52bc3e3
+│   │   │       ├── 4409917d7ed8dca27a04ed00df48f782a6437118
+│   │   │       ├── 4c21d96edb7a572bf71033378844aa111a43b921
+│   │   │       ├── 4e91db2a9dfeb4d4b0765ab72de651e3caca926e
+│   │   │       ├── 502736a59d70b38d2638eac1ebc1e30466f44e39
+│   │   │       ├── 50bdf364c1e35c8d79c4df3d56cb0b51705cb92f
+│   │   │       ├── 5209dcacd63cbf404b80a411585ede9d8b0af81a
+│   │   │       ├── 5a15046b8fd0af62f2e4e8dc3dfecb2348c5f2fa
+│   │   │       ├── 5a92346f3e1d64bd27647ed59bc0534a2cdbab34
+│   │   │       ├── 5eb55aca13f4d9d116cce05241d482670f6814d5
+│   │   │       ├── 5fa746ca87bf951b77f3c482c5b9baac3ade22fb
+│   │   │       ├── 628fee00a1ccbc732db1350401ba2d36fd16684a
+│   │   │       ├── 629fcab2d7389b94b37eac4d71a267c5971a3fbf
+│   │   │       ├── 6c32be495a44243d5cc9573d8455dd78cd84b80c
+│   │   │       ├── 6eaa1ab7107f1e059bab45a4307cec5f64c2b1ff
+│   │   │       ├── 71442c615e2217a8668b5e8f13607886a6b4a1c1
+│   │   │       ├── 71aa908aff1548c8c6cdecf63545261584738a25
+│   │   │       ├── 7c8585b1328fc1254d9b15e1f3238ff57fdcbfa5
+│   │   │       ├── 8059e7ad281dcdbf715c1f419aeb72db06c92d3b
+│   │   │       ├── 8115864f2990a8ccd96ab1f9d970549364419670
+│   │   │       ├── 86ab01d0a5eb6c1ae332483c2172caf9b506ffe7
+│   │   │       ├── 8c9ac5c2468338193d0dc57d56bf91d897aad290
+│   │   │       ├── 8f64a028d7017d459e5cbdcd1888b3ec4d644ba7
+│   │   │       ├── 9d03fe3f86386a332d957bb0f4380902df5e957f
+│   │   │       ├── a2e8fef7cefe94069527097e83248f316190f04b
+│   │   │       ├── a385465fcd336fe54a6f1de67b60fdcbd40bc54d
+│   │   │       ├── a51f9c0815a4d866a5286e32f8ccf032d64aab2b
+│   │   │       ├── b774da56ff734504dd555580ace16aec4196a550
+│   │   │       ├── ba4a47863e99bc5bbe7ab17689896eda9ca54fdf
+│   │   │       ├── bab5eb295b8a02c8f341e6c470d0bdfbf6fc6812
+│   │   │       ├── bde6cecb6c100e036e84f678824265c9f43f61f0
+│   │   │       ├── c32259548fcb299420ec582cbbdce166e0ca18cb
+│   │   │       ├── c531e831c45510448d596421f80885d4fa56e550
+│   │   │       ├── c5766cf96ebc3efb01b92fce146ce50915f2a483
+│   │   │       ├── c896fceb7c9396d25065a24193dbec9515b9b8fc
+│   │   │       ├── ca266956659ef0fc3ee29663d1bbade83f9d3a55
+│   │   │       ├── cacaf284112f7f5e8e5f69c67e5bc58f71dddacc
+│   │   │       ├── ccff44cdc02f5b76ce2d5db2e5e87a628c6a85ac
+│   │   │       ├── cda0c9c0c307d13c51beb7ee81f7a709364508cc
+│   │   │       ├── d0939f90b0cc1b27121c94429d44402023ed42ac
+│   │   │       ├── d1de88b9cd6c293ffc236dedc0f2f23c1f0c5df1
+│   │   │       ├── d3f40bc8b3ab3cabae5878bebb9184026d5ae4c3
+│   │   │       ├── d40e7337e9c2ad20a2429a17829a1fe9b38b241e
+│   │   │       ├── d66f6c5c323a3a3cbefb1d02c154bc06bf91a5a1
+│   │   │       ├── e47252d8a4082d056266926721cebdac896f0c44
+│   │   │       ├── e6d529af9a368a4b4771aa32c1ec135c27203b40
+│   │   │       ├── e94c081fb9dfe280362b3413e3c2fee814f90418
+│   │   │       ├── ef75a9bdf111fa72c177f3821924140de1baa5a0
+│   │   │       ├── f1689928559af60b7dd211da8a4d8b620f1ace30
+│   │   │       ├── f2c8f41017f2d558b86882b32cc3a1a7a7f4e5d9
+│   │   │       ├── f2d5b1f74741ddb2fb9e68755c07595dfededc7f
+│   │   │       └── fa4385c5b1ca70d454976b08f2240c8112c840f1
+│   │   └── fuzz_targets
+│   │       ├── abi_decode.rs
+│   │       └── dispatch_deterministic.rs
+│   ├── klc-rb
+│   │   ├── BUILD-SUMMARY.md
+│   │   ├── build-wasm.sh
+│   │   ├── Cargo.toml
+│   │   ├── package.json
+│   │   ├── README-WASM.md
+│   │   ├── README.md
+│   │   └── src
+│   │       ├── algorithms
+│   │       │   ├── dilithium
+│   │       │   │   ├── clean.rs
+│   │       │   │   ├── mod.rs
+│   │       │   │   ├── utils.rs
+│   │       │   │   └── wasm_bindings.rs
+│   │       │   ├── kyber
+│   │       │   │   ├── clean.rs
+│   │       │   │   ├── mod.rs
+│   │       │   │   ├── traits.rs
+│   │       │   │   ├── utils.rs
+│   │       │   │   └── wasm_bindings.rs
+│   │       │   └── mod.rs
+│   │       ├── hash.rs
+│   │       ├── key_lifecycle_manager_wasm.rs
+│   │       ├── key_lifecycle_manager.rs
+│   │       ├── lib.rs
+│   │       ├── quantum_randomness_beacon.rs
+│   │       └── utils.rs
+│   ├── LICENSE
+│   ├── package-lock.json
+│   ├── pqcore
+│   │   ├── .astylerc
+│   │   ├── .clang-tidy
+│   │   ├── .gitignore
+│   │   ├── common
+│   │   │   ├── aes.c
+│   │   │   ├── aes.h
+│   │   │   ├── compat.h
+│   │   │   ├── crypto_declassify.h
+│   │   │   ├── fips202.c
+│   │   │   ├── fips202.h
+│   │   │   ├── keccak2x
+│   │   │   │   ├── feat.S
+│   │   │   │   ├── fips202x2.c
+│   │   │   │   └── fips202x2.h
+│   │   │   ├── keccak4x
+│   │   │   │   ├── align.h
+│   │   │   │   ├── brg_endian.h
+│   │   │   │   ├── KeccakP-1600-times4-SIMD256.c
+│   │   │   │   ├── KeccakP-1600-times4-SnP.h
+│   │   │   │   ├── KeccakP-1600-unrolling.macros
+│   │   │   │   ├── Makefile
+│   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   └── SIMD256-config.h
+│   │   │   ├── nistseedexpander.c
+│   │   │   ├── nistseedexpander.h
+│   │   │   ├── randombytes.c
+│   │   │   ├── randombytes.h
+│   │   │   ├── sha2.c
+│   │   │   ├── sha2.h
+│   │   │   ├── sp800-185.c
+│   │   │   └── sp800-185.h
+│   │   ├── crypto_kem
+│   │   │   ├── hqc-128
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── code.c
+│   │   │   │   │   ├── code.h
+│   │   │   │   │   ├── domains.h
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fft.h
+│   │   │   │   │   ├── gf.c
+│   │   │   │   │   ├── gf.h
+│   │   │   │   │   ├── gf2x.c
+│   │   │   │   │   ├── gf2x.h
+│   │   │   │   │   ├── hqc.c
+│   │   │   │   │   ├── hqc.h
+│   │   │   │   │   ├── kem.c
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── parameters.h
+│   │   │   │   │   ├── parsing.c
+│   │   │   │   │   ├── parsing.h
+│   │   │   │   │   ├── reed_muller.c
+│   │   │   │   │   ├── reed_muller.h
+│   │   │   │   │   ├── reed_solomon.c
+│   │   │   │   │   ├── reed_solomon.h
+│   │   │   │   │   ├── shake_ds.c
+│   │   │   │   │   ├── shake_ds.h
+│   │   │   │   │   ├── shake_prng.c
+│   │   │   │   │   ├── shake_prng.h
+│   │   │   │   │   ├── vector.c
+│   │   │   │   │   └── vector.h
+│   │   │   │   └── META.yml
+│   │   │   ├── hqc-192
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── code.c
+│   │   │   │   │   ├── code.h
+│   │   │   │   │   ├── domains.h
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fft.h
+│   │   │   │   │   ├── gf.c
+│   │   │   │   │   ├── gf.h
+│   │   │   │   │   ├── gf2x.c
+│   │   │   │   │   ├── gf2x.h
+│   │   │   │   │   ├── hqc.c
+│   │   │   │   │   ├── hqc.h
+│   │   │   │   │   ├── kem.c
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── parameters.h
+│   │   │   │   │   ├── parsing.c
+│   │   │   │   │   ├── parsing.h
+│   │   │   │   │   ├── reed_muller.c
+│   │   │   │   │   ├── reed_muller.h
+│   │   │   │   │   ├── reed_solomon.c
+│   │   │   │   │   ├── reed_solomon.h
+│   │   │   │   │   ├── shake_ds.c
+│   │   │   │   │   ├── shake_ds.h
+│   │   │   │   │   ├── shake_prng.c
+│   │   │   │   │   ├── shake_prng.h
+│   │   │   │   │   ├── vector.c
+│   │   │   │   │   └── vector.h
+│   │   │   │   └── META.yml
+│   │   │   ├── hqc-256
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── code.c
+│   │   │   │   │   ├── code.h
+│   │   │   │   │   ├── domains.h
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fft.h
+│   │   │   │   │   ├── gf.c
+│   │   │   │   │   ├── gf.h
+│   │   │   │   │   ├── gf2x.c
+│   │   │   │   │   ├── gf2x.h
+│   │   │   │   │   ├── hqc.c
+│   │   │   │   │   ├── hqc.h
+│   │   │   │   │   ├── kem.c
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── parameters.h
+│   │   │   │   │   ├── parsing.c
+│   │   │   │   │   ├── parsing.h
+│   │   │   │   │   ├── reed_muller.c
+│   │   │   │   │   ├── reed_muller.h
+│   │   │   │   │   ├── reed_solomon.c
+│   │   │   │   │   ├── reed_solomon.h
+│   │   │   │   │   ├── shake_ds.c
+│   │   │   │   │   ├── shake_ds.h
+│   │   │   │   │   ├── shake_prng.c
+│   │   │   │   │   ├── shake_prng.h
+│   │   │   │   │   ├── vector.c
+│   │   │   │   │   └── vector.h
+│   │   │   │   └── META.yml
+│   │   │   ├── mceliece348864
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── aes256ctr.c
+│   │   │   │   │   ├── aes256ctr.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── architectures
+│   │   │   │   │   ├── benes.c
+│   │   │   │   │   ├── benes.h
+│   │   │   │   │   ├── bm.c
+│   │   │   │   │   ├── bm.h
+│   │   │   │   │   ├── consts.data
+│   │   │   │   │   ├── consts.S
+│   │   │   │   │   ├── controlbits.c
+│   │   │   │   │   ├── controlbits.h
+│   │   │   │   │   ├── crypto_hash.h
+│   │   │   │   │   ├── crypto_int16.c
+│   │   │   │   │   ├── crypto_int16.h
+│   │   │   │   │   ├── crypto_int32.c
+│   │   │   │   │   ├── crypto_int32.h
+│   │   │   │   │   ├── crypto_kem.h
+│   │   │   │   │   ├── crypto_uint16.c
+│   │   │   │   │   ├── crypto_uint16.h
+│   │   │   │   │   ├── crypto_uint32.c
+│   │   │   │   │   ├── crypto_uint32.h
+│   │   │   │   │   ├── crypto_uint64.c
+│   │   │   │   │   ├── crypto_uint64.h
+│   │   │   │   │   ├── decrypt.c
+│   │   │   │   │   ├── decrypt.h
+│   │   │   │   │   ├── encrypt.c
+│   │   │   │   │   ├── encrypt.h
+│   │   │   │   │   ├── fft_tr.c
+│   │   │   │   │   ├── fft_tr.h
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fft.h
+│   │   │   │   │   ├── gf.c
+│   │   │   │   │   ├── gf.h
+│   │   │   │   │   ├── int32_sort.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── namespace.h
+│   │   │   │   │   ├── operations.c
+│   │   │   │   │   ├── operations.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── pk_gen.c
+│   │   │   │   │   ├── pk_gen.h
+│   │   │   │   │   ├── powers.data
+│   │   │   │   │   ├── scalars_2x.data
+│   │   │   │   │   ├── scalars.data
+│   │   │   │   │   ├── sk_gen.c
+│   │   │   │   │   ├── sk_gen.h
+│   │   │   │   │   ├── syndrome_asm.S
+│   │   │   │   │   ├── transpose_64x256_sp_asm.S
+│   │   │   │   │   ├── transpose_64x64_asm.S
+│   │   │   │   │   ├── transpose.h
+│   │   │   │   │   ├── uint64_sort.h
+│   │   │   │   │   ├── update_asm.S
+│   │   │   │   │   ├── util.h
+│   │   │   │   │   ├── vec_mul_asm.S
+│   │   │   │   │   ├── vec_mul_sp_asm.S
+│   │   │   │   │   ├── vec_reduce_asm.S
+│   │   │   │   │   ├── vec.c
+│   │   │   │   │   ├── vec.h
+│   │   │   │   │   ├── vec128_mul_asm.S
+│   │   │   │   │   ├── vec128.h
+│   │   │   │   │   ├── vec256_mul_asm.S
+│   │   │   │   │   ├── vec256.c
+│   │   │   │   │   └── vec256.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── aes256ctr.c
+│   │   │   │   │   ├── aes256ctr.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── benes.c
+│   │   │   │   │   ├── benes.h
+│   │   │   │   │   ├── bm.c
+│   │   │   │   │   ├── bm.h
+│   │   │   │   │   ├── controlbits.c
+│   │   │   │   │   ├── controlbits.h
+│   │   │   │   │   ├── crypto_hash.h
+│   │   │   │   │   ├── crypto_int16.c
+│   │   │   │   │   ├── crypto_int16.h
+│   │   │   │   │   ├── crypto_int32.c
+│   │   │   │   │   ├── crypto_int32.h
+│   │   │   │   │   ├── crypto_kem.h
+│   │   │   │   │   ├── crypto_uint16.c
+│   │   │   │   │   ├── crypto_uint16.h
+│   │   │   │   │   ├── crypto_uint32.c
+│   │   │   │   │   ├── crypto_uint32.h
+│   │   │   │   │   ├── crypto_uint64.c
+│   │   │   │   │   ├── crypto_uint64.h
+│   │   │   │   │   ├── decrypt.c
+│   │   │   │   │   ├── decrypt.h
+│   │   │   │   │   ├── encrypt.c
+│   │   │   │   │   ├── encrypt.h
+│   │   │   │   │   ├── gf.c
+│   │   │   │   │   ├── gf.h
+│   │   │   │   │   ├── int32_sort.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── namespace.h
+│   │   │   │   │   ├── operations.c
+│   │   │   │   │   ├── operations.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── pk_gen.c
+│   │   │   │   │   ├── pk_gen.h
+│   │   │   │   │   ├── root.c
+│   │   │   │   │   ├── root.h
+│   │   │   │   │   ├── sk_gen.c
+│   │   │   │   │   ├── sk_gen.h
+│   │   │   │   │   ├── synd.c
+│   │   │   │   │   ├── synd.h
+│   │   │   │   │   ├── transpose.c
+│   │   │   │   │   ├── transpose.h
+│   │   │   │   │   ├── uint64_sort.h
+│   │   │   │   │   ├── util.c
+│   │   │   │   │   └── util.h
+│   │   │   │   └── META.yml
+│   │   │   ├── mceliece348864f
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── aes256ctr.c
+│   │   │   │   │   ├── aes256ctr.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── architectures
+│   │   │   │   │   ├── benes.c
+│   │   │   │   │   ├── benes.h
+│   │   │   │   │   ├── bm.c
+│   │   │   │   │   ├── bm.h
+│   │   │   │   │   ├── consts.data
+│   │   │   │   │   ├── consts.S
+│   │   │   │   │   ├── controlbits.c
+│   │   │   │   │   ├── controlbits.h
+│   │   │   │   │   ├── crypto_hash.h
+│   │   │   │   │   ├── crypto_int16.c
+│   │   │   │   │   ├── crypto_int16.h
+│   │   │   │   │   ├── crypto_int32.c
+│   │   │   │   │   ├── crypto_int32.h
+│   │   │   │   │   ├── crypto_kem.h
+│   │   │   │   │   ├── crypto_uint16.c
+│   │   │   │   │   ├── crypto_uint16.h
+│   │   │   │   │   ├── crypto_uint32.c
+│   │   │   │   │   ├── crypto_uint32.h
+│   │   │   │   │   ├── crypto_uint64.c
+│   │   │   │   │   ├── crypto_uint64.h
+│   │   │   │   │   ├── decrypt.c
+│   │   │   │   │   ├── decrypt.h
+│   │   │   │   │   ├── encrypt.c
+│   │   │   │   │   ├── encrypt.h
+│   │   │   │   │   ├── fft_tr.c
+│   │   │   │   │   ├── fft_tr.h
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fft.h
+│   │   │   │   │   ├── gf.c
+│   │   │   │   │   ├── gf.h
+│   │   │   │   │   ├── int32_sort.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── namespace.h
+│   │   │   │   │   ├── operations.c
+│   │   │   │   │   ├── operations.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── pk_gen.c
+│   │   │   │   │   ├── pk_gen.h
+│   │   │   │   │   ├── powers.data
+│   │   │   │   │   ├── scalars_2x.data
+│   │   │   │   │   ├── scalars.data
+│   │   │   │   │   ├── sk_gen.c
+│   │   │   │   │   ├── sk_gen.h
+│   │   │   │   │   ├── syndrome_asm.S
+│   │   │   │   │   ├── transpose_64x256_sp_asm.S
+│   │   │   │   │   ├── transpose_64x64_asm.S
+│   │   │   │   │   ├── transpose.h
+│   │   │   │   │   ├── uint64_sort.h
+│   │   │   │   │   ├── update_asm.S
+│   │   │   │   │   ├── util.h
+│   │   │   │   │   ├── vec_mul_asm.S
+│   │   │   │   │   ├── vec_mul_sp_asm.S
+│   │   │   │   │   ├── vec_reduce_asm.S
+│   │   │   │   │   ├── vec.c
+│   │   │   │   │   ├── vec.h
+│   │   │   │   │   ├── vec128_mul_asm.S
+│   │   │   │   │   ├── vec128.h
+│   │   │   │   │   ├── vec256_mul_asm.S
+│   │   │   │   │   ├── vec256.c
+│   │   │   │   │   └── vec256.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── aes256ctr.c
+│   │   │   │   │   ├── aes256ctr.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── benes.c
+│   │   │   │   │   ├── benes.h
+│   │   │   │   │   ├── bm.c
+│   │   │   │   │   ├── bm.h
+│   │   │   │   │   ├── controlbits.c
+│   │   │   │   │   ├── controlbits.h
+│   │   │   │   │   ├── crypto_hash.h
+│   │   │   │   │   ├── crypto_int16.c
+│   │   │   │   │   ├── crypto_int16.h
+│   │   │   │   │   ├── crypto_int32.c
+│   │   │   │   │   ├── crypto_int32.h
+│   │   │   │   │   ├── crypto_kem.h
+│   │   │   │   │   ├── crypto_uint16.c
+│   │   │   │   │   ├── crypto_uint16.h
+│   │   │   │   │   ├── crypto_uint32.c
+│   │   │   │   │   ├── crypto_uint32.h
+│   │   │   │   │   ├── crypto_uint64.c
+│   │   │   │   │   ├── crypto_uint64.h
+│   │   │   │   │   ├── decrypt.c
+│   │   │   │   │   ├── decrypt.h
+│   │   │   │   │   ├── encrypt.c
+│   │   │   │   │   ├── encrypt.h
+│   │   │   │   │   ├── gf.c
+│   │   │   │   │   ├── gf.h
+│   │   │   │   │   ├── int32_sort.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── namespace.h
+│   │   │   │   │   ├── operations.c
+│   │   │   │   │   ├── operations.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── pk_gen.c
+│   │   │   │   │   ├── pk_gen.h
+│   │   │   │   │   ├── root.c
+│   │   │   │   │   ├── root.h
+│   │   │   │   │   ├── sk_gen.c
+│   │   │   │   │   ├── sk_gen.h
+│   │   │   │   │   ├── synd.c
+│   │   │   │   │   ├── synd.h
+│   │   │   │   │   ├── transpose.c
+│   │   │   │   │   ├── transpose.h
+│   │   │   │   │   ├── uint64_sort.h
+│   │   │   │   │   ├── util.c
+│   │   │   │   │   └── util.h
+│   │   │   │   └── META.yml
+│   │   │   ├── mceliece460896
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── aes256ctr.c
+│   │   │   │   │   ├── aes256ctr.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── architectures
+│   │   │   │   │   ├── benes.c
+│   │   │   │   │   ├── benes.h
+│   │   │   │   │   ├── bm.c
+│   │   │   │   │   ├── bm.h
+│   │   │   │   │   ├── consts.data
+│   │   │   │   │   ├── consts.S
+│   │   │   │   │   ├── controlbits.c
+│   │   │   │   │   ├── controlbits.h
+│   │   │   │   │   ├── crypto_hash.h
+│   │   │   │   │   ├── crypto_int16.c
+│   │   │   │   │   ├── crypto_int16.h
+│   │   │   │   │   ├── crypto_int32.c
+│   │   │   │   │   ├── crypto_int32.h
+│   │   │   │   │   ├── crypto_kem.h
+│   │   │   │   │   ├── crypto_uint16.c
+│   │   │   │   │   ├── crypto_uint16.h
+│   │   │   │   │   ├── crypto_uint32.c
+│   │   │   │   │   ├── crypto_uint32.h
+│   │   │   │   │   ├── crypto_uint64.c
+│   │   │   │   │   ├── crypto_uint64.h
+│   │   │   │   │   ├── decrypt.c
+│   │   │   │   │   ├── decrypt.h
+│   │   │   │   │   ├── encrypt.c
+│   │   │   │   │   ├── encrypt.h
+│   │   │   │   │   ├── fft_tr.c
+│   │   │   │   │   ├── fft_tr.h
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fft.h
+│   │   │   │   │   ├── gf.c
+│   │   │   │   │   ├── gf.h
+│   │   │   │   │   ├── int32_sort.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── namespace.h
+│   │   │   │   │   ├── operations.c
+│   │   │   │   │   ├── operations.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── pk_gen.c
+│   │   │   │   │   ├── pk_gen.h
+│   │   │   │   │   ├── scalars_2x.data
+│   │   │   │   │   ├── scalars_4x.data
+│   │   │   │   │   ├── sk_gen.c
+│   │   │   │   │   ├── sk_gen.h
+│   │   │   │   │   ├── syndrome_asm.S
+│   │   │   │   │   ├── transpose_64x128_sp_asm.S
+│   │   │   │   │   ├── transpose_64x256_sp_asm.S
+│   │   │   │   │   ├── transpose_64x64_asm.S
+│   │   │   │   │   ├── transpose.h
+│   │   │   │   │   ├── uint64_sort.h
+│   │   │   │   │   ├── update_asm.S
+│   │   │   │   │   ├── util.h
+│   │   │   │   │   ├── vec_reduce_asm.S
+│   │   │   │   │   ├── vec128_mul_asm.S
+│   │   │   │   │   ├── vec128.c
+│   │   │   │   │   ├── vec128.h
+│   │   │   │   │   ├── vec256_ama_asm.S
+│   │   │   │   │   ├── vec256_maa_asm.S
+│   │   │   │   │   ├── vec256_mul_asm.S
+│   │   │   │   │   ├── vec256.c
+│   │   │   │   │   └── vec256.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── aes256ctr.c
+│   │   │   │   │   ├── aes256ctr.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── benes.c
+│   │   │   │   │   ├── benes.h
+│   │   │   │   │   ├── bm.c
+│   │   │   │   │   ├── bm.h
+│   │   │   │   │   ├── controlbits.c
+│   │   │   │   │   ├── controlbits.h
+│   │   │   │   │   ├── crypto_hash.h
+│   │   │   │   │   ├── crypto_int16.c
+│   │   │   │   │   ├── crypto_int16.h
+│   │   │   │   │   ├── crypto_int32.c
+│   │   │   │   │   ├── crypto_int32.h
+│   │   │   │   │   ├── crypto_kem.h
+│   │   │   │   │   ├── crypto_uint16.c
+│   │   │   │   │   ├── crypto_uint16.h
+│   │   │   │   │   ├── crypto_uint32.c
+│   │   │   │   │   ├── crypto_uint32.h
+│   │   │   │   │   ├── crypto_uint64.c
+│   │   │   │   │   ├── crypto_uint64.h
+│   │   │   │   │   ├── decrypt.c
+│   │   │   │   │   ├── decrypt.h
+│   │   │   │   │   ├── encrypt.c
+│   │   │   │   │   ├── encrypt.h
+│   │   │   │   │   ├── gf.c
+│   │   │   │   │   ├── gf.h
+│   │   │   │   │   ├── int32_sort.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── namespace.h
+│   │   │   │   │   ├── operations.c
+│   │   │   │   │   ├── operations.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── pk_gen.c
+│   │   │   │   │   ├── pk_gen.h
+│   │   │   │   │   ├── root.c
+│   │   │   │   │   ├── root.h
+│   │   │   │   │   ├── sk_gen.c
+│   │   │   │   │   ├── sk_gen.h
+│   │   │   │   │   ├── synd.c
+│   │   │   │   │   ├── synd.h
+│   │   │   │   │   ├── transpose.c
+│   │   │   │   │   ├── transpose.h
+│   │   │   │   │   ├── uint64_sort.h
+│   │   │   │   │   ├── util.c
+│   │   │   │   │   └── util.h
+│   │   │   │   └── META.yml
+│   │   │   ├── mceliece460896f
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── aes256ctr.c
+│   │   │   │   │   ├── aes256ctr.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── architectures
+│   │   │   │   │   ├── benes.c
+│   │   │   │   │   ├── benes.h
+│   │   │   │   │   ├── bm.c
+│   │   │   │   │   ├── bm.h
+│   │   │   │   │   ├── consts.data
+│   │   │   │   │   ├── consts.S
+│   │   │   │   │   ├── controlbits.c
+│   │   │   │   │   ├── controlbits.h
+│   │   │   │   │   ├── crypto_hash.h
+│   │   │   │   │   ├── crypto_int16.c
+│   │   │   │   │   ├── crypto_int16.h
+│   │   │   │   │   ├── crypto_int32.c
+│   │   │   │   │   ├── crypto_int32.h
+│   │   │   │   │   ├── crypto_kem.h
+│   │   │   │   │   ├── crypto_uint16.c
+│   │   │   │   │   ├── crypto_uint16.h
+│   │   │   │   │   ├── crypto_uint32.c
+│   │   │   │   │   ├── crypto_uint32.h
+│   │   │   │   │   ├── crypto_uint64.c
+│   │   │   │   │   ├── crypto_uint64.h
+│   │   │   │   │   ├── decrypt.c
+│   │   │   │   │   ├── decrypt.h
+│   │   │   │   │   ├── encrypt.c
+│   │   │   │   │   ├── encrypt.h
+│   │   │   │   │   ├── fft_tr.c
+│   │   │   │   │   ├── fft_tr.h
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fft.h
+│   │   │   │   │   ├── gf.c
+│   │   │   │   │   ├── gf.h
+│   │   │   │   │   ├── int32_sort.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── namespace.h
+│   │   │   │   │   ├── operations.c
+│   │   │   │   │   ├── operations.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── pk_gen.c
+│   │   │   │   │   ├── pk_gen.h
+│   │   │   │   │   ├── scalars_2x.data
+│   │   │   │   │   ├── scalars_4x.data
+│   │   │   │   │   ├── sk_gen.c
+│   │   │   │   │   ├── sk_gen.h
+│   │   │   │   │   ├── syndrome_asm.S
+│   │   │   │   │   ├── transpose_64x128_sp_asm.S
+│   │   │   │   │   ├── transpose_64x256_sp_asm.S
+│   │   │   │   │   ├── transpose_64x64_asm.S
+│   │   │   │   │   ├── transpose.h
+│   │   │   │   │   ├── uint64_sort.h
+│   │   │   │   │   ├── update_asm.S
+│   │   │   │   │   ├── util.h
+│   │   │   │   │   ├── vec_reduce_asm.S
+│   │   │   │   │   ├── vec128_mul_asm.S
+│   │   │   │   │   ├── vec128.c
+│   │   │   │   │   ├── vec128.h
+│   │   │   │   │   ├── vec256_ama_asm.S
+│   │   │   │   │   ├── vec256_maa_asm.S
+│   │   │   │   │   ├── vec256_mul_asm.S
+│   │   │   │   │   ├── vec256.c
+│   │   │   │   │   └── vec256.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── aes256ctr.c
+│   │   │   │   │   ├── aes256ctr.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── benes.c
+│   │   │   │   │   ├── benes.h
+│   │   │   │   │   ├── bm.c
+│   │   │   │   │   ├── bm.h
+│   │   │   │   │   ├── controlbits.c
+│   │   │   │   │   ├── controlbits.h
+│   │   │   │   │   ├── crypto_hash.h
+│   │   │   │   │   ├── crypto_int16.c
+│   │   │   │   │   ├── crypto_int16.h
+│   │   │   │   │   ├── crypto_int32.c
+│   │   │   │   │   ├── crypto_int32.h
+│   │   │   │   │   ├── crypto_kem.h
+│   │   │   │   │   ├── crypto_uint16.c
+│   │   │   │   │   ├── crypto_uint16.h
+│   │   │   │   │   ├── crypto_uint32.c
+│   │   │   │   │   ├── crypto_uint32.h
+│   │   │   │   │   ├── crypto_uint64.c
+│   │   │   │   │   ├── crypto_uint64.h
+│   │   │   │   │   ├── decrypt.c
+│   │   │   │   │   ├── decrypt.h
+│   │   │   │   │   ├── encrypt.c
+│   │   │   │   │   ├── encrypt.h
+│   │   │   │   │   ├── gf.c
+│   │   │   │   │   ├── gf.h
+│   │   │   │   │   ├── int32_sort.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── namespace.h
+│   │   │   │   │   ├── operations.c
+│   │   │   │   │   ├── operations.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── pk_gen.c
+│   │   │   │   │   ├── pk_gen.h
+│   │   │   │   │   ├── root.c
+│   │   │   │   │   ├── root.h
+│   │   │   │   │   ├── sk_gen.c
+│   │   │   │   │   ├── sk_gen.h
+│   │   │   │   │   ├── synd.c
+│   │   │   │   │   ├── synd.h
+│   │   │   │   │   ├── transpose.c
+│   │   │   │   │   ├── transpose.h
+│   │   │   │   │   ├── uint64_sort.h
+│   │   │   │   │   ├── util.c
+│   │   │   │   │   └── util.h
+│   │   │   │   └── META.yml
+│   │   │   ├── mceliece6688128
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── aes256ctr.c
+│   │   │   │   │   ├── aes256ctr.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── architectures
+│   │   │   │   │   ├── benes.c
+│   │   │   │   │   ├── benes.h
+│   │   │   │   │   ├── bm.c
+│   │   │   │   │   ├── bm.h
+│   │   │   │   │   ├── consts.data
+│   │   │   │   │   ├── consts.S
+│   │   │   │   │   ├── controlbits.c
+│   │   │   │   │   ├── controlbits.h
+│   │   │   │   │   ├── crypto_hash.h
+│   │   │   │   │   ├── crypto_int16.c
+│   │   │   │   │   ├── crypto_int16.h
+│   │   │   │   │   ├── crypto_int32.c
+│   │   │   │   │   ├── crypto_int32.h
+│   │   │   │   │   ├── crypto_kem.h
+│   │   │   │   │   ├── crypto_uint16.c
+│   │   │   │   │   ├── crypto_uint16.h
+│   │   │   │   │   ├── crypto_uint32.c
+│   │   │   │   │   ├── crypto_uint32.h
+│   │   │   │   │   ├── crypto_uint64.c
+│   │   │   │   │   ├── crypto_uint64.h
+│   │   │   │   │   ├── decrypt.c
+│   │   │   │   │   ├── decrypt.h
+│   │   │   │   │   ├── encrypt.c
+│   │   │   │   │   ├── encrypt.h
+│   │   │   │   │   ├── fft_tr.c
+│   │   │   │   │   ├── fft_tr.h
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fft.h
+│   │   │   │   │   ├── gf.c
+│   │   │   │   │   ├── gf.h
+│   │   │   │   │   ├── int32_sort.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── namespace.h
+│   │   │   │   │   ├── operations.c
+│   │   │   │   │   ├── operations.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── pk_gen.c
+│   │   │   │   │   ├── pk_gen.h
+│   │   │   │   │   ├── powers.data
+│   │   │   │   │   ├── scalars_2x.data
+│   │   │   │   │   ├── scalars_4x.data
+│   │   │   │   │   ├── sk_gen.c
+│   │   │   │   │   ├── sk_gen.h
+│   │   │   │   │   ├── syndrome_asm.S
+│   │   │   │   │   ├── transpose_64x128_sp_asm.S
+│   │   │   │   │   ├── transpose_64x256_sp_asm.S
+│   │   │   │   │   ├── transpose_64x64_asm.S
+│   │   │   │   │   ├── transpose.h
+│   │   │   │   │   ├── uint64_sort.h
+│   │   │   │   │   ├── update_asm.S
+│   │   │   │   │   ├── util.h
+│   │   │   │   │   ├── vec_reduce_asm.S
+│   │   │   │   │   ├── vec128_mul_asm.S
+│   │   │   │   │   ├── vec128.c
+│   │   │   │   │   ├── vec128.h
+│   │   │   │   │   ├── vec256_ama_asm.S
+│   │   │   │   │   ├── vec256_maa_asm.S
+│   │   │   │   │   ├── vec256_mul_asm.S
+│   │   │   │   │   ├── vec256.c
+│   │   │   │   │   └── vec256.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── aes256ctr.c
+│   │   │   │   │   ├── aes256ctr.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── benes.c
+│   │   │   │   │   ├── benes.h
+│   │   │   │   │   ├── bm.c
+│   │   │   │   │   ├── bm.h
+│   │   │   │   │   ├── controlbits.c
+│   │   │   │   │   ├── controlbits.h
+│   │   │   │   │   ├── crypto_hash.h
+│   │   │   │   │   ├── crypto_int16.c
+│   │   │   │   │   ├── crypto_int16.h
+│   │   │   │   │   ├── crypto_int32.c
+│   │   │   │   │   ├── crypto_int32.h
+│   │   │   │   │   ├── crypto_kem.h
+│   │   │   │   │   ├── crypto_uint16.c
+│   │   │   │   │   ├── crypto_uint16.h
+│   │   │   │   │   ├── crypto_uint32.c
+│   │   │   │   │   ├── crypto_uint32.h
+│   │   │   │   │   ├── crypto_uint64.c
+│   │   │   │   │   ├── crypto_uint64.h
+│   │   │   │   │   ├── decrypt.c
+│   │   │   │   │   ├── decrypt.h
+│   │   │   │   │   ├── encrypt.c
+│   │   │   │   │   ├── encrypt.h
+│   │   │   │   │   ├── gf.c
+│   │   │   │   │   ├── gf.h
+│   │   │   │   │   ├── int32_sort.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── namespace.h
+│   │   │   │   │   ├── operations.c
+│   │   │   │   │   ├── operations.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── pk_gen.c
+│   │   │   │   │   ├── pk_gen.h
+│   │   │   │   │   ├── root.c
+│   │   │   │   │   ├── root.h
+│   │   │   │   │   ├── sk_gen.c
+│   │   │   │   │   ├── sk_gen.h
+│   │   │   │   │   ├── synd.c
+│   │   │   │   │   ├── synd.h
+│   │   │   │   │   ├── transpose.c
+│   │   │   │   │   ├── transpose.h
+│   │   │   │   │   ├── uint64_sort.h
+│   │   │   │   │   ├── util.c
+│   │   │   │   │   └── util.h
+│   │   │   │   └── META.yml
+│   │   │   ├── mceliece6688128f
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── aes256ctr.c
+│   │   │   │   │   ├── aes256ctr.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── architectures
+│   │   │   │   │   ├── benes.c
+│   │   │   │   │   ├── benes.h
+│   │   │   │   │   ├── bm.c
+│   │   │   │   │   ├── bm.h
+│   │   │   │   │   ├── consts.data
+│   │   │   │   │   ├── consts.S
+│   │   │   │   │   ├── controlbits.c
+│   │   │   │   │   ├── controlbits.h
+│   │   │   │   │   ├── crypto_hash.h
+│   │   │   │   │   ├── crypto_int16.c
+│   │   │   │   │   ├── crypto_int16.h
+│   │   │   │   │   ├── crypto_int32.c
+│   │   │   │   │   ├── crypto_int32.h
+│   │   │   │   │   ├── crypto_kem.h
+│   │   │   │   │   ├── crypto_uint16.c
+│   │   │   │   │   ├── crypto_uint16.h
+│   │   │   │   │   ├── crypto_uint32.c
+│   │   │   │   │   ├── crypto_uint32.h
+│   │   │   │   │   ├── crypto_uint64.c
+│   │   │   │   │   ├── crypto_uint64.h
+│   │   │   │   │   ├── decrypt.c
+│   │   │   │   │   ├── decrypt.h
+│   │   │   │   │   ├── encrypt.c
+│   │   │   │   │   ├── encrypt.h
+│   │   │   │   │   ├── fft_tr.c
+│   │   │   │   │   ├── fft_tr.h
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fft.h
+│   │   │   │   │   ├── gf.c
+│   │   │   │   │   ├── gf.h
+│   │   │   │   │   ├── int32_sort.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── namespace.h
+│   │   │   │   │   ├── operations.c
+│   │   │   │   │   ├── operations.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── pk_gen.c
+│   │   │   │   │   ├── pk_gen.h
+│   │   │   │   │   ├── powers.data
+│   │   │   │   │   ├── scalars_2x.data
+│   │   │   │   │   ├── scalars_4x.data
+│   │   │   │   │   ├── sk_gen.c
+│   │   │   │   │   ├── sk_gen.h
+│   │   │   │   │   ├── syndrome_asm.S
+│   │   │   │   │   ├── transpose_64x128_sp_asm.S
+│   │   │   │   │   ├── transpose_64x256_sp_asm.S
+│   │   │   │   │   ├── transpose_64x64_asm.S
+│   │   │   │   │   ├── transpose.h
+│   │   │   │   │   ├── uint64_sort.h
+│   │   │   │   │   ├── update_asm.S
+│   │   │   │   │   ├── util.h
+│   │   │   │   │   ├── vec_reduce_asm.S
+│   │   │   │   │   ├── vec128_mul_asm.S
+│   │   │   │   │   ├── vec128.c
+│   │   │   │   │   ├── vec128.h
+│   │   │   │   │   ├── vec256_ama_asm.S
+│   │   │   │   │   ├── vec256_maa_asm.S
+│   │   │   │   │   ├── vec256_mul_asm.S
+│   │   │   │   │   ├── vec256.c
+│   │   │   │   │   └── vec256.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── aes256ctr.c
+│   │   │   │   │   ├── aes256ctr.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── benes.c
+│   │   │   │   │   ├── benes.h
+│   │   │   │   │   ├── bm.c
+│   │   │   │   │   ├── bm.h
+│   │   │   │   │   ├── controlbits.c
+│   │   │   │   │   ├── controlbits.h
+│   │   │   │   │   ├── crypto_hash.h
+│   │   │   │   │   ├── crypto_int16.c
+│   │   │   │   │   ├── crypto_int16.h
+│   │   │   │   │   ├── crypto_int32.c
+│   │   │   │   │   ├── crypto_int32.h
+│   │   │   │   │   ├── crypto_kem.h
+│   │   │   │   │   ├── crypto_uint16.c
+│   │   │   │   │   ├── crypto_uint16.h
+│   │   │   │   │   ├── crypto_uint32.c
+│   │   │   │   │   ├── crypto_uint32.h
+│   │   │   │   │   ├── crypto_uint64.c
+│   │   │   │   │   ├── crypto_uint64.h
+│   │   │   │   │   ├── decrypt.c
+│   │   │   │   │   ├── decrypt.h
+│   │   │   │   │   ├── encrypt.c
+│   │   │   │   │   ├── encrypt.h
+│   │   │   │   │   ├── gf.c
+│   │   │   │   │   ├── gf.h
+│   │   │   │   │   ├── int32_sort.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── namespace.h
+│   │   │   │   │   ├── operations.c
+│   │   │   │   │   ├── operations.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── pk_gen.c
+│   │   │   │   │   ├── pk_gen.h
+│   │   │   │   │   ├── root.c
+│   │   │   │   │   ├── root.h
+│   │   │   │   │   ├── sk_gen.c
+│   │   │   │   │   ├── sk_gen.h
+│   │   │   │   │   ├── synd.c
+│   │   │   │   │   ├── synd.h
+│   │   │   │   │   ├── transpose.c
+│   │   │   │   │   ├── transpose.h
+│   │   │   │   │   ├── uint64_sort.h
+│   │   │   │   │   ├── util.c
+│   │   │   │   │   └── util.h
+│   │   │   │   └── META.yml
+│   │   │   ├── mceliece6960119
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── aes256ctr.c
+│   │   │   │   │   ├── aes256ctr.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── architectures
+│   │   │   │   │   ├── benes.c
+│   │   │   │   │   ├── benes.h
+│   │   │   │   │   ├── bm.c
+│   │   │   │   │   ├── bm.h
+│   │   │   │   │   ├── consts.data
+│   │   │   │   │   ├── consts.S
+│   │   │   │   │   ├── controlbits.c
+│   │   │   │   │   ├── controlbits.h
+│   │   │   │   │   ├── crypto_hash.h
+│   │   │   │   │   ├── crypto_int16.c
+│   │   │   │   │   ├── crypto_int16.h
+│   │   │   │   │   ├── crypto_int32.c
+│   │   │   │   │   ├── crypto_int32.h
+│   │   │   │   │   ├── crypto_kem.h
+│   │   │   │   │   ├── crypto_uint16.c
+│   │   │   │   │   ├── crypto_uint16.h
+│   │   │   │   │   ├── crypto_uint32.c
+│   │   │   │   │   ├── crypto_uint32.h
+│   │   │   │   │   ├── crypto_uint64.c
+│   │   │   │   │   ├── crypto_uint64.h
+│   │   │   │   │   ├── decrypt.c
+│   │   │   │   │   ├── decrypt.h
+│   │   │   │   │   ├── encrypt.c
+│   │   │   │   │   ├── encrypt.h
+│   │   │   │   │   ├── fft_tr.c
+│   │   │   │   │   ├── fft_tr.h
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fft.h
+│   │   │   │   │   ├── gf.c
+│   │   │   │   │   ├── gf.h
+│   │   │   │   │   ├── int32_sort.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── namespace.h
+│   │   │   │   │   ├── namespacing
+│   │   │   │   │   ├── operations.c
+│   │   │   │   │   ├── operations.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── pk_gen.c
+│   │   │   │   │   ├── pk_gen.h
+│   │   │   │   │   ├── scalars_2x.data
+│   │   │   │   │   ├── scalars_4x.data
+│   │   │   │   │   ├── sk_gen.c
+│   │   │   │   │   ├── sk_gen.h
+│   │   │   │   │   ├── syndrome_asm.S
+│   │   │   │   │   ├── transpose_64x128_sp_asm.S
+│   │   │   │   │   ├── transpose_64x256_sp_asm.S
+│   │   │   │   │   ├── transpose_64x64_asm.S
+│   │   │   │   │   ├── transpose.h
+│   │   │   │   │   ├── uint64_sort.h
+│   │   │   │   │   ├── update_asm.S
+│   │   │   │   │   ├── util.h
+│   │   │   │   │   ├── vec_reduce_asm.S
+│   │   │   │   │   ├── vec128_mul_asm.S
+│   │   │   │   │   ├── vec128.c
+│   │   │   │   │   ├── vec128.h
+│   │   │   │   │   ├── vec256_ama_asm.S
+│   │   │   │   │   ├── vec256_maa_asm.S
+│   │   │   │   │   ├── vec256_mul_asm.S
+│   │   │   │   │   ├── vec256.c
+│   │   │   │   │   └── vec256.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── aes256ctr.c
+│   │   │   │   │   ├── aes256ctr.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── benes.c
+│   │   │   │   │   ├── benes.h
+│   │   │   │   │   ├── bm.c
+│   │   │   │   │   ├── bm.h
+│   │   │   │   │   ├── controlbits.c
+│   │   │   │   │   ├── controlbits.h
+│   │   │   │   │   ├── crypto_hash.h
+│   │   │   │   │   ├── crypto_int16.c
+│   │   │   │   │   ├── crypto_int16.h
+│   │   │   │   │   ├── crypto_int32.c
+│   │   │   │   │   ├── crypto_int32.h
+│   │   │   │   │   ├── crypto_kem.h
+│   │   │   │   │   ├── crypto_uint16.c
+│   │   │   │   │   ├── crypto_uint16.h
+│   │   │   │   │   ├── crypto_uint32.c
+│   │   │   │   │   ├── crypto_uint32.h
+│   │   │   │   │   ├── crypto_uint64.c
+│   │   │   │   │   ├── crypto_uint64.h
+│   │   │   │   │   ├── decrypt.c
+│   │   │   │   │   ├── decrypt.h
+│   │   │   │   │   ├── encrypt.c
+│   │   │   │   │   ├── encrypt.h
+│   │   │   │   │   ├── gf.c
+│   │   │   │   │   ├── gf.h
+│   │   │   │   │   ├── int32_sort.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── namespace.h
+│   │   │   │   │   ├── namespacing
+│   │   │   │   │   ├── operations.c
+│   │   │   │   │   ├── operations.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── pk_gen.c
+│   │   │   │   │   ├── pk_gen.h
+│   │   │   │   │   ├── root.c
+│   │   │   │   │   ├── root.h
+│   │   │   │   │   ├── sk_gen.c
+│   │   │   │   │   ├── sk_gen.h
+│   │   │   │   │   ├── synd.c
+│   │   │   │   │   ├── synd.h
+│   │   │   │   │   ├── transpose.c
+│   │   │   │   │   ├── transpose.h
+│   │   │   │   │   ├── uint64_sort.h
+│   │   │   │   │   ├── util.c
+│   │   │   │   │   └── util.h
+│   │   │   │   └── META.yml
+│   │   │   ├── mceliece6960119f
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── aes256ctr.c
+│   │   │   │   │   ├── aes256ctr.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── architectures
+│   │   │   │   │   ├── benes.c
+│   │   │   │   │   ├── benes.h
+│   │   │   │   │   ├── bm.c
+│   │   │   │   │   ├── bm.h
+│   │   │   │   │   ├── consts.data
+│   │   │   │   │   ├── consts.S
+│   │   │   │   │   ├── controlbits.c
+│   │   │   │   │   ├── controlbits.h
+│   │   │   │   │   ├── crypto_hash.h
+│   │   │   │   │   ├── crypto_int16.c
+│   │   │   │   │   ├── crypto_int16.h
+│   │   │   │   │   ├── crypto_int32.c
+│   │   │   │   │   ├── crypto_int32.h
+│   │   │   │   │   ├── crypto_kem.h
+│   │   │   │   │   ├── crypto_uint16.c
+│   │   │   │   │   ├── crypto_uint16.h
+│   │   │   │   │   ├── crypto_uint32.c
+│   │   │   │   │   ├── crypto_uint32.h
+│   │   │   │   │   ├── crypto_uint64.c
+│   │   │   │   │   ├── crypto_uint64.h
+│   │   │   │   │   ├── decrypt.c
+│   │   │   │   │   ├── decrypt.h
+│   │   │   │   │   ├── encrypt.c
+│   │   │   │   │   ├── encrypt.h
+│   │   │   │   │   ├── fft_tr.c
+│   │   │   │   │   ├── fft_tr.h
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fft.h
+│   │   │   │   │   ├── gf.c
+│   │   │   │   │   ├── gf.h
+│   │   │   │   │   ├── int32_sort.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── namespace.h
+│   │   │   │   │   ├── namespacing
+│   │   │   │   │   ├── operations.c
+│   │   │   │   │   ├── operations.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── pk_gen.c
+│   │   │   │   │   ├── pk_gen.h
+│   │   │   │   │   ├── scalars_2x.data
+│   │   │   │   │   ├── scalars_4x.data
+│   │   │   │   │   ├── sk_gen.c
+│   │   │   │   │   ├── sk_gen.h
+│   │   │   │   │   ├── syndrome_asm.S
+│   │   │   │   │   ├── transpose_64x128_sp_asm.S
+│   │   │   │   │   ├── transpose_64x256_sp_asm.S
+│   │   │   │   │   ├── transpose_64x64_asm.S
+│   │   │   │   │   ├── transpose.h
+│   │   │   │   │   ├── uint64_sort.h
+│   │   │   │   │   ├── update_asm.S
+│   │   │   │   │   ├── util.h
+│   │   │   │   │   ├── vec_reduce_asm.S
+│   │   │   │   │   ├── vec128_mul_asm.S
+│   │   │   │   │   ├── vec128.c
+│   │   │   │   │   ├── vec128.h
+│   │   │   │   │   ├── vec256_ama_asm.S
+│   │   │   │   │   ├── vec256_maa_asm.S
+│   │   │   │   │   ├── vec256_mul_asm.S
+│   │   │   │   │   ├── vec256.c
+│   │   │   │   │   └── vec256.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── aes256ctr.c
+│   │   │   │   │   ├── aes256ctr.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── benes.c
+│   │   │   │   │   ├── benes.h
+│   │   │   │   │   ├── bm.c
+│   │   │   │   │   ├── bm.h
+│   │   │   │   │   ├── controlbits.c
+│   │   │   │   │   ├── controlbits.h
+│   │   │   │   │   ├── crypto_hash.h
+│   │   │   │   │   ├── crypto_int16.c
+│   │   │   │   │   ├── crypto_int16.h
+│   │   │   │   │   ├── crypto_int32.c
+│   │   │   │   │   ├── crypto_int32.h
+│   │   │   │   │   ├── crypto_kem.h
+│   │   │   │   │   ├── crypto_uint16.c
+│   │   │   │   │   ├── crypto_uint16.h
+│   │   │   │   │   ├── crypto_uint32.c
+│   │   │   │   │   ├── crypto_uint32.h
+│   │   │   │   │   ├── crypto_uint64.c
+│   │   │   │   │   ├── crypto_uint64.h
+│   │   │   │   │   ├── decrypt.c
+│   │   │   │   │   ├── decrypt.h
+│   │   │   │   │   ├── encrypt.c
+│   │   │   │   │   ├── encrypt.h
+│   │   │   │   │   ├── gf.c
+│   │   │   │   │   ├── gf.h
+│   │   │   │   │   ├── int32_sort.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── namespace.h
+│   │   │   │   │   ├── namespacing
+│   │   │   │   │   ├── operations.c
+│   │   │   │   │   ├── operations.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── pk_gen.c
+│   │   │   │   │   ├── pk_gen.h
+│   │   │   │   │   ├── root.c
+│   │   │   │   │   ├── root.h
+│   │   │   │   │   ├── sk_gen.c
+│   │   │   │   │   ├── sk_gen.h
+│   │   │   │   │   ├── synd.c
+│   │   │   │   │   ├── synd.h
+│   │   │   │   │   ├── transpose.c
+│   │   │   │   │   ├── transpose.h
+│   │   │   │   │   ├── uint64_sort.h
+│   │   │   │   │   ├── util.c
+│   │   │   │   │   └── util.h
+│   │   │   │   └── META.yml
+│   │   │   ├── mceliece8192128
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── aes256ctr.c
+│   │   │   │   │   ├── aes256ctr.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── architectures
+│   │   │   │   │   ├── benes.c
+│   │   │   │   │   ├── benes.h
+│   │   │   │   │   ├── bm.c
+│   │   │   │   │   ├── bm.h
+│   │   │   │   │   ├── consts.data
+│   │   │   │   │   ├── consts.S
+│   │   │   │   │   ├── controlbits.c
+│   │   │   │   │   ├── controlbits.h
+│   │   │   │   │   ├── crypto_hash.h
+│   │   │   │   │   ├── crypto_int16.c
+│   │   │   │   │   ├── crypto_int16.h
+│   │   │   │   │   ├── crypto_int32.c
+│   │   │   │   │   ├── crypto_int32.h
+│   │   │   │   │   ├── crypto_kem.h
+│   │   │   │   │   ├── crypto_uint16.c
+│   │   │   │   │   ├── crypto_uint16.h
+│   │   │   │   │   ├── crypto_uint32.c
+│   │   │   │   │   ├── crypto_uint32.h
+│   │   │   │   │   ├── crypto_uint64.c
+│   │   │   │   │   ├── crypto_uint64.h
+│   │   │   │   │   ├── decrypt.c
+│   │   │   │   │   ├── decrypt.h
+│   │   │   │   │   ├── encrypt.c
+│   │   │   │   │   ├── encrypt.h
+│   │   │   │   │   ├── fft_tr.c
+│   │   │   │   │   ├── fft_tr.h
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fft.h
+│   │   │   │   │   ├── gf.c
+│   │   │   │   │   ├── gf.h
+│   │   │   │   │   ├── int32_sort.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── namespace.h
+│   │   │   │   │   ├── namespacing
+│   │   │   │   │   ├── operations.c
+│   │   │   │   │   ├── operations.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── pk_gen.c
+│   │   │   │   │   ├── pk_gen.h
+│   │   │   │   │   ├── powers.data
+│   │   │   │   │   ├── scalars_2x.data
+│   │   │   │   │   ├── scalars_4x.data
+│   │   │   │   │   ├── sk_gen.c
+│   │   │   │   │   ├── sk_gen.h
+│   │   │   │   │   ├── syndrome_asm.S
+│   │   │   │   │   ├── transpose_64x128_sp_asm.S
+│   │   │   │   │   ├── transpose_64x256_sp_asm.S
+│   │   │   │   │   ├── transpose_64x64_asm.S
+│   │   │   │   │   ├── transpose.h
+│   │   │   │   │   ├── uint64_sort.h
+│   │   │   │   │   ├── update_asm.S
+│   │   │   │   │   ├── util.h
+│   │   │   │   │   ├── vec_reduce_asm.S
+│   │   │   │   │   ├── vec128_mul_asm.S
+│   │   │   │   │   ├── vec128.c
+│   │   │   │   │   ├── vec128.h
+│   │   │   │   │   ├── vec256_ama_asm.S
+│   │   │   │   │   ├── vec256_maa_asm.S
+│   │   │   │   │   ├── vec256_mul_asm.S
+│   │   │   │   │   ├── vec256.c
+│   │   │   │   │   └── vec256.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── aes256ctr.c
+│   │   │   │   │   ├── aes256ctr.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── benes.c
+│   │   │   │   │   ├── benes.h
+│   │   │   │   │   ├── bm.c
+│   │   │   │   │   ├── bm.h
+│   │   │   │   │   ├── controlbits.c
+│   │   │   │   │   ├── controlbits.h
+│   │   │   │   │   ├── crypto_hash.h
+│   │   │   │   │   ├── crypto_int16.c
+│   │   │   │   │   ├── crypto_int16.h
+│   │   │   │   │   ├── crypto_int32.c
+│   │   │   │   │   ├── crypto_int32.h
+│   │   │   │   │   ├── crypto_kem.h
+│   │   │   │   │   ├── crypto_uint16.c
+│   │   │   │   │   ├── crypto_uint16.h
+│   │   │   │   │   ├── crypto_uint32.c
+│   │   │   │   │   ├── crypto_uint32.h
+│   │   │   │   │   ├── crypto_uint64.c
+│   │   │   │   │   ├── crypto_uint64.h
+│   │   │   │   │   ├── decrypt.c
+│   │   │   │   │   ├── decrypt.h
+│   │   │   │   │   ├── encrypt.c
+│   │   │   │   │   ├── encrypt.h
+│   │   │   │   │   ├── gf.c
+│   │   │   │   │   ├── gf.h
+│   │   │   │   │   ├── int32_sort.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── namespace.h
+│   │   │   │   │   ├── namespacing
+│   │   │   │   │   ├── operations.c
+│   │   │   │   │   ├── operations.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── pk_gen.c
+│   │   │   │   │   ├── pk_gen.h
+│   │   │   │   │   ├── root.c
+│   │   │   │   │   ├── root.h
+│   │   │   │   │   ├── sk_gen.c
+│   │   │   │   │   ├── sk_gen.h
+│   │   │   │   │   ├── synd.c
+│   │   │   │   │   ├── synd.h
+│   │   │   │   │   ├── transpose.c
+│   │   │   │   │   ├── transpose.h
+│   │   │   │   │   ├── uint64_sort.h
+│   │   │   │   │   ├── util.c
+│   │   │   │   │   └── util.h
+│   │   │   │   └── META.yml
+│   │   │   ├── mceliece8192128f
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── aes256ctr.c
+│   │   │   │   │   ├── aes256ctr.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── architectures
+│   │   │   │   │   ├── benes.c
+│   │   │   │   │   ├── benes.h
+│   │   │   │   │   ├── bm.c
+│   │   │   │   │   ├── bm.h
+│   │   │   │   │   ├── consts.data
+│   │   │   │   │   ├── consts.S
+│   │   │   │   │   ├── controlbits.c
+│   │   │   │   │   ├── controlbits.h
+│   │   │   │   │   ├── crypto_hash.h
+│   │   │   │   │   ├── crypto_int16.c
+│   │   │   │   │   ├── crypto_int16.h
+│   │   │   │   │   ├── crypto_int32.c
+│   │   │   │   │   ├── crypto_int32.h
+│   │   │   │   │   ├── crypto_kem.h
+│   │   │   │   │   ├── crypto_uint16.c
+│   │   │   │   │   ├── crypto_uint16.h
+│   │   │   │   │   ├── crypto_uint32.c
+│   │   │   │   │   ├── crypto_uint32.h
+│   │   │   │   │   ├── crypto_uint64.c
+│   │   │   │   │   ├── crypto_uint64.h
+│   │   │   │   │   ├── decrypt.c
+│   │   │   │   │   ├── decrypt.h
+│   │   │   │   │   ├── encrypt.c
+│   │   │   │   │   ├── encrypt.h
+│   │   │   │   │   ├── fft_tr.c
+│   │   │   │   │   ├── fft_tr.h
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fft.h
+│   │   │   │   │   ├── gf.c
+│   │   │   │   │   ├── gf.h
+│   │   │   │   │   ├── int32_sort.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── namespace.h
+│   │   │   │   │   ├── namespacing
+│   │   │   │   │   ├── operations.c
+│   │   │   │   │   ├── operations.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── pk_gen.c
+│   │   │   │   │   ├── pk_gen.h
+│   │   │   │   │   ├── powers.data
+│   │   │   │   │   ├── scalars_2x.data
+│   │   │   │   │   ├── scalars_4x.data
+│   │   │   │   │   ├── sk_gen.c
+│   │   │   │   │   ├── sk_gen.h
+│   │   │   │   │   ├── syndrome_asm.S
+│   │   │   │   │   ├── transpose_64x128_sp_asm.S
+│   │   │   │   │   ├── transpose_64x256_sp_asm.S
+│   │   │   │   │   ├── transpose_64x64_asm.S
+│   │   │   │   │   ├── transpose.h
+│   │   │   │   │   ├── uint64_sort.h
+│   │   │   │   │   ├── update_asm.S
+│   │   │   │   │   ├── util.h
+│   │   │   │   │   ├── vec_reduce_asm.S
+│   │   │   │   │   ├── vec128_mul_asm.S
+│   │   │   │   │   ├── vec128.c
+│   │   │   │   │   ├── vec128.h
+│   │   │   │   │   ├── vec256_ama_asm.S
+│   │   │   │   │   ├── vec256_maa_asm.S
+│   │   │   │   │   ├── vec256_mul_asm.S
+│   │   │   │   │   ├── vec256.c
+│   │   │   │   │   └── vec256.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── aes256ctr.c
+│   │   │   │   │   ├── aes256ctr.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── benes.c
+│   │   │   │   │   ├── benes.h
+│   │   │   │   │   ├── bm.c
+│   │   │   │   │   ├── bm.h
+│   │   │   │   │   ├── controlbits.c
+│   │   │   │   │   ├── controlbits.h
+│   │   │   │   │   ├── crypto_hash.h
+│   │   │   │   │   ├── crypto_int16.c
+│   │   │   │   │   ├── crypto_int16.h
+│   │   │   │   │   ├── crypto_int32.c
+│   │   │   │   │   ├── crypto_int32.h
+│   │   │   │   │   ├── crypto_kem.h
+│   │   │   │   │   ├── crypto_uint16.c
+│   │   │   │   │   ├── crypto_uint16.h
+│   │   │   │   │   ├── crypto_uint32.c
+│   │   │   │   │   ├── crypto_uint32.h
+│   │   │   │   │   ├── crypto_uint64.c
+│   │   │   │   │   ├── crypto_uint64.h
+│   │   │   │   │   ├── decrypt.c
+│   │   │   │   │   ├── decrypt.h
+│   │   │   │   │   ├── encrypt.c
+│   │   │   │   │   ├── encrypt.h
+│   │   │   │   │   ├── gf.c
+│   │   │   │   │   ├── gf.h
+│   │   │   │   │   ├── int32_sort.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── namespace.h
+│   │   │   │   │   ├── namespacing
+│   │   │   │   │   ├── operations.c
+│   │   │   │   │   ├── operations.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── pk_gen.c
+│   │   │   │   │   ├── pk_gen.h
+│   │   │   │   │   ├── root.c
+│   │   │   │   │   ├── root.h
+│   │   │   │   │   ├── sk_gen.c
+│   │   │   │   │   ├── sk_gen.h
+│   │   │   │   │   ├── synd.c
+│   │   │   │   │   ├── synd.h
+│   │   │   │   │   ├── transpose.c
+│   │   │   │   │   ├── transpose.h
+│   │   │   │   │   ├── uint64_sort.h
+│   │   │   │   │   ├── util.c
+│   │   │   │   │   └── util.h
+│   │   │   │   └── META.yml
+│   │   │   ├── ml-kem-1024
+│   │   │   │   ├── aarch64
+│   │   │   │   │   ├── __asm_base_mul.S
+│   │   │   │   │   ├── __asm_iNTT.S
+│   │   │   │   │   ├── __asm_NTT.S
+│   │   │   │   │   ├── __asm_poly.S
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── cbd.c
+│   │   │   │   │   ├── cbd.h
+│   │   │   │   │   ├── indcpa.c
+│   │   │   │   │   ├── indcpa.h
+│   │   │   │   │   ├── kem.c
+│   │   │   │   │   ├── kem.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── macros_common.inc
+│   │   │   │   │   ├── macros.inc
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── neon_poly.c
+│   │   │   │   │   ├── neon_polyvec.c
+│   │   │   │   │   ├── neon_symmetric-shake.c
+│   │   │   │   │   ├── NTT_params.h
+│   │   │   │   │   ├── ntt.c
+│   │   │   │   │   ├── ntt.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── poly.c
+│   │   │   │   │   ├── poly.h
+│   │   │   │   │   ├── polyvec.c
+│   │   │   │   │   ├── polyvec.h
+│   │   │   │   │   ├── reduce.c
+│   │   │   │   │   ├── reduce.h
+│   │   │   │   │   ├── rejsample.c
+│   │   │   │   │   ├── rejsample.h
+│   │   │   │   │   ├── symmetric-shake.c
+│   │   │   │   │   ├── symmetric.h
+│   │   │   │   │   ├── verify.c
+│   │   │   │   │   └── verify.h
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── align.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── basemul.S
+│   │   │   │   │   ├── cbd.c
+│   │   │   │   │   ├── cbd.h
+│   │   │   │   │   ├── cdecl.h
+│   │   │   │   │   ├── consts.c
+│   │   │   │   │   ├── consts.h
+│   │   │   │   │   ├── fips202x4.c
+│   │   │   │   │   ├── fips202x4.h
+│   │   │   │   │   ├── fq.inc
+│   │   │   │   │   ├── fq.S
+│   │   │   │   │   ├── indcpa.c
+│   │   │   │   │   ├── indcpa.h
+│   │   │   │   │   ├── invntt.S
+│   │   │   │   │   ├── kem.c
+│   │   │   │   │   ├── kem.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── ntt.h
+│   │   │   │   │   ├── ntt.S
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── poly.c
+│   │   │   │   │   ├── poly.h
+│   │   │   │   │   ├── polyvec.c
+│   │   │   │   │   ├── polyvec.h
+│   │   │   │   │   ├── reduce.h
+│   │   │   │   │   ├── rejsample.c
+│   │   │   │   │   ├── rejsample.h
+│   │   │   │   │   ├── shuffle.inc
+│   │   │   │   │   ├── shuffle.S
+│   │   │   │   │   ├── symmetric-shake.c
+│   │   │   │   │   ├── symmetric.h
+│   │   │   │   │   ├── verify.c
+│   │   │   │   │   └── verify.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── cbd.c
+│   │   │   │   │   ├── cbd.h
+│   │   │   │   │   ├── indcpa.c
+│   │   │   │   │   ├── indcpa.h
+│   │   │   │   │   ├── kem.c
+│   │   │   │   │   ├── kem.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── ntt.c
+│   │   │   │   │   ├── ntt.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── poly.c
+│   │   │   │   │   ├── poly.h
+│   │   │   │   │   ├── polyvec.c
+│   │   │   │   │   ├── polyvec.h
+│   │   │   │   │   ├── reduce.c
+│   │   │   │   │   ├── reduce.h
+│   │   │   │   │   ├── symmetric-shake.c
+│   │   │   │   │   ├── symmetric.h
+│   │   │   │   │   ├── verify.c
+│   │   │   │   │   └── verify.h
+│   │   │   │   └── META.yml
+│   │   │   ├── ml-kem-512
+│   │   │   │   ├── aarch64
+│   │   │   │   │   ├── __asm_base_mul.S
+│   │   │   │   │   ├── __asm_iNTT.S
+│   │   │   │   │   ├── __asm_NTT.S
+│   │   │   │   │   ├── __asm_poly.S
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── cbd.c
+│   │   │   │   │   ├── cbd.h
+│   │   │   │   │   ├── indcpa.c
+│   │   │   │   │   ├── indcpa.h
+│   │   │   │   │   ├── kem.c
+│   │   │   │   │   ├── kem.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── macros_common.inc
+│   │   │   │   │   ├── macros.inc
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── neon_poly.c
+│   │   │   │   │   ├── neon_polyvec.c
+│   │   │   │   │   ├── neon_symmetric-shake.c
+│   │   │   │   │   ├── NTT_params.h
+│   │   │   │   │   ├── ntt.c
+│   │   │   │   │   ├── ntt.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── poly.c
+│   │   │   │   │   ├── poly.h
+│   │   │   │   │   ├── polyvec.c
+│   │   │   │   │   ├── polyvec.h
+│   │   │   │   │   ├── reduce.c
+│   │   │   │   │   ├── reduce.h
+│   │   │   │   │   ├── rejsample.c
+│   │   │   │   │   ├── rejsample.h
+│   │   │   │   │   ├── symmetric-shake.c
+│   │   │   │   │   ├── symmetric.h
+│   │   │   │   │   ├── verify.c
+│   │   │   │   │   └── verify.h
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── align.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── basemul.S
+│   │   │   │   │   ├── cbd.c
+│   │   │   │   │   ├── cbd.h
+│   │   │   │   │   ├── cdecl.h
+│   │   │   │   │   ├── consts.c
+│   │   │   │   │   ├── consts.h
+│   │   │   │   │   ├── fips202x4.c
+│   │   │   │   │   ├── fips202x4.h
+│   │   │   │   │   ├── fq.inc
+│   │   │   │   │   ├── fq.S
+│   │   │   │   │   ├── indcpa.c
+│   │   │   │   │   ├── indcpa.h
+│   │   │   │   │   ├── invntt.S
+│   │   │   │   │   ├── kem.c
+│   │   │   │   │   ├── kem.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── ntt.h
+│   │   │   │   │   ├── ntt.S
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── poly.c
+│   │   │   │   │   ├── poly.h
+│   │   │   │   │   ├── polyvec.c
+│   │   │   │   │   ├── polyvec.h
+│   │   │   │   │   ├── reduce.h
+│   │   │   │   │   ├── rejsample.c
+│   │   │   │   │   ├── rejsample.h
+│   │   │   │   │   ├── shuffle.inc
+│   │   │   │   │   ├── shuffle.S
+│   │   │   │   │   ├── symmetric-shake.c
+│   │   │   │   │   ├── symmetric.h
+│   │   │   │   │   ├── verify.c
+│   │   │   │   │   └── verify.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── cbd.c
+│   │   │   │   │   ├── cbd.h
+│   │   │   │   │   ├── indcpa.c
+│   │   │   │   │   ├── indcpa.h
+│   │   │   │   │   ├── kem.c
+│   │   │   │   │   ├── kem.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── ntt.c
+│   │   │   │   │   ├── ntt.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── poly.c
+│   │   │   │   │   ├── poly.h
+│   │   │   │   │   ├── polyvec.c
+│   │   │   │   │   ├── polyvec.h
+│   │   │   │   │   ├── reduce.c
+│   │   │   │   │   ├── reduce.h
+│   │   │   │   │   ├── symmetric-shake.c
+│   │   │   │   │   ├── symmetric.h
+│   │   │   │   │   ├── verify.c
+│   │   │   │   │   └── verify.h
+│   │   │   │   └── META.yml
+│   │   │   └── ml-kem-768
+│   │   │       ├── aarch64
+│   │   │       │   ├── __asm_base_mul.S
+│   │   │       │   ├── __asm_iNTT.S
+│   │   │       │   ├── __asm_NTT.S
+│   │   │       │   ├── __asm_poly.S
+│   │   │       │   ├── api.h
+│   │   │       │   ├── cbd.c
+│   │   │       │   ├── cbd.h
+│   │   │       │   ├── indcpa.c
+│   │   │       │   ├── indcpa.h
+│   │   │       │   ├── kem.c
+│   │   │       │   ├── kem.h
+│   │   │       │   ├── LICENSE
+│   │   │       │   ├── macros_common.inc
+│   │   │       │   ├── macros.inc
+│   │   │       │   ├── Makefile
+│   │   │       │   ├── neon_poly.c
+│   │   │       │   ├── neon_polyvec.c
+│   │   │       │   ├── neon_symmetric-shake.c
+│   │   │       │   ├── NTT_params.h
+│   │   │       │   ├── ntt.c
+│   │   │       │   ├── ntt.h
+│   │   │       │   ├── params.h
+│   │   │       │   ├── poly.c
+│   │   │       │   ├── poly.h
+│   │   │       │   ├── polyvec.c
+│   │   │       │   ├── polyvec.h
+│   │   │       │   ├── reduce.c
+│   │   │       │   ├── reduce.h
+│   │   │       │   ├── rejsample.c
+│   │   │       │   ├── rejsample.h
+│   │   │       │   ├── symmetric-shake.c
+│   │   │       │   ├── symmetric.h
+│   │   │       │   ├── verify.c
+│   │   │       │   └── verify.h
+│   │   │       ├── avx2
+│   │   │       │   ├── align.h
+│   │   │       │   ├── api.h
+│   │   │       │   ├── basemul.S
+│   │   │       │   ├── cbd.c
+│   │   │       │   ├── cbd.h
+│   │   │       │   ├── cdecl.h
+│   │   │       │   ├── consts.c
+│   │   │       │   ├── consts.h
+│   │   │       │   ├── fips202x4.c
+│   │   │       │   ├── fips202x4.h
+│   │   │       │   ├── fq.inc
+│   │   │       │   ├── fq.S
+│   │   │       │   ├── indcpa.c
+│   │   │       │   ├── indcpa.h
+│   │   │       │   ├── invntt.S
+│   │   │       │   ├── kem.c
+│   │   │       │   ├── kem.h
+│   │   │       │   ├── LICENSE
+│   │   │       │   ├── Makefile
+│   │   │       │   ├── ntt.h
+│   │   │       │   ├── ntt.S
+│   │   │       │   ├── params.h
+│   │   │       │   ├── poly.c
+│   │   │       │   ├── poly.h
+│   │   │       │   ├── polyvec.c
+│   │   │       │   ├── polyvec.h
+│   │   │       │   ├── reduce.h
+│   │   │       │   ├── rejsample.c
+│   │   │       │   ├── rejsample.h
+│   │   │       │   ├── shuffle.inc
+│   │   │       │   ├── shuffle.S
+│   │   │       │   ├── symmetric-shake.c
+│   │   │       │   ├── symmetric.h
+│   │   │       │   ├── verify.c
+│   │   │       │   └── verify.h
+│   │   │       ├── clean
+│   │   │       │   ├── api.h
+│   │   │       │   ├── cbd.c
+│   │   │       │   ├── cbd.h
+│   │   │       │   ├── indcpa.c
+│   │   │       │   ├── indcpa.h
+│   │   │       │   ├── kem.c
+│   │   │       │   ├── kem.h
+│   │   │       │   ├── LICENSE
+│   │   │       │   ├── Makefile
+│   │   │       │   ├── Makefile.Microsoft_nmake
+│   │   │       │   ├── ntt.c
+│   │   │       │   ├── ntt.h
+│   │   │       │   ├── params.h
+│   │   │       │   ├── poly.c
+│   │   │       │   ├── poly.h
+│   │   │       │   ├── polyvec.c
+│   │   │       │   ├── polyvec.h
+│   │   │       │   ├── reduce.c
+│   │   │       │   ├── reduce.h
+│   │   │       │   ├── symmetric-shake.c
+│   │   │       │   ├── symmetric.h
+│   │   │       │   ├── verify.c
+│   │   │       │   └── verify.h
+│   │   │       └── META.yml
+│   │   ├── crypto_sign
+│   │   │   ├── falcon-1024
+│   │   │   │   ├── aarch64
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── codec.c
+│   │   │   │   │   ├── common.c
+│   │   │   │   │   ├── fft_tree.c
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fpr.c
+│   │   │   │   │   ├── fpr.h
+│   │   │   │   │   ├── inner.h
+│   │   │   │   │   ├── keygen.c
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── macrof.h
+│   │   │   │   │   ├── macrofx4.h
+│   │   │   │   │   ├── macrous.h
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── ntt_consts.c
+│   │   │   │   │   ├── ntt_consts.h
+│   │   │   │   │   ├── ntt.c
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── poly_float.c
+│   │   │   │   │   ├── poly_int.c
+│   │   │   │   │   ├── poly.h
+│   │   │   │   │   ├── pqcore.c
+│   │   │   │   │   ├── rng.c
+│   │   │   │   │   ├── sampler.c
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── util.c
+│   │   │   │   │   ├── util.h
+│   │   │   │   │   └── vrfy.c
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── codec.c
+│   │   │   │   │   ├── common.c
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fpr.c
+│   │   │   │   │   ├── fpr.h
+│   │   │   │   │   ├── inner.h
+│   │   │   │   │   ├── keygen.c
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── pqcore.c
+│   │   │   │   │   ├── rng.c
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   └── vrfy.c
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── codec.c
+│   │   │   │   │   ├── common.c
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fpr.c
+│   │   │   │   │   ├── fpr.h
+│   │   │   │   │   ├── inner.h
+│   │   │   │   │   ├── keygen.c
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── pqcore.c
+│   │   │   │   │   ├── rng.c
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   └── vrfy.c
+│   │   │   │   └── META.yml
+│   │   │   ├── falcon-512
+│   │   │   │   ├── aarch64
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── codec.c
+│   │   │   │   │   ├── common.c
+│   │   │   │   │   ├── fft_tree.c
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fpr.c
+│   │   │   │   │   ├── fpr.h
+│   │   │   │   │   ├── inner.h
+│   │   │   │   │   ├── keygen.c
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── macrof.h
+│   │   │   │   │   ├── macrofx4.h
+│   │   │   │   │   ├── macrous.h
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── ntt_consts.c
+│   │   │   │   │   ├── ntt_consts.h
+│   │   │   │   │   ├── ntt.c
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── poly_float.c
+│   │   │   │   │   ├── poly_int.c
+│   │   │   │   │   ├── poly.h
+│   │   │   │   │   ├── pqcore.c
+│   │   │   │   │   ├── rng.c
+│   │   │   │   │   ├── sampler.c
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── util.c
+│   │   │   │   │   ├── util.h
+│   │   │   │   │   └── vrfy.c
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── codec.c
+│   │   │   │   │   ├── common.c
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fpr.c
+│   │   │   │   │   ├── fpr.h
+│   │   │   │   │   ├── inner.h
+│   │   │   │   │   ├── keygen.c
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── pqcore.c
+│   │   │   │   │   ├── rng.c
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   └── vrfy.c
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── codec.c
+│   │   │   │   │   ├── common.c
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fpr.c
+│   │   │   │   │   ├── fpr.h
+│   │   │   │   │   ├── inner.h
+│   │   │   │   │   ├── keygen.c
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── pqcore.c
+│   │   │   │   │   ├── rng.c
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   └── vrfy.c
+│   │   │   │   └── META.yml
+│   │   │   ├── falcon-padded-1024
+│   │   │   │   ├── aarch64
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── codec.c
+│   │   │   │   │   ├── common.c
+│   │   │   │   │   ├── fft_tree.c
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fpr.c
+│   │   │   │   │   ├── fpr.h
+│   │   │   │   │   ├── inner.h
+│   │   │   │   │   ├── keygen.c
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── macrof.h
+│   │   │   │   │   ├── macrofx4.h
+│   │   │   │   │   ├── macrous.h
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── ntt_consts.c
+│   │   │   │   │   ├── ntt_consts.h
+│   │   │   │   │   ├── ntt.c
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── poly_float.c
+│   │   │   │   │   ├── poly_int.c
+│   │   │   │   │   ├── poly.h
+│   │   │   │   │   ├── pqcore.c
+│   │   │   │   │   ├── rng.c
+│   │   │   │   │   ├── sampler.c
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── util.c
+│   │   │   │   │   ├── util.h
+│   │   │   │   │   └── vrfy.c
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── codec.c
+│   │   │   │   │   ├── common.c
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fpr.c
+│   │   │   │   │   ├── fpr.h
+│   │   │   │   │   ├── inner.h
+│   │   │   │   │   ├── keygen.c
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── pqcore.c
+│   │   │   │   │   ├── rng.c
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   └── vrfy.c
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── codec.c
+│   │   │   │   │   ├── common.c
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fpr.c
+│   │   │   │   │   ├── fpr.h
+│   │   │   │   │   ├── inner.h
+│   │   │   │   │   ├── keygen.c
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── pqcore.c
+│   │   │   │   │   ├── rng.c
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   └── vrfy.c
+│   │   │   │   └── META.yml
+│   │   │   ├── falcon-padded-512
+│   │   │   │   ├── aarch64
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── codec.c
+│   │   │   │   │   ├── common.c
+│   │   │   │   │   ├── fft_tree.c
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fpr.c
+│   │   │   │   │   ├── fpr.h
+│   │   │   │   │   ├── inner.h
+│   │   │   │   │   ├── keygen.c
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── macrof.h
+│   │   │   │   │   ├── macrofx4.h
+│   │   │   │   │   ├── macrous.h
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── ntt_consts.c
+│   │   │   │   │   ├── ntt_consts.h
+│   │   │   │   │   ├── ntt.c
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── poly_float.c
+│   │   │   │   │   ├── poly_int.c
+│   │   │   │   │   ├── poly.h
+│   │   │   │   │   ├── pqcore.c
+│   │   │   │   │   ├── rng.c
+│   │   │   │   │   ├── sampler.c
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── util.c
+│   │   │   │   │   ├── util.h
+│   │   │   │   │   └── vrfy.c
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── codec.c
+│   │   │   │   │   ├── common.c
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fpr.c
+│   │   │   │   │   ├── fpr.h
+│   │   │   │   │   ├── inner.h
+│   │   │   │   │   ├── keygen.c
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── pqcore.c
+│   │   │   │   │   ├── rng.c
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   └── vrfy.c
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── codec.c
+│   │   │   │   │   ├── common.c
+│   │   │   │   │   ├── fft.c
+│   │   │   │   │   ├── fpr.c
+│   │   │   │   │   ├── fpr.h
+│   │   │   │   │   ├── inner.h
+│   │   │   │   │   ├── keygen.c
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── pqcore.c
+│   │   │   │   │   ├── rng.c
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   └── vrfy.c
+│   │   │   │   └── META.yml
+│   │   │   ├── ml-dsa-44
+│   │   │   │   ├── aarch64
+│   │   │   │   │   ├── __asm_iNTT.S
+│   │   │   │   │   ├── __asm_NTT.S
+│   │   │   │   │   ├── __asm_poly.S
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── macros_common.inc
+│   │   │   │   │   ├── macros.inc
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── NTT_params.h
+│   │   │   │   │   ├── ntt.c
+│   │   │   │   │   ├── ntt.h
+│   │   │   │   │   ├── packing.c
+│   │   │   │   │   ├── packing.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── poly.c
+│   │   │   │   │   ├── poly.h
+│   │   │   │   │   ├── polyvec.c
+│   │   │   │   │   ├── polyvec.h
+│   │   │   │   │   ├── reduce.c
+│   │   │   │   │   ├── reduce.h
+│   │   │   │   │   ├── rounding.c
+│   │   │   │   │   ├── rounding.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── sign.h
+│   │   │   │   │   ├── symmetric-shake.c
+│   │   │   │   │   └── symmetric.h
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── align.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── cdecl.h
+│   │   │   │   │   ├── consts.c
+│   │   │   │   │   ├── consts.h
+│   │   │   │   │   ├── f1600x4.S
+│   │   │   │   │   ├── fips202x4.c
+│   │   │   │   │   ├── fips202x4.h
+│   │   │   │   │   ├── invntt.S
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── ntt.h
+│   │   │   │   │   ├── ntt.S
+│   │   │   │   │   ├── packing.c
+│   │   │   │   │   ├── packing.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── pointwise.S
+│   │   │   │   │   ├── poly.c
+│   │   │   │   │   ├── poly.h
+│   │   │   │   │   ├── polyvec.c
+│   │   │   │   │   ├── polyvec.h
+│   │   │   │   │   ├── rejsample.c
+│   │   │   │   │   ├── rejsample.h
+│   │   │   │   │   ├── rounding.c
+│   │   │   │   │   ├── rounding.h
+│   │   │   │   │   ├── shuffle.inc
+│   │   │   │   │   ├── shuffle.S
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── sign.h
+│   │   │   │   │   ├── symmetric-shake.c
+│   │   │   │   │   └── symmetric.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── ntt.c
+│   │   │   │   │   ├── ntt.h
+│   │   │   │   │   ├── packing.c
+│   │   │   │   │   ├── packing.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── poly.c
+│   │   │   │   │   ├── poly.h
+│   │   │   │   │   ├── polyvec.c
+│   │   │   │   │   ├── polyvec.h
+│   │   │   │   │   ├── reduce.c
+│   │   │   │   │   ├── reduce.h
+│   │   │   │   │   ├── rounding.c
+│   │   │   │   │   ├── rounding.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── sign.h
+│   │   │   │   │   ├── symmetric-shake.c
+│   │   │   │   │   └── symmetric.h
+│   │   │   │   └── META.yml
+│   │   │   ├── ml-dsa-65
+│   │   │   │   ├── aarch64
+│   │   │   │   │   ├── __asm_iNTT.S
+│   │   │   │   │   ├── __asm_NTT.S
+│   │   │   │   │   ├── __asm_poly.S
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── macros_common.inc
+│   │   │   │   │   ├── macros.inc
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── NTT_params.h
+│   │   │   │   │   ├── ntt.c
+│   │   │   │   │   ├── ntt.h
+│   │   │   │   │   ├── packing.c
+│   │   │   │   │   ├── packing.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── poly.c
+│   │   │   │   │   ├── poly.h
+│   │   │   │   │   ├── polyvec.c
+│   │   │   │   │   ├── polyvec.h
+│   │   │   │   │   ├── reduce.c
+│   │   │   │   │   ├── reduce.h
+│   │   │   │   │   ├── rounding.c
+│   │   │   │   │   ├── rounding.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── sign.h
+│   │   │   │   │   ├── symmetric-shake.c
+│   │   │   │   │   └── symmetric.h
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── align.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── cdecl.h
+│   │   │   │   │   ├── consts.c
+│   │   │   │   │   ├── consts.h
+│   │   │   │   │   ├── f1600x4.S
+│   │   │   │   │   ├── fips202x4.c
+│   │   │   │   │   ├── fips202x4.h
+│   │   │   │   │   ├── invntt.S
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── ntt.h
+│   │   │   │   │   ├── ntt.S
+│   │   │   │   │   ├── packing.c
+│   │   │   │   │   ├── packing.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── pointwise.S
+│   │   │   │   │   ├── poly.c
+│   │   │   │   │   ├── poly.h
+│   │   │   │   │   ├── polyvec.c
+│   │   │   │   │   ├── polyvec.h
+│   │   │   │   │   ├── rejsample.c
+│   │   │   │   │   ├── rejsample.h
+│   │   │   │   │   ├── rounding.c
+│   │   │   │   │   ├── rounding.h
+│   │   │   │   │   ├── shuffle.inc
+│   │   │   │   │   ├── shuffle.S
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── sign.h
+│   │   │   │   │   ├── symmetric-shake.c
+│   │   │   │   │   └── symmetric.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── ntt.c
+│   │   │   │   │   ├── ntt.h
+│   │   │   │   │   ├── packing.c
+│   │   │   │   │   ├── packing.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── poly.c
+│   │   │   │   │   ├── poly.h
+│   │   │   │   │   ├── polyvec.c
+│   │   │   │   │   ├── polyvec.h
+│   │   │   │   │   ├── reduce.c
+│   │   │   │   │   ├── reduce.h
+│   │   │   │   │   ├── rounding.c
+│   │   │   │   │   ├── rounding.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── sign.h
+│   │   │   │   │   ├── symmetric-shake.c
+│   │   │   │   │   └── symmetric.h
+│   │   │   │   └── META.yml
+│   │   │   ├── ml-dsa-87
+│   │   │   │   ├── aarch64
+│   │   │   │   │   ├── __asm_iNTT.S
+│   │   │   │   │   ├── __asm_NTT.S
+│   │   │   │   │   ├── __asm_poly.S
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── macros_common.inc
+│   │   │   │   │   ├── macros.inc
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── NTT_params.h
+│   │   │   │   │   ├── ntt.c
+│   │   │   │   │   ├── ntt.h
+│   │   │   │   │   ├── packing.c
+│   │   │   │   │   ├── packing.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── poly.c
+│   │   │   │   │   ├── poly.h
+│   │   │   │   │   ├── polyvec.c
+│   │   │   │   │   ├── polyvec.h
+│   │   │   │   │   ├── reduce.c
+│   │   │   │   │   ├── reduce.h
+│   │   │   │   │   ├── rounding.c
+│   │   │   │   │   ├── rounding.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── sign.h
+│   │   │   │   │   ├── symmetric-shake.c
+│   │   │   │   │   └── symmetric.h
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── align.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── cdecl.h
+│   │   │   │   │   ├── consts.c
+│   │   │   │   │   ├── consts.h
+│   │   │   │   │   ├── f1600x4.S
+│   │   │   │   │   ├── fips202x4.c
+│   │   │   │   │   ├── fips202x4.h
+│   │   │   │   │   ├── invntt.S
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── ntt.h
+│   │   │   │   │   ├── ntt.S
+│   │   │   │   │   ├── packing.c
+│   │   │   │   │   ├── packing.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── pointwise.S
+│   │   │   │   │   ├── poly.c
+│   │   │   │   │   ├── poly.h
+│   │   │   │   │   ├── polyvec.c
+│   │   │   │   │   ├── polyvec.h
+│   │   │   │   │   ├── rejsample.c
+│   │   │   │   │   ├── rejsample.h
+│   │   │   │   │   ├── rounding.c
+│   │   │   │   │   ├── rounding.h
+│   │   │   │   │   ├── shuffle.inc
+│   │   │   │   │   ├── shuffle.S
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── sign.h
+│   │   │   │   │   ├── symmetric-shake.c
+│   │   │   │   │   └── symmetric.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── ntt.c
+│   │   │   │   │   ├── ntt.h
+│   │   │   │   │   ├── packing.c
+│   │   │   │   │   ├── packing.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── poly.c
+│   │   │   │   │   ├── poly.h
+│   │   │   │   │   ├── polyvec.c
+│   │   │   │   │   ├── polyvec.h
+│   │   │   │   │   ├── reduce.c
+│   │   │   │   │   ├── reduce.h
+│   │   │   │   │   ├── rounding.c
+│   │   │   │   │   ├── rounding.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── sign.h
+│   │   │   │   │   ├── symmetric-shake.c
+│   │   │   │   │   └── symmetric.h
+│   │   │   │   └── META.yml
+│   │   │   ├── sphincs-sha2-128f-simple
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_sha2.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_sha2.c
+│   │   │   │   │   ├── hash_sha2x8.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── hashx8.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── sha2_offsets.h
+│   │   │   │   │   ├── sha256avx.c
+│   │   │   │   │   ├── sha256avx.h
+│   │   │   │   │   ├── sha256x8.c
+│   │   │   │   │   ├── sha256x8.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_sha2_simple.c
+│   │   │   │   │   ├── thash_sha2_simplex8.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── thashx8.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx8.c
+│   │   │   │   │   ├── utilsx8.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   └── wotsx8.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_sha2.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_sha2.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── sha2_offsets.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_sha2_simple.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx1.c
+│   │   │   │   │   ├── utilsx1.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   ├── wotsx1.c
+│   │   │   │   │   └── wotsx1.h
+│   │   │   │   └── META.yml
+│   │   │   ├── sphincs-sha2-128s-simple
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_sha2.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_sha2.c
+│   │   │   │   │   ├── hash_sha2x8.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── hashx8.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── sha2_offsets.h
+│   │   │   │   │   ├── sha256avx.c
+│   │   │   │   │   ├── sha256avx.h
+│   │   │   │   │   ├── sha256x8.c
+│   │   │   │   │   ├── sha256x8.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_sha2_simple.c
+│   │   │   │   │   ├── thash_sha2_simplex8.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── thashx8.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx8.c
+│   │   │   │   │   ├── utilsx8.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   └── wotsx8.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_sha2.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_sha2.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── sha2_offsets.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_sha2_simple.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx1.c
+│   │   │   │   │   ├── utilsx1.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   ├── wotsx1.c
+│   │   │   │   │   └── wotsx1.h
+│   │   │   │   └── META.yml
+│   │   │   ├── sphincs-sha2-192f-simple
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_sha2.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_sha2.c
+│   │   │   │   │   ├── hash_sha2x8.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── hashx8.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── sha2_offsets.h
+│   │   │   │   │   ├── sha256avx.c
+│   │   │   │   │   ├── sha256avx.h
+│   │   │   │   │   ├── sha256x8.c
+│   │   │   │   │   ├── sha256x8.h
+│   │   │   │   │   ├── sha512x4.c
+│   │   │   │   │   ├── sha512x4.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_sha2_simple.c
+│   │   │   │   │   ├── thash_sha2_simplex8.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── thashx8.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx8.c
+│   │   │   │   │   ├── utilsx8.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   └── wotsx8.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_sha2.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_sha2.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── sha2_offsets.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_sha2_simple.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx1.c
+│   │   │   │   │   ├── utilsx1.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   ├── wotsx1.c
+│   │   │   │   │   └── wotsx1.h
+│   │   │   │   └── META.yml
+│   │   │   ├── sphincs-sha2-192s-simple
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_sha2.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_sha2.c
+│   │   │   │   │   ├── hash_sha2x8.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── hashx8.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── sha2_offsets.h
+│   │   │   │   │   ├── sha256avx.c
+│   │   │   │   │   ├── sha256avx.h
+│   │   │   │   │   ├── sha256x8.c
+│   │   │   │   │   ├── sha256x8.h
+│   │   │   │   │   ├── sha512x4.c
+│   │   │   │   │   ├── sha512x4.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_sha2_simple.c
+│   │   │   │   │   ├── thash_sha2_simplex8.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── thashx8.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx8.c
+│   │   │   │   │   ├── utilsx8.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   └── wotsx8.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_sha2.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_sha2.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── sha2_offsets.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_sha2_simple.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx1.c
+│   │   │   │   │   ├── utilsx1.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   ├── wotsx1.c
+│   │   │   │   │   └── wotsx1.h
+│   │   │   │   └── META.yml
+│   │   │   ├── sphincs-sha2-256f-simple
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_sha2.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_sha2.c
+│   │   │   │   │   ├── hash_sha2x8.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── hashx8.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── sha2_offsets.h
+│   │   │   │   │   ├── sha256avx.c
+│   │   │   │   │   ├── sha256avx.h
+│   │   │   │   │   ├── sha256x8.c
+│   │   │   │   │   ├── sha256x8.h
+│   │   │   │   │   ├── sha512x4.c
+│   │   │   │   │   ├── sha512x4.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_sha2_simple.c
+│   │   │   │   │   ├── thash_sha2_simplex8.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── thashx8.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx8.c
+│   │   │   │   │   ├── utilsx8.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   └── wotsx8.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_sha2.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_sha2.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── sha2_offsets.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_sha2_simple.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx1.c
+│   │   │   │   │   ├── utilsx1.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   ├── wotsx1.c
+│   │   │   │   │   └── wotsx1.h
+│   │   │   │   └── META.yml
+│   │   │   ├── sphincs-sha2-256s-simple
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_sha2.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_sha2.c
+│   │   │   │   │   ├── hash_sha2x8.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── hashx8.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── sha2_offsets.h
+│   │   │   │   │   ├── sha256avx.c
+│   │   │   │   │   ├── sha256avx.h
+│   │   │   │   │   ├── sha256x8.c
+│   │   │   │   │   ├── sha256x8.h
+│   │   │   │   │   ├── sha512x4.c
+│   │   │   │   │   ├── sha512x4.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_sha2_simple.c
+│   │   │   │   │   ├── thash_sha2_simplex8.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── thashx8.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx8.c
+│   │   │   │   │   ├── utilsx8.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   └── wotsx8.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_sha2.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_sha2.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── sha2_offsets.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_sha2_simple.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx1.c
+│   │   │   │   │   ├── utilsx1.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   ├── wotsx1.c
+│   │   │   │   │   └── wotsx1.h
+│   │   │   │   └── META.yml
+│   │   │   ├── sphincs-shake-128f-simple
+│   │   │   │   ├── aarch64
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_shake.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── f1600x2_const.c
+│   │   │   │   │   ├── f1600x2.h
+│   │   │   │   │   ├── f1600x2.s
+│   │   │   │   │   ├── fips202x2.c
+│   │   │   │   │   ├── fips202x2.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_shake.c
+│   │   │   │   │   ├── hash_shakex2.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── hashx2.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── shake_offsets.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_shake_simplex2.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── thashx2.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx2.c
+│   │   │   │   │   ├── utilsx2.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   └── wotsx2.h
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_shake.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── fips202x4.c
+│   │   │   │   │   ├── fips202x4.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_shake.c
+│   │   │   │   │   ├── hash_shakex4.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── hashx4.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── shake_offsets.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_shake_simple.c
+│   │   │   │   │   ├── thash_shake_simplex4.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── thashx4.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx4.c
+│   │   │   │   │   ├── utilsx4.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   └── wotsx4.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_shake.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_shake.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── shake_offsets.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_shake_simple.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx1.c
+│   │   │   │   │   ├── utilsx1.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   ├── wotsx1.c
+│   │   │   │   │   └── wotsx1.h
+│   │   │   │   └── META.yml
+│   │   │   ├── sphincs-shake-128s-simple
+│   │   │   │   ├── aarch64
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_shake.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── f1600x2_const.c
+│   │   │   │   │   ├── f1600x2.h
+│   │   │   │   │   ├── f1600x2.s
+│   │   │   │   │   ├── fips202x2.c
+│   │   │   │   │   ├── fips202x2.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_shake.c
+│   │   │   │   │   ├── hash_shakex2.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── hashx2.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── shake_offsets.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_shake_simplex2.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── thashx2.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx2.c
+│   │   │   │   │   ├── utilsx2.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   └── wotsx2.h
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_shake.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── fips202x4.c
+│   │   │   │   │   ├── fips202x4.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_shake.c
+│   │   │   │   │   ├── hash_shakex4.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── hashx4.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── shake_offsets.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_shake_simple.c
+│   │   │   │   │   ├── thash_shake_simplex4.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── thashx4.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx4.c
+│   │   │   │   │   ├── utilsx4.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   └── wotsx4.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_shake.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_shake.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── shake_offsets.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_shake_simple.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx1.c
+│   │   │   │   │   ├── utilsx1.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   ├── wotsx1.c
+│   │   │   │   │   └── wotsx1.h
+│   │   │   │   └── META.yml
+│   │   │   ├── sphincs-shake-192f-simple
+│   │   │   │   ├── aarch64
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_shake.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── f1600x2_const.c
+│   │   │   │   │   ├── f1600x2.h
+│   │   │   │   │   ├── f1600x2.s
+│   │   │   │   │   ├── fips202x2.c
+│   │   │   │   │   ├── fips202x2.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_shake.c
+│   │   │   │   │   ├── hash_shakex2.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── hashx2.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── shake_offsets.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_shake_simplex2.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── thashx2.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx2.c
+│   │   │   │   │   ├── utilsx2.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   └── wotsx2.h
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_shake.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── fips202x4.c
+│   │   │   │   │   ├── fips202x4.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_shake.c
+│   │   │   │   │   ├── hash_shakex4.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── hashx4.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── shake_offsets.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_shake_simple.c
+│   │   │   │   │   ├── thash_shake_simplex4.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── thashx4.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx4.c
+│   │   │   │   │   ├── utilsx4.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   └── wotsx4.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_shake.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_shake.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── shake_offsets.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_shake_simple.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx1.c
+│   │   │   │   │   ├── utilsx1.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   ├── wotsx1.c
+│   │   │   │   │   └── wotsx1.h
+│   │   │   │   └── META.yml
+│   │   │   ├── sphincs-shake-192s-simple
+│   │   │   │   ├── aarch64
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_shake.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── f1600x2_const.c
+│   │   │   │   │   ├── f1600x2.h
+│   │   │   │   │   ├── f1600x2.s
+│   │   │   │   │   ├── fips202x2.c
+│   │   │   │   │   ├── fips202x2.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_shake.c
+│   │   │   │   │   ├── hash_shakex2.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── hashx2.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── shake_offsets.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_shake_simplex2.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── thashx2.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx2.c
+│   │   │   │   │   ├── utilsx2.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   └── wotsx2.h
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_shake.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── fips202x4.c
+│   │   │   │   │   ├── fips202x4.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_shake.c
+│   │   │   │   │   ├── hash_shakex4.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── hashx4.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── shake_offsets.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_shake_simple.c
+│   │   │   │   │   ├── thash_shake_simplex4.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── thashx4.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx4.c
+│   │   │   │   │   ├── utilsx4.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   └── wotsx4.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_shake.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_shake.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── shake_offsets.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_shake_simple.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx1.c
+│   │   │   │   │   ├── utilsx1.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   ├── wotsx1.c
+│   │   │   │   │   └── wotsx1.h
+│   │   │   │   └── META.yml
+│   │   │   ├── sphincs-shake-256f-simple
+│   │   │   │   ├── aarch64
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_shake.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── f1600x2_const.c
+│   │   │   │   │   ├── f1600x2.h
+│   │   │   │   │   ├── f1600x2.s
+│   │   │   │   │   ├── fips202x2.c
+│   │   │   │   │   ├── fips202x2.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_shake.c
+│   │   │   │   │   ├── hash_shakex2.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── hashx2.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── shake_offsets.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_shake_simplex2.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── thashx2.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx2.c
+│   │   │   │   │   ├── utilsx2.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   └── wotsx2.h
+│   │   │   │   ├── avx2
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_shake.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── fips202x4.c
+│   │   │   │   │   ├── fips202x4.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_shake.c
+│   │   │   │   │   ├── hash_shakex4.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── hashx4.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── shake_offsets.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_shake_simple.c
+│   │   │   │   │   ├── thash_shake_simplex4.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── thashx4.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx4.c
+│   │   │   │   │   ├── utilsx4.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   └── wotsx4.h
+│   │   │   │   ├── clean
+│   │   │   │   │   ├── address.c
+│   │   │   │   │   ├── address.h
+│   │   │   │   │   ├── api.h
+│   │   │   │   │   ├── context_shake.c
+│   │   │   │   │   ├── context.h
+│   │   │   │   │   ├── fors.c
+│   │   │   │   │   ├── fors.h
+│   │   │   │   │   ├── hash_shake.c
+│   │   │   │   │   ├── hash.h
+│   │   │   │   │   ├── LICENSE
+│   │   │   │   │   ├── Makefile
+│   │   │   │   │   ├── Makefile.Microsoft_nmake
+│   │   │   │   │   ├── merkle.c
+│   │   │   │   │   ├── merkle.h
+│   │   │   │   │   ├── nistapi.h
+│   │   │   │   │   ├── params.h
+│   │   │   │   │   ├── shake_offsets.h
+│   │   │   │   │   ├── sign.c
+│   │   │   │   │   ├── thash_shake_simple.c
+│   │   │   │   │   ├── thash.h
+│   │   │   │   │   ├── utils.c
+│   │   │   │   │   ├── utils.h
+│   │   │   │   │   ├── utilsx1.c
+│   │   │   │   │   ├── utilsx1.h
+│   │   │   │   │   ├── wots.c
+│   │   │   │   │   ├── wots.h
+│   │   │   │   │   ├── wotsx1.c
+│   │   │   │   │   └── wotsx1.h
+│   │   │   │   └── META.yml
+│   │   │   └── sphincs-shake-256s-simple
+│   │   │       ├── aarch64
+│   │   │       │   ├── address.c
+│   │   │       │   ├── address.h
+│   │   │       │   ├── api.h
+│   │   │       │   ├── context_shake.c
+│   │   │       │   ├── context.h
+│   │   │       │   ├── f1600x2_const.c
+│   │   │       │   ├── f1600x2.h
+│   │   │       │   ├── f1600x2.s
+│   │   │       │   ├── fips202x2.c
+│   │   │       │   ├── fips202x2.h
+│   │   │       │   ├── fors.c
+│   │   │       │   ├── fors.h
+│   │   │       │   ├── hash_shake.c
+│   │   │       │   ├── hash_shakex2.c
+│   │   │       │   ├── hash.h
+│   │   │       │   ├── hashx2.h
+│   │   │       │   ├── LICENSE
+│   │   │       │   ├── Makefile
+│   │   │       │   ├── merkle.c
+│   │   │       │   ├── merkle.h
+│   │   │       │   ├── nistapi.h
+│   │   │       │   ├── params.h
+│   │   │       │   ├── shake_offsets.h
+│   │   │       │   ├── sign.c
+│   │   │       │   ├── thash_shake_simplex2.c
+│   │   │       │   ├── thash.h
+│   │   │       │   ├── thashx2.h
+│   │   │       │   ├── utils.c
+│   │   │       │   ├── utils.h
+│   │   │       │   ├── utilsx2.c
+│   │   │       │   ├── utilsx2.h
+│   │   │       │   ├── wots.c
+│   │   │       │   ├── wots.h
+│   │   │       │   └── wotsx2.h
+│   │   │       ├── avx2
+│   │   │       │   ├── address.c
+│   │   │       │   ├── address.h
+│   │   │       │   ├── api.h
+│   │   │       │   ├── context_shake.c
+│   │   │       │   ├── context.h
+│   │   │       │   ├── fips202x4.c
+│   │   │       │   ├── fips202x4.h
+│   │   │       │   ├── fors.c
+│   │   │       │   ├── fors.h
+│   │   │       │   ├── hash_shake.c
+│   │   │       │   ├── hash_shakex4.c
+│   │   │       │   ├── hash.h
+│   │   │       │   ├── hashx4.h
+│   │   │       │   ├── LICENSE
+│   │   │       │   ├── Makefile
+│   │   │       │   ├── Makefile.Microsoft_nmake
+│   │   │       │   ├── merkle.c
+│   │   │       │   ├── merkle.h
+│   │   │       │   ├── nistapi.h
+│   │   │       │   ├── params.h
+│   │   │       │   ├── shake_offsets.h
+│   │   │       │   ├── sign.c
+│   │   │       │   ├── thash_shake_simple.c
+│   │   │       │   ├── thash_shake_simplex4.c
+│   │   │       │   ├── thash.h
+│   │   │       │   ├── thashx4.h
+│   │   │       │   ├── utils.c
+│   │   │       │   ├── utils.h
+│   │   │       │   ├── utilsx4.c
+│   │   │       │   ├── utilsx4.h
+│   │   │       │   ├── wots.c
+│   │   │       │   ├── wots.h
+│   │   │       │   └── wotsx4.h
+│   │   │       ├── clean
+│   │   │       │   ├── address.c
+│   │   │       │   ├── address.h
+│   │   │       │   ├── api.h
+│   │   │       │   ├── context_shake.c
+│   │   │       │   ├── context.h
+│   │   │       │   ├── fors.c
+│   │   │       │   ├── fors.h
+│   │   │       │   ├── hash_shake.c
+│   │   │       │   ├── hash.h
+│   │   │       │   ├── LICENSE
+│   │   │       │   ├── Makefile
+│   │   │       │   ├── Makefile.Microsoft_nmake
+│   │   │       │   ├── merkle.c
+│   │   │       │   ├── merkle.h
+│   │   │       │   ├── nistapi.h
+│   │   │       │   ├── params.h
+│   │   │       │   ├── shake_offsets.h
+│   │   │       │   ├── sign.c
+│   │   │       │   ├── thash_shake_simple.c
+│   │   │       │   ├── thash.h
+│   │   │       │   ├── utils.c
+│   │   │       │   ├── utils.h
+│   │   │       │   ├── utilsx1.c
+│   │   │       │   ├── utilsx1.h
+│   │   │       │   ├── wots.c
+│   │   │       │   ├── wots.h
+│   │   │       │   ├── wotsx1.c
+│   │   │       │   └── wotsx1.h
+│   │   │       └── META.yml
+│   │   ├── requirements.txt
+│   │   └── test
+│   │       ├── common
+│   │       │   ├── compat.h
+│   │       │   ├── hqckatrng.c
+│   │       │   ├── nistkatrng.c
+│   │       │   └── notrandombytes.c
+│   │       ├── crypto_kem
+│   │       │   ├── functest.c
+│   │       │   ├── hqckat.c
+│   │       │   ├── nistkat.c
+│   │       │   ├── printparams.c
+│   │       │   └── testvectors.c
+│   │       ├── crypto_sign
+│   │       │   ├── functest.c
+│   │       │   ├── nistkat.c
+│   │       │   ├── printparams.c
+│   │       │   └── testvectors.c
+│   │       ├── duplicate_consistency
+│   │       │   ├── falcon-1024_aarch64.yml
+│   │       │   ├── falcon-1024_avx2.yml
+│   │       │   ├── falcon-1024_clean.yml
+│   │       │   ├── falcon-512_aarch64.yml
+│   │       │   ├── falcon-512_avx2.yml
+│   │       │   ├── falcon-512_clean.yml
+│   │       │   ├── falcon-padded-1024_aarch64.yml
+│   │       │   ├── falcon-padded-1024_avx2.yml
+│   │       │   ├── falcon-padded-1024_clean.yml
+│   │       │   ├── falcon-padded-512_aarch64.yml
+│   │       │   ├── falcon-padded-512_avx2.yml
+│   │       │   ├── falcon-padded-512_clean.yml
+│   │       │   ├── hqc-128_clean.yml
+│   │       │   ├── hqc-192_clean.yml
+│   │       │   ├── mceliece348864_avx2.yml
+│   │       │   ├── mceliece348864_clean.yml
+│   │       │   ├── mceliece348864f_avx2.yml
+│   │       │   ├── mceliece348864f_clean.yml
+│   │       │   ├── mceliece460896_avx2.yml
+│   │       │   ├── mceliece460896_clean.yml
+│   │       │   ├── mceliece460896f_avx2.yml
+│   │       │   ├── mceliece460896f_clean.yml
+│   │       │   ├── mceliece6688128_avx2.yml
+│   │       │   ├── mceliece6688128_clean.yml
+│   │       │   ├── mceliece6688128f_avx2.yml
+│   │       │   ├── mceliece6688128f_clean.yml
+│   │       │   ├── mceliece6960119_avx2.yml
+│   │       │   ├── mceliece6960119_clean.yml
+│   │       │   ├── mceliece6960119f_avx2.yml
+│   │       │   ├── mceliece6960119f_clean.yml
+│   │       │   ├── mceliece8192128_avx2.yml
+│   │       │   ├── mceliece8192128_clean.yml
+│   │       │   ├── mceliece8192128f_avx2.yml
+│   │       │   ├── mceliece8192128f_clean.yml
+│   │       │   ├── ml-dsa-44_aarch64.yml
+│   │       │   ├── ml-dsa-44_avx2.yml
+│   │       │   ├── ml-dsa-44_clean.yml
+│   │       │   ├── ml-dsa-65_aarch64.yml
+│   │       │   ├── ml-dsa-65_avx2.yml
+│   │       │   ├── ml-dsa-65_clean.yml
+│   │       │   ├── ml-dsa-87_aarch64.yml
+│   │       │   ├── ml-dsa-87_avx2.yml
+│   │       │   ├── ml-dsa-87_clean.yml
+│   │       │   ├── ml-kem-1024_aarch64.yml
+│   │       │   ├── ml-kem-1024_avx2.yml
+│   │       │   ├── ml-kem-1024_clean.yml
+│   │       │   ├── ml-kem-512_aarch64.yml
+│   │       │   ├── ml-kem-512_avx2.yml
+│   │       │   ├── ml-kem-512_clean.yml
+│   │       │   ├── ml-kem-768_aarch64.yml
+│   │       │   ├── ml-kem-768_avx2.yml
+│   │       │   ├── ml-kem-768_clean.yml
+│   │       │   ├── sphincs-sha2-128f-simple_avx2.yml
+│   │       │   ├── sphincs-sha2-128f-simple_clean.yml
+│   │       │   ├── sphincs-sha2-128s-simple_avx2.yml
+│   │       │   ├── sphincs-sha2-128s-simple_clean.yml
+│   │       │   ├── sphincs-sha2-192f-simple_avx2.yml
+│   │       │   ├── sphincs-sha2-192f-simple_clean.yml
+│   │       │   ├── sphincs-sha2-192s-simple_avx2.yml
+│   │       │   ├── sphincs-sha2-192s-simple_clean.yml
+│   │       │   ├── sphincs-sha2-256f-simple_avx2.yml
+│   │       │   ├── sphincs-sha2-256f-simple_clean.yml
+│   │       │   ├── sphincs-sha2-256s-simple_avx2.yml
+│   │       │   ├── sphincs-sha2-256s-simple_clean.yml
+│   │       │   ├── sphincs-shake-128f-simple_aarch64.yml
+│   │       │   ├── sphincs-shake-128f-simple_avx2.yml
+│   │       │   ├── sphincs-shake-128f-simple_clean.yml
+│   │       │   ├── sphincs-shake-128s-simple_aarch64.yml
+│   │       │   ├── sphincs-shake-128s-simple_avx2.yml
+│   │       │   ├── sphincs-shake-128s-simple_clean.yml
+│   │       │   ├── sphincs-shake-192f-simple_aarch64.yml
+│   │       │   ├── sphincs-shake-192f-simple_avx2.yml
+│   │       │   ├── sphincs-shake-192f-simple_clean.yml
+│   │       │   ├── sphincs-shake-192s-simple_aarch64.yml
+│   │       │   ├── sphincs-shake-192s-simple_avx2.yml
+│   │       │   ├── sphincs-shake-192s-simple_clean.yml
+│   │       │   ├── sphincs-shake-256f-simple_aarch64.yml
+│   │       │   ├── sphincs-shake-256f-simple_avx2.yml
+│   │       │   ├── sphincs-shake-256f-simple_clean.yml
+│   │       │   ├── sphincs-shake-256s-simple_aarch64.yml
+│   │       │   ├── sphincs-shake-256s-simple_avx2.yml
+│   │       │   └── sphincs-shake-256s-simple_clean.yml
+│   │       ├── helpers.py
+│   │       ├── Makefile
+│   │       ├── Makefile.Microsoft_nmake
+│   │       ├── pqcore.py
+│   │       ├── pytest.ini
+│   │       ├── test_api_h.py
+│   │       ├── test_boolean.py
+│   │       ├── test_char.py
+│   │       ├── test_common
+│   │       │   ├── aes.c
+│   │       │   ├── fips202.c
+│   │       │   ├── nistseedexpander.c
+│   │       │   ├── sha2.c
+│   │       │   └── sp800-185.c
+│   │       ├── test_common.py
+│   │       ├── test_compile_lib.py
+│   │       ├── test_duplicate_consistency.py
+│   │       ├── test_dynamic_memory.py
+│   │       ├── test_format.py
+│   │       ├── test_functest.py
+│   │       ├── test_license.py
+│   │       ├── test_linter.py
+│   │       ├── test_makefile_dependencies.py
+│   │       ├── test_makefiles_present.py
+│   │       ├── test_metadata_sizes.py
+│   │       ├── test_metadata.py
+│   │       ├── test_nistkat.py
+│   │       ├── test_no_symlinks.py
+│   │       ├── test_preprocessor.py
+│   │       ├── test_required_symbols.py
+│   │       ├── test_symbol_namespace.py
+│   │       ├── test_testvectors.py
+│   │       ├── test_valgrind.py
+│   │       └── test_workflows.py
+│   ├── PQVM_USAGE_MANUAL.md
+│   ├── README.md
+│   ├── scripts
+│   │   ├── check_effective_pqc_source_markers.sh
+│   │   ├── check_independent_security_signoff.sh
+│   │   ├── check_naming_policy.sh
+│   │   ├── check_no_absolute_paths.sh
+│   │   ├── check_no_ignored_kat.sh
+│   │   ├── check_traceability_matrix.sh
+│   │   ├── generate_release_manifest.sh
+│   │   ├── generate_sbom.sh
+│   │   ├── package_customer_bundle.sh
+│   │   ├── run_benchmark_report.sh
+│   │   ├── run_deterministic_kat.sh
+│   │   ├── run_fuzz_fault_campaign.sh
+│   │   ├── run_quality_gates.sh
+│   │   └── run_side_channel_review.sh
+│   ├── SECURITY.md
+│   ├── src
+│   │   ├── integrations
+│   │   │   ├── abi.rs
+│   │   │   ├── bitcoin
+│   │   │   │   └── mod.rs
+│   │   │   ├── cosmwasm
+│   │   │   │   └── mod.rs
+│   │   │   ├── evm
+│   │   │   │   └── mod.rs
+│   │   │   ├── mod.rs
+│   │   │   ├── move
+│   │   │   │   └── mod.rs
+│   │   │   ├── solana
+│   │   │   │   └── mod.rs
+│   │   │   └── substrate
+│   │   │       └── mod.rs
+│   │   ├── key_lifecycle.rs
+│   │   ├── lib.rs
+│   │   ├── pqc
+│   │   │   ├── kem
+│   │   │   │   ├── mlkem
+│   │   │   │   │   ├── ffi.rs
+│   │   │   │   │   ├── mlkem1024.rs
+│   │   │   │   │   ├── mlkem512.rs
+│   │   │   │   │   ├── mlkem768.rs
+│   │   │   │   │   └── mod.rs
+│   │   │   │   └── mod.rs
+│   │   │   ├── mod.rs
+│   │   │   └── signatures
+│   │   │       ├── fndsa
+│   │   │       │   ├── ffi.rs
+│   │   │       │   ├── fndsa_padded1024.rs
+│   │   │       │   ├── fndsa_padded512.rs
+│   │   │       │   ├── fndsa1024.rs
+│   │   │       │   ├── fndsa512.rs
+│   │   │       │   └── mod.rs
+│   │   │       ├── mldsa
+│   │   │       │   ├── ffi.rs
+│   │   │       │   ├── mldsa44.rs
+│   │   │       │   ├── mldsa65.rs
+│   │   │       │   ├── mldsa87.rs
+│   │   │       │   └── mod.rs
+│   │   │       └── mod.rs
+│   │   ├── quantum_randomness_beacon.rs
+│   │   ├── security
+│   │   │   └── mod.rs
+│   │   ├── traits.rs
+│   │   └── utils.rs
+│   └── tests
+│       ├── benchmarks
+│       │   ├── pqcrypto
+│       │   │   └── benchmark.rs
+│       │   ├── pqmobile
+│       │   │   └── benchmark.sh
+│       │   ├── pqnodejs
+│       │   │   └── benchmark_all.js
+│       │   ├── pqplatform
+│       │   │   └── benchmark.sh
+│       │   ├── pqpython
+│       │   │   └── benchmark.py
+│       │   ├── pqvm
+│       │   │   └── run_benchmarks.sh
+│       │   └── pqwear
+│       │       └── benchmark.sh
+│       ├── common
+│       │   └── mod.rs
+│       ├── compliance
+│       ├── fault_injection_campaign.rs
+│       ├── functional
+│       │   ├── common
+│       │   │   ├── hardware_test.py
+│       │   │   ├── organize_tests_benchmarks.sh
+│       │   │   ├── test_all.js
+│       │   │   ├── test_api_h.py
+│       │   │   ├── test_boolean.py
+│       │   │   ├── test_char.py
+│       │   │   ├── test_common.py
+│       │   │   ├── test_compile_lib.py
+│       │   │   ├── test_duplicate_consistency.py
+│       │   │   ├── test_dynamic_memory.py
+│       │   │   ├── test_format.py
+│       │   │   ├── test_functest.py
+│       │   │   ├── test_kat.js
+│       │   │   ├── test_kat.sh
+│       │   │   ├── test_license.py
+│       │   │   ├── test_linter.py
+│       │   │   ├── test_makefile_dependencies.py
+│       │   │   ├── test_makefiles_present.py
+│       │   │   ├── test_metadata_sizes.py
+│       │   │   ├── test_metadata.py
+│       │   │   ├── test_nistkat.py
+│       │   │   ├── test_no_symlinks.py
+│       │   │   ├── test_pqpython.py
+│       │   │   ├── test_preprocessor.py
+│       │   │   ├── test_required_symbols.py
+│       │   │   ├── test_symbol_namespace.py
+│       │   │   ├── test_testvectors.py
+│       │   │   ├── test_valgrind.py
+│       │   │   ├── test_workflows.py
+│       │   │   ├── test-browser.js
+│       │   │   └── test.sh
+│       │   └── pqcrypto
+│       │       └── kat_test.rs
+│       ├── integrations_dispatch.rs
+│       ├── kat_fndsa.rs
+│       ├── kat_mldsa_aegis.rs
+│       ├── kat_mlkem.rs
+│       ├── kats
+│       │   ├── aegis
+│       │   │   ├── mldsa44.json
+│       │   │   ├── mldsa65.json
+│       │   │   └── mldsa87.json
+│       │   ├── fndsa
+│       │   │   └── reference
+│       │   │       ├── falcon1024-KAT.req
+│       │   │       ├── falcon1024-KAT.rsp
+│       │   │       ├── falcon512-KAT.req
+│       │   │       └── falcon512-KAT.rsp
+│       │   ├── mldsa
+│       │   │   ├── avx2
+│       │   │   │   └── ml-dsa-64-AES-R
+│       │   │   │       ├── PQCsignKAT_2544.req
+│       │   │   │       └── PQCsignKAT_2544.rsp
+│       │   │   └── reference
+│       │   │       ├── ml-dsa-44
+│       │   │       │   ├── PQCsignKAT_2544.req
+│       │   │       │   └── PQCsignKAT_2544.rsp
+│       │   │       ├── ml-dsa-44-AES
+│       │   │       │   ├── PQCsignKAT_2544.req
+│       │   │       │   └── PQCsignKAT_2544.rsp
+│       │   │       ├── ml-dsa-44-AES-R
+│       │   │       │   ├── PQCsignKAT_2544.req
+│       │   │       │   └── PQCsignKAT_2544.rsp
+│       │   │       ├── ml-dsa-44-R
+│       │   │       │   ├── PQCsignKAT_2544.req
+│       │   │       │   └── PQCsignKAT_2544.rsp
+│       │   │       ├── ml-dsa-65
+│       │   │       │   ├── PQCsignKAT_4016.req
+│       │   │       │   └── PQCsignKAT_4016.rsp
+│       │   │       ├── ml-dsa-65-AES
+│       │   │       │   ├── PQCsignKAT_4016.req
+│       │   │       │   └── PQCsignKAT_4016.rsp
+│       │   │       ├── ml-dsa-65-AES-R
+│       │   │       │   ├── PQCsignKAT_4016.req
+│       │   │       │   └── PQCsignKAT_4016.rsp
+│       │   │       ├── ml-dsa-65-R
+│       │   │       │   ├── PQCsignKAT_4016.req
+│       │   │       │   └── PQCsignKAT_4016.rsp
+│       │   │       ├── ml-dsa-87
+│       │   │       │   ├── PQCsignKAT_4880.req
+│       │   │       │   └── PQCsignKAT_4880.rsp
+│       │   │       ├── ml-dsa-87-AES
+│       │   │       │   ├── PQCsignKAT_4880.req
+│       │   │       │   └── PQCsignKAT_4880.rsp
+│       │   │       ├── ml-dsa-87-AES-R
+│       │   │       │   ├── PQCsignKAT_4880.req
+│       │   │       │   └── PQCsignKAT_4880.rsp
+│       │   │       └── ml-dsa-87-R
+│       │   │           ├── PQCsignKAT_4880.req
+│       │   │           └── PQCsignKAT_4880.rsp
+│       │   └── mlkem
+│       │       ├── avx2
+│       │       │   ├── ml-kem-1024
+│       │       │   │   ├── PQCkemKAT_3168.req
+│       │       │   │   └── PQCkemKAT_3168.rsp
+│       │       │   ├── ml-kem-1024-90s
+│       │       │   │   ├── PQCkemKAT_3168.req
+│       │       │   │   └── PQCkemKAT_3168.rsp
+│       │       │   ├── ml-kem-512
+│       │       │   │   ├── PQCkemKAT_1632.req
+│       │       │   │   └── PQCkemKAT_1632.rsp
+│       │       │   ├── ml-kem-512-90s
+│       │       │   │   ├── PQCkemKAT_1632.req
+│       │       │   │   └── PQCkemKAT_1632.rsp
+│       │       │   ├── ml-kem-768
+│       │       │   │   ├── PQCkemKAT_2400.req
+│       │       │   │   └── PQCkemKAT_2400.rsp
+│       │       │   └── ml-kem-768-90s
+│       │       │       ├── PQCkemKAT_2400.req
+│       │       │       └── PQCkemKAT_2400.rsp
+│       │       └── reference
+│       │           ├── ml-kem-1024
+│       │           │   ├── PQCkemKAT_3168.req
+│       │           │   └── PQCkemKAT_3168.rsp
+│       │           ├── ml-kem-1024-90s
+│       │           │   ├── PQCkemKAT_3168.req
+│       │           │   └── PQCkemKAT_3168.rsp
+│       │           ├── ml-kem-512
+│       │           │   ├── PQCkemKAT_1632.req
+│       │           │   └── PQCkemKAT_1632.rsp
+│       │           ├── ml-kem-512-90s
+│       │           │   ├── PQCkemKAT_1632.req
+│       │           │   └── PQCkemKAT_1632.rsp
+│       │           ├── ml-kem-768
+│       │           │   ├── PQCkemKAT_2400.req
+│       │           │   └── PQCkemKAT_2400.rsp
+│       │           └── ml-kem-768-90s
+│       │               ├── PQCkemKAT_2400.req
+│       │               └── PQCkemKAT_2400.rsp
+│       ├── quantum_randomness_beacon.rs
+│       ├── security
+│       ├── security_smoke.rs
+│       ├── side_channel_review.rs
+│       └── vm_validation.rs
+├── api.synergy-network.io
+├── archive
+├── Cargo.toml
+├── clean-file-tree.txt
+├── COMMANDS.md
+├── config
+│   ├── bootnode1.toml
+│   ├── bootnode2.toml
+│   ├── bootnode3.toml
+│   ├── cluster_identity.example.json
+│   ├── consensus-config.toml
+│   ├── genesis-validators
+│   │   ├── node-01.identity.json
+│   │   ├── node-02.identity.json
+│   │   ├── node-03.identity.json
+│   │   ├── node-04.identity.json
+│   │   └── node-05.identity.json
+│   ├── genesis.json
+│   ├── keys
+│   │   ├── dao_identity.json
+│   │   └── fee_collector_identity.json
+│   ├── network-config.toml
+│   ├── node_config.toml
+│   ├── node.toml
+│   ├── operational-manifest.json
+│   ├── rewards_pool.example.json
+│   ├── seed-services
+│   │   ├── seed1.json
+│   │   ├── seed2.json
+│   │   └── seed3.json
+│   ├── testbeta_wallets.example.json
+│   ├── token_metadata.json
+│   └── validator
+│       └── validator.toml
+├── data
+│   ├── .gitkeep
+│   ├── chain
+│   ├── chain.json
+│   ├── role-runtime.json
+│   └── synergy-testbeta.pid
+├── dependencies
+│   ├── Cargo.toml
+│   └── package.json
+├── docs
+│   ├── ~$ken-system.docx
+│   ├── aivm-gpt-oss-usage.md
+│   ├── aivm-guide.md
+│   ├── allocation-template.csv
+│   ├── api-reference.md
+│   ├── config-guide.md
+│   ├── crypto-theft-solutions-implementation-matrix.md
+│   ├── explorer-guide.md
+│   ├── genesis_types.rs
+│   ├── genesis-blueprint.json
+│   ├── how-to-set-up-indexer-explorer-node.md
+│   ├── node-role-functions-operator.docx
+│   ├── node-role-functions-operator.md
+│   ├── node-role-functions.docx
+│   ├── node-role-functions.md
+│   ├── public-rpc-gateway-setup.md
+│   ├── README.md
+│   ├── security-implementation-program.md
+│   ├── setup-guide.md
+│   ├── staking-guide.md
+│   ├── Synergy_Genesis_Block_Master_Spec.docx
+│   ├── Synergy_Genesis_Contract_Specifications.docx
+│   ├── synq-language.md
+│   ├── testbeta-control-panel-go-live-checklist.md
+│   ├── testbeta-dns-final.csv
+│   ├── testbeta-dns-records-to-create.md
+│   ├── testbeta-onchain-transaction-commands.docx
+│   ├── testbeta-onchain-transaction-commands.md
+│   ├── testnet-beta-genesis-snts-corrected.json
+│   ├── testnet-beta-genesis.json
+│   ├── token-system.docx
+│   ├── token-system.md
+│   ├── token-system.pdf
+│   ├── troubleshooting.md
+│   ├── validator-template.json
+│   └── wallet-usage.md
+├── fix-nginx-permissions.sh
+├── guides
+├── icons
+│   ├── Android icons (synergy)
+│   │   ├── mipmap-hdpi
+│   │   │   └── ic_launcher.png
+│   │   ├── mipmap-ldpi
+│   │   │   └── ic_launcher.png
+│   │   ├── mipmap-mdpi
+│   │   │   └── ic_launcher.png
+│   │   ├── mipmap-xhdpi
+│   │   │   └── ic_launcher.png
+│   │   ├── mipmap-xxhdpi
+│   │   │   └── ic_launcher.png
+│   │   ├── mipmap-xxxhdpi
+│   │   │   └── ic_launcher.png
+│   │   └── playstore-icon.png
+│   ├── Favicons (synergy)
+│   │   ├── favicon-114-precomposed.png
+│   │   ├── favicon-120-precomposed.png
+│   │   ├── favicon-144-precomposed.png
+│   │   ├── favicon-152-precomposed.png
+│   │   ├── favicon-180-precomposed.png
+│   │   ├── favicon-192.png
+│   │   ├── favicon-32.png
+│   │   ├── favicon-36.png
+│   │   ├── favicon-48.png
+│   │   ├── favicon-57.png
+│   │   ├── favicon-60.png
+│   │   ├── favicon-72-precomposed.png
+│   │   ├── favicon-72.png
+│   │   ├── favicon-76.png
+│   │   ├── favicon-96.png
+│   │   ├── favicon.ico
+│   │   ├── index.html
+│   │   └── manifest.json
+│   ├── icon.iconset
+│   │   ├── icon_128x128.png
+│   │   ├── icon_128x128@2x.png
+│   │   ├── icon_16x16.png
+│   │   ├── icon_16x16@2x.png
+│   │   ├── icon_256x256.png
+│   │   ├── icon_256x256@2x.png
+│   │   ├── icon_32x32.png
+│   │   ├── icon_32x32@2x.png
+│   │   ├── icon_512x512.png
+│   │   └── icon_512x512@2x.png
+│   ├── iOS icons (synergy)
+│   │   ├── App Store.png
+│   │   ├── Apple Watch Companion Settings@2x.png
+│   │   ├── Apple Watch Companion Settings@3x.png
+│   │   ├── Apple Watch Home Screen (38mm).png
+│   │   ├── Apple Watch Home Screen (40mm).png
+│   │   ├── Apple Watch Home Screen (41mm).png
+│   │   ├── Apple Watch Home Screen (44mm).png
+│   │   ├── Apple Watch Home Screen (45mm).png
+│   │   ├── Apple Watch Notification center (38mm).png
+│   │   ├── Apple Watch Notification center (42mm).png
+│   │   ├── Apple Watch Notification center (45mm).png
+│   │   ├── Apple Watch Short Look (38mm).png
+│   │   ├── Apple Watch Short Look (42mm).png
+│   │   ├── Apple Watch Short Look (44mm).png
+│   │   ├── Apple Watch Short Look (45mm).png
+│   │   ├── iPad App Icon iOS 5,6.png
+│   │   ├── iPad App Icon iOS 5,6@2x.png
+│   │   ├── iPad App Icon iOS 7,12.png
+│   │   ├── iPad App Icon iOS 7,12@2x.png
+│   │   ├── iPad notification iOS 7,12.png
+│   │   ├── iPad notification iOS 7,12@2x.png
+│   │   ├── iPad Pro Icon iOS 9,12@2x.png
+│   │   ├── iPad Settings.png
+│   │   ├── iPad Settings@2x.png
+│   │   ├── iPad Spotlight iOS 5,6.png
+│   │   ├── iPad Spotlight iOS 5,6@2x.png
+│   │   ├── iPad Spotlight iOS 7,12.png
+│   │   ├── iPad Spotlight iOS 7,12@2x.png
+│   │   ├── iPhone App Icon iOS 5,6.png
+│   │   ├── iPhone App Icon iOS 5,6@2x.png
+│   │   ├── iPhone App Icon iOS 7,12@2x.png
+│   │   ├── iPhone App Icon iOS 7,12@3x.png
+│   │   ├── iPhone notification iOS 7,12@2x.png
+│   │   ├── iPhone notification iOS 7,12@3x.png
+│   │   ├── iPhone settings iOS 7,12@2x.png
+│   │   ├── iPhone settings iOS 7,12@3x.png
+│   │   ├── iPhone Spotlight iOS 5,6 & Settings.png
+│   │   ├── iPhone Spotlight iOS 5,6 & Settings@2x.png
+│   │   ├── iPhone Spotlight iOS 5,6 & Settings@3x.png
+│   │   ├── iPhone Spotlight iOS 7,12.png
+│   │   ├── iPhone Spotlight iOS 7,12@2x.png
+│   │   ├── iPhone Spotlight iOS 7,12@3x.png
+│   │   ├── Messages (27x20pt)@2x.png
+│   │   ├── Messages (27x20pt)@3x.png
+│   │   ├── Messages (32x24pt)@2x.png
+│   │   ├── Messages (32x24pt)@3x.png
+│   │   ├── Messages App Store.png
+│   │   ├── Messages iPad Pro@2x.png
+│   │   ├── Messages iPad Settings@2x.png
+│   │   ├── Messages iPad@2x.png
+│   │   ├── Messages iPhone Settings@2x.png
+│   │   ├── Messages iPhone Settings@3x.png
+│   │   ├── Messages iPhone@2x.png
+│   │   └── Messages iPhone@3x.png
+│   ├── SNRG512
+│   ├── SNRG512.icns
+│   ├── SNRG512.iconset
+│   │   ├── icon_128x128.png
+│   │   ├── icon_128x128@2x.png
+│   │   ├── icon_16x16.png
+│   │   ├── icon_16x16@2x.png
+│   │   ├── icon_256x256.png
+│   │   ├── icon_256x256@2x.png
+│   │   ├── icon_32x32.png
+│   │   ├── icon_32x32@2x.png
+│   │   ├── icon_512x512.png
+│   │   └── icon_512x512@2x.png
+│   ├── SNRG512.png
+│   ├── SNRG512android
+│   │   ├── mipmap-hdpi
+│   │   │   └── ic_launcher.png
+│   │   ├── mipmap-ldpi
+│   │   │   └── ic_launcher.png
+│   │   ├── mipmap-mdpi
+│   │   │   └── ic_launcher.png
+│   │   ├── mipmap-xhdpi
+│   │   │   └── ic_launcher.png
+│   │   ├── mipmap-xxhdpi
+│   │   │   └── ic_launcher.png
+│   │   ├── mipmap-xxxhdpi
+│   │   │   └── ic_launcher.png
+│   │   └── playstore-icon.png
+│   ├── SNRG512favicon
+│   │   ├── favicon-114-precomposed.png
+│   │   ├── favicon-120-precomposed.png
+│   │   ├── favicon-144-precomposed.png
+│   │   ├── favicon-152-precomposed.png
+│   │   ├── favicon-180-precomposed.png
+│   │   ├── favicon-192.png
+│   │   ├── favicon-32.png
+│   │   ├── favicon-36.png
+│   │   ├── favicon-48.png
+│   │   ├── favicon-57.png
+│   │   ├── favicon-60.png
+│   │   ├── favicon-72-precomposed.png
+│   │   ├── favicon-72.png
+│   │   ├── favicon-76.png
+│   │   ├── favicon-96.png
+│   │   ├── favicon.ico
+│   │   ├── index.html
+│   │   └── manifest.json
+│   ├── SNRGcoin
+│   ├── SNRGcoin.icns
+│   ├── SNRGcoin.iconset
+│   │   ├── icon_128x128.png
+│   │   ├── icon_128x128@2x.png
+│   │   ├── icon_16x16.png
+│   │   ├── icon_16x16@2x.png
+│   │   ├── icon_256x256.png
+│   │   ├── icon_256x256@2x.png
+│   │   ├── icon_32x32.png
+│   │   ├── icon_32x32@2x.png
+│   │   ├── icon_512x512.png
+│   │   └── icon_512x512@2x.png
+│   ├── SNRGcoin.png
+│   ├── SNRGcoinandroid
+│   │   ├── mipmap-hdpi
+│   │   │   └── ic_launcher.png
+│   │   ├── mipmap-ldpi
+│   │   │   └── ic_launcher.png
+│   │   ├── mipmap-mdpi
+│   │   │   └── ic_launcher.png
+│   │   ├── mipmap-xhdpi
+│   │   │   └── ic_launcher.png
+│   │   ├── mipmap-xxhdpi
+│   │   │   └── ic_launcher.png
+│   │   ├── mipmap-xxxhdpi
+│   │   │   └── ic_launcher.png
+│   │   └── playstore-icon.png
+│   ├── SNRGcoinfavicon
+│   │   ├── favicon-114-precomposed.png
+│   │   ├── favicon-120-precomposed.png
+│   │   ├── favicon-144-precomposed.png
+│   │   ├── favicon-152-precomposed.png
+│   │   ├── favicon-180-precomposed.png
+│   │   ├── favicon-192.png
+│   │   ├── favicon-32.png
+│   │   ├── favicon-36.png
+│   │   ├── favicon-48.png
+│   │   ├── favicon-57.png
+│   │   ├── favicon-60.png
+│   │   ├── favicon-72-precomposed.png
+│   │   ├── favicon-72.png
+│   │   ├── favicon-76.png
+│   │   ├── favicon-96.png
+│   │   ├── favicon.ico
+│   │   ├── index.html
+│   │   └── manifest.json
+│   ├── SNRGcoiniOS
+│   │   ├── App Store.png
+│   │   ├── Apple Watch Companion Settings@2x.png
+│   │   ├── Apple Watch Companion Settings@3x.png
+│   │   ├── Apple Watch Home Screen (38mm).png
+│   │   ├── Apple Watch Home Screen (40mm).png
+│   │   ├── Apple Watch Home Screen (41mm).png
+│   │   ├── Apple Watch Home Screen (44mm).png
+│   │   ├── Apple Watch Home Screen (45mm).png
+│   │   ├── Apple Watch Notification center (38mm).png
+│   │   ├── Apple Watch Notification center (42mm).png
+│   │   ├── Apple Watch Notification center (45mm).png
+│   │   ├── Apple Watch Short Look (38mm).png
+│   │   ├── Apple Watch Short Look (42mm).png
+│   │   ├── Apple Watch Short Look (44mm).png
+│   │   ├── Apple Watch Short Look (45mm).png
+│   │   ├── iPad App Icon iOS 5,6.png
+│   │   ├── iPad App Icon iOS 5,6@2x.png
+│   │   ├── iPad App Icon iOS 7,12.png
+│   │   ├── iPad App Icon iOS 7,12@2x.png
+│   │   ├── iPad notification iOS 7,12.png
+│   │   ├── iPad notification iOS 7,12@2x.png
+│   │   ├── iPad Pro Icon iOS 9,12@2x.png
+│   │   ├── iPad Settings.png
+│   │   ├── iPad Settings@2x.png
+│   │   ├── iPad Spotlight iOS 5,6.png
+│   │   ├── iPad Spotlight iOS 5,6@2x.png
+│   │   ├── iPad Spotlight iOS 7,12.png
+│   │   ├── iPad Spotlight iOS 7,12@2x.png
+│   │   ├── iPhone App Icon iOS 5,6.png
+│   │   ├── iPhone App Icon iOS 5,6@2x.png
+│   │   ├── iPhone App Icon iOS 7,12@2x.png
+│   │   ├── iPhone App Icon iOS 7,12@3x.png
+│   │   ├── iPhone notification iOS 7,12@2x.png
+│   │   ├── iPhone notification iOS 7,12@3x.png
+│   │   ├── iPhone settings iOS 7,12@2x.png
+│   │   ├── iPhone settings iOS 7,12@3x.png
+│   │   ├── iPhone Spotlight iOS 5,6 & Settings.png
+│   │   ├── iPhone Spotlight iOS 5,6 & Settings@2x.png
+│   │   ├── iPhone Spotlight iOS 5,6 & Settings@3x.png
+│   │   ├── iPhone Spotlight iOS 7,12.png
+│   │   ├── iPhone Spotlight iOS 7,12@2x.png
+│   │   ├── iPhone Spotlight iOS 7,12@3x.png
+│   │   ├── Messages (27x20pt)@2x.png
+│   │   ├── Messages (27x20pt)@3x.png
+│   │   ├── Messages (32x24pt)@2x.png
+│   │   ├── Messages (32x24pt)@3x.png
+│   │   ├── Messages App Store.png
+│   │   ├── Messages iPad Pro@2x.png
+│   │   ├── Messages iPad Settings@2x.png
+│   │   ├── Messages iPad@2x.png
+│   │   ├── Messages iPhone Settings@2x.png
+│   │   ├── Messages iPhone Settings@3x.png
+│   │   ├── Messages iPhone@2x.png
+│   │   └── Messages iPhone@3x.png
+│   ├── SNRGiOS512
+│   │   ├── App Store.png
+│   │   ├── Apple Watch Companion Settings@2x.png
+│   │   ├── Apple Watch Companion Settings@3x.png
+│   │   ├── Apple Watch Home Screen (38mm).png
+│   │   ├── Apple Watch Home Screen (40mm).png
+│   │   ├── Apple Watch Home Screen (41mm).png
+│   │   ├── Apple Watch Home Screen (44mm).png
+│   │   ├── Apple Watch Home Screen (45mm).png
+│   │   ├── Apple Watch Notification center (38mm).png
+│   │   ├── Apple Watch Notification center (42mm).png
+│   │   ├── Apple Watch Notification center (45mm).png
+│   │   ├── Apple Watch Short Look (38mm).png
+│   │   ├── Apple Watch Short Look (42mm).png
+│   │   ├── Apple Watch Short Look (44mm).png
+│   │   ├── Apple Watch Short Look (45mm).png
+│   │   ├── iPad App Icon iOS 5,6.png
+│   │   ├── iPad App Icon iOS 5,6@2x.png
+│   │   ├── iPad App Icon iOS 7,12.png
+│   │   ├── iPad App Icon iOS 7,12@2x.png
+│   │   ├── iPad notification iOS 7,12.png
+│   │   ├── iPad notification iOS 7,12@2x.png
+│   │   ├── iPad Pro Icon iOS 9,12@2x.png
+│   │   ├── iPad Settings.png
+│   │   ├── iPad Settings@2x.png
+│   │   ├── iPad Spotlight iOS 5,6.png
+│   │   ├── iPad Spotlight iOS 5,6@2x.png
+│   │   ├── iPad Spotlight iOS 7,12.png
+│   │   ├── iPad Spotlight iOS 7,12@2x.png
+│   │   ├── iPhone App Icon iOS 5,6.png
+│   │   ├── iPhone App Icon iOS 5,6@2x.png
+│   │   ├── iPhone App Icon iOS 7,12@2x.png
+│   │   ├── iPhone App Icon iOS 7,12@3x.png
+│   │   ├── iPhone notification iOS 7,12@2x.png
+│   │   ├── iPhone notification iOS 7,12@3x.png
+│   │   ├── iPhone settings iOS 7,12@2x.png
+│   │   ├── iPhone settings iOS 7,12@3x.png
+│   │   ├── iPhone Spotlight iOS 5,6 & Settings.png
+│   │   ├── iPhone Spotlight iOS 5,6 & Settings@2x.png
+│   │   ├── iPhone Spotlight iOS 5,6 & Settings@3x.png
+│   │   ├── iPhone Spotlight iOS 7,12.png
+│   │   ├── iPhone Spotlight iOS 7,12@2x.png
+│   │   ├── iPhone Spotlight iOS 7,12@3x.png
+│   │   ├── Messages (27x20pt)@2x.png
+│   │   ├── Messages (27x20pt)@3x.png
+│   │   ├── Messages (32x24pt)@2x.png
+│   │   ├── Messages (32x24pt)@3x.png
+│   │   ├── Messages App Store.png
+│   │   ├── Messages iPad Pro@2x.png
+│   │   ├── Messages iPad Settings@2x.png
+│   │   ├── Messages iPad@2x.png
+│   │   ├── Messages iPhone Settings@2x.png
+│   │   ├── Messages iPhone Settings@3x.png
+│   │   ├── Messages iPhone@2x.png
+│   │   └── Messages iPhone@3x.png
+│   └── synergy.icns
+├── install-api-router.sh
+├── install-testbeta-service.sh
+├── LICENSE
+├── monitor-blocks.sh
+├── node-control-panel
+│   ├── .claude
+│   │   └── settings.local.json
+│   ├── .env
+│   ├── .env.example
+│   ├── .gitattributes
+│   ├── .github
+│   │   ├── RELEASE_SETUP.md
+│   │   └── workflows
+│   │       └── release.yml
+│   ├── .gitignore
+│   ├── 03-proof-of-synergy-consensus.docx
+│   ├── archive
+│   │   ├── docs-legacy
+│   │   │   ├── guides
+│   │   │   │   ├── NETWORK_NODE_MONITOR_QUICK_OPS_CHEAT_SHEET.docx
+│   │   │   │   └── NETWORK_NODE_MONITOR_USER_MANUAL.docx
+│   │   │   └── root
+│   │   │       ├── DISTRIBUTION.md
+│   │   │       ├── IMPLEMENTATION_SUMMARY.md
+│   │   │       ├── NETWORK_CONFIGS_MASTER.md
+│   │   │       ├── NETWORK_NODE_MONITOR_QUICK_OPS_CHEAT_SHEET.docx
+│   │   │       ├── NETWORK_NODE_MONITOR_USER_MANUAL.docx
+│   │   │       ├── PQC_INTEGRATION.md
+│   │   │       ├── SETUP_WIZARD_GUIDE.md
+│   │   │       ├── SETUP.md
+│   │   │       ├── USER_GUIDE_ENHANCED.docx
+│   │   │       ├── USER_GUIDE.docx
+│   │   │       └── USER_GUIDE.md
+│   │   └── README.md
+│   ├── binaries
+│   │   ├── synergy-testbeta-agent-darwin-arm64
+│   │   ├── synergy-testbeta-agent-linux-amd64
+│   │   ├── synergy-testbeta-agent-linux-arm64
+│   │   ├── synergy-testbeta-agent-windows-amd64.exe
+│   │   ├── synergy-testbeta-darwin-arm64
+│   │   ├── synergy-testbeta-linux-amd64
+│   │   ├── synergy-testbeta-linux-amd64.bak.20260421-150024
+│   │   ├── synergy-testbeta-linux-amd64.bak.20260421-150045
+│   │   ├── synergy-testbeta-linux-amd64.sha256
+│   │   ├── synergy-testbeta-macos-arm64
+│   │   ├── synergy-testbeta-macos-arm64.sha256
+│   │   ├── synergy-testbeta-windows-amd64.exe
+│   │   └── synergy-testbeta-windows-amd64.exe.sha256
+│   ├── CHANGELOG.md
+│   ├── control-service
+│   │   ├── .gitignore
+│   │   ├── Cargo.toml
+│   │   ├── icons
+│   │   │   ├── 128x128.png
+│   │   │   ├── 128x128@2x.png
+│   │   │   ├── 32x32.png
+│   │   │   ├── 64x64.png
+│   │   │   ├── android
+│   │   │   │   ├── mipmap-anydpi-v26
+│   │   │   │   │   └── ic_launcher.xml
+│   │   │   │   ├── mipmap-hdpi
+│   │   │   │   │   ├── ic_launcher_foreground.png
+│   │   │   │   │   ├── ic_launcher_round.png
+│   │   │   │   │   └── ic_launcher.png
+│   │   │   │   ├── mipmap-mdpi
+│   │   │   │   │   ├── ic_launcher_foreground.png
+│   │   │   │   │   ├── ic_launcher_round.png
+│   │   │   │   │   └── ic_launcher.png
+│   │   │   │   ├── mipmap-xhdpi
+│   │   │   │   │   ├── ic_launcher_foreground.png
+│   │   │   │   │   ├── ic_launcher_round.png
+│   │   │   │   │   └── ic_launcher.png
+│   │   │   │   ├── mipmap-xxhdpi
+│   │   │   │   │   ├── ic_launcher_foreground.png
+│   │   │   │   │   ├── ic_launcher_round.png
+│   │   │   │   │   └── ic_launcher.png
+│   │   │   │   ├── mipmap-xxxhdpi
+│   │   │   │   │   ├── ic_launcher_foreground.png
+│   │   │   │   │   ├── ic_launcher_round.png
+│   │   │   │   │   └── ic_launcher.png
+│   │   │   │   └── values
+│   │   │   │       └── ic_launcher_background.xml
+│   │   │   ├── icon.icns
+│   │   │   ├── icon.ico
+│   │   │   ├── icon.png
+│   │   │   ├── ios
+│   │   │   │   ├── AppIcon-20x20@1x.png
+│   │   │   │   ├── AppIcon-20x20@2x-1.png
+│   │   │   │   ├── AppIcon-20x20@2x.png
+│   │   │   │   ├── AppIcon-20x20@3x.png
+│   │   │   │   ├── AppIcon-29x29@1x.png
+│   │   │   │   ├── AppIcon-29x29@2x-1.png
+│   │   │   │   ├── AppIcon-29x29@2x.png
+│   │   │   │   ├── AppIcon-29x29@3x.png
+│   │   │   │   ├── AppIcon-40x40@1x.png
+│   │   │   │   ├── AppIcon-40x40@2x-1.png
+│   │   │   │   ├── AppIcon-40x40@2x.png
+│   │   │   │   ├── AppIcon-40x40@3x.png
+│   │   │   │   ├── AppIcon-512@2x.png
+│   │   │   │   ├── AppIcon-60x60@2x.png
+│   │   │   │   ├── AppIcon-60x60@3x.png
+│   │   │   │   ├── AppIcon-76x76@1x.png
+│   │   │   │   ├── AppIcon-76x76@2x.png
+│   │   │   │   └── AppIcon-83.5x83.5@2x.png
+│   │   │   ├── Square107x107Logo.png
+│   │   │   ├── Square142x142Logo.png
+│   │   │   ├── Square150x150Logo.png
+│   │   │   ├── Square284x284Logo.png
+│   │   │   ├── Square30x30Logo.png
+│   │   │   ├── Square310x310Logo.png
+│   │   │   ├── Square44x44Logo.png
+│   │   │   ├── Square71x71Logo.png
+│   │   │   ├── Square89x89Logo.png
+│   │   │   └── StoreLogo.png
+│   │   ├── src
+│   │   │   ├── agent.rs
+│   │   │   ├── app_context.rs
+│   │   │   ├── blockchain
+│   │   │   │   ├── mod.rs
+│   │   │   │   ├── rpc_client.rs
+│   │   │   │   └── service.rs
+│   │   │   ├── commands
+│   │   │   ├── control_service.rs
+│   │   │   ├── event_bus.rs
+│   │   │   ├── lib.rs
+│   │   │   ├── monitor.rs
+│   │   │   ├── testbeta_agent_service.rs
+│   │   │   └── testnet_beta.rs
+│   │   ├── synergy-address-engine
+│   │   │   ├── Cargo.toml
+│   │   │   ├── readme_doc_testbeta.md
+│   │   │   └── src
+│   │   │       ├── lib.rs
+│   │   │       └── main.rs
+│   │   ├── synergy-node
+│   │   │   ├── Cargo.toml
+│   │   │   └── src
+│   │   │       ├── consensus.rs
+│   │   │       ├── crypto.rs
+│   │   │       ├── main.rs
+│   │   │       ├── network.rs
+│   │   │       ├── node.rs
+│   │   │       ├── rpc.rs
+│   │   │       └── storage.rs
+│   │   └── testbeta-agent
+│   │       ├── Cargo.toml
+│   │       └── src
+│   │           └── main.rs
+│   ├── docs
+│   │   ├── developer
+│   │   │   ├── git-remote.md
+│   │   │   ├── github-ssh-key.md
+│   │   │   ├── testnet-beta-validator-debug-cheatsheet-linux.md
+│   │   │   ├── testnet-beta-validator-debug-cheatsheet-macos.md
+│   │   │   ├── testnet-beta-validator-debug-cheatsheet-windows.md
+│   │   │   └── testnet-beta-validator-update-workflow.md
+│   │   ├── operator
+│   │   │   ├── firewall-privilege-escalation.md
+│   │   │   └── public-testing-readiness-checklist.md
+│   │   ├── README.md
+│   │   ├── reference
+│   │   │   ├── address-format.md
+│   │   │   ├── COMMANDS.docx
+│   │   │   ├── COMMANDS.md
+│   │   │   └── release-notes-v3.0.0.docx
+│   │   └── testnet-beta-migration.md
+│   ├── electron
+│   │   ├── main.cjs
+│   │   └── preload.cjs
+│   ├── electron-builder.yml
+│   ├── Explorer-Reset-Integration-Guide.md
+│   ├── guides
+│   │   ├── COORDINATOR_GUIDE.md
+│   │   ├── NODE_DEPLOYMENT_SUMMARY.md
+│   │   ├── POSY_CLUSTER_TESTING_GUIDE.md
+│   │   ├── QUICK_REFERENCE.md
+│   │   ├── QUICK_START.md
+│   │   ├── RELAYER_NODE_SETUP_GUIDE.md
+│   │   ├── RPC_NODE_SETUP_GUIDE.md
+│   │   ├── Synergy Network Address Formatting Standard.pdf
+│   │   ├── SYNERGY_TESTBETA_CONTROL_PANEL_QUICK_OPS_CHEAT_SHEET.md
+│   │   ├── SYNERGY_TESTBETA_CONTROL_PANEL_USER_MANUAL.md
+│   │   ├── TESTBETA_GUIDE.md
+│   │   ├── TESTBETA_STARTUP_GUIDE.md
+│   │   ├── VALIDATOR_ONBOARDING_GUIDE.md
+│   │   ├── VALIDATOR_SETUP_COMPLETE.md
+│   │   └── validator-guide-ubuntu.md
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── public
+│   │   ├── 02.png
+│   │   ├── branding
+│   │   │   ├── assets
+│   │   │   │   ├── aegis_lattice.svg
+│   │   │   │   ├── dashboard_gauges.svg
+│   │   │   │   ├── docs_blueprint.svg
+│   │   │   │   ├── eco.gif
+│   │   │   │   ├── ecobanner.gif
+│   │   │   │   ├── explorer_blocks.svg
+│   │   │   │   ├── snrg-logo.png
+│   │   │   │   ├── snrg-logo.svg
+│   │   │   │   ├── snrg-splash.gif
+│   │   │   │   ├── synq_graph.svg
+│   │   │   │   └── wallet_vault.svg
+│   │   │   └── fonts
+│   │   │       ├── Inter-Italic-VariableFont_opsz_wght.ttf
+│   │   │       ├── Inter-VariableFont_opsz_wght.ttf
+│   │   │       ├── JetBrainsMono-Italic-VariableFont_wght.ttf
+│   │   │       ├── JetBrainsMono-VariableFont_wght.ttf
+│   │   │       ├── Orbitron-VariableFont_wght.ttf
+│   │   │       └── Sora-VariableFont_wght.ttf
+│   │   ├── electron.svg
+│   │   ├── snrg.gif
+│   │   └── vite.svg
+│   ├── README.md
+│   ├── recipes
+│   │   ├── ai_inference.yml
+│   │   ├── archive_validator.yml
+│   │   ├── audit_validator.yml
+│   │   ├── committee.yml
+│   │   ├── compute.yml
+│   │   ├── cross_chain_verifier.yml
+│   │   ├── data_availability.yml
+│   │   ├── governance_auditor.yml
+│   │   ├── indexer.yml
+│   │   ├── observer.yml
+│   │   ├── oracle.yml
+│   │   ├── pqc_crypto.yml
+│   │   ├── relayer.yml
+│   │   ├── rpc_gateway.yml
+│   │   ├── security_council.yml
+│   │   ├── treasury_controller.yml
+│   │   ├── uma_coordinator.yml
+│   │   ├── validator.yml
+│   │   └── witness.yml
+│   ├── RELEASE_NOTES_v4.0.0.md
+│   ├── release-notes-v4.0.0.docx
+│   ├── RELEASES_README.md
+│   ├── scripts
+│   │   ├── build-sidecars.sh
+│   │   ├── cleanup
+│   │   │   ├── clean-slate-linux.sh
+│   │   │   ├── clean-slate-macos.sh
+│   │   │   └── clean-slate-windows.ps1
+│   │   ├── electron
+│   │   │   ├── afterPack.cjs
+│   │   │   ├── dev-desktop.mjs
+│   │   │   ├── dev-electron.mjs
+│   │   │   ├── dev-port.mjs
+│   │   │   └── prepare-runtime.mjs
+│   │   ├── release
+│   │   │   ├── build-bundle-prep.sh
+│   │   │   ├── generate-latest-json.sh
+│   │   │   ├── generate-workspace-manifest.sh
+│   │   │   ├── preflight.sh
+│   │   │   └── validate-bundled-assets.sh
+│   │   ├── release.sh
+│   │   ├── reset-testbeta.sh
+│   │   ├── testbeta
+│   │   │   ├── bootstrap-sxcp-testbeta.sh
+│   │   │   ├── chaos-node.sh
+│   │   │   ├── check-determinism.sh
+│   │   │   ├── check-sxcp-external-infra.sh
+│   │   │   ├── generate-monitor-hosts-env.sh
+│   │   │   ├── generate-node-keys.sh
+│   │   │   ├── generate-testbeta-genesis.sh
+│   │   │   ├── load-generator.sh
+│   │   │   ├── remote-node-orchestrator.sh
+│   │   │   ├── render-configs.sh
+│   │   │   ├── reset-testbeta.sh
+│   │   │   ├── run-node.sh
+│   │   │   ├── run-testbeta-test-phases.sh
+│   │   │   ├── start-observability.sh
+│   │   │   ├── stop-observability.sh
+│   │   │   ├── sxcp-smoke-test.sh
+│   │   │   ├── sxcp-test-phases.sh
+│   │   │   ├── sync-legacy-setup-packages.sh
+│   │   │   ├── validate-testbeta.sh
+│   │   │   └── verify-node-installers.sh
+│   │   └── uninstall
+│   │       ├── clean-uninstall-linux.sh
+│   │       ├── clean-uninstall-macos.sh
+│   │       └── clean-uninstall-windows.ps1
+│   ├── snrg.gif
+│   ├── src
+│   │   ├── App.jsx
+│   │   ├── assets
+│   │   │   └── synergy-devnet
+│   │   ├── components
+│   │   │   ├── BreakStuffPage.jsx
+│   │   │   ├── control-panel
+│   │   │   │   ├── controlPanelActions.js
+│   │   │   │   ├── ControlPanelConnectivityPage.jsx
+│   │   │   │   ├── ControlPanelLogsPage.jsx
+│   │   │   │   ├── controlPanelModel.js
+│   │   │   │   ├── ControlPanelProvider.jsx
+│   │   │   │   ├── ControlPanelRewardsPage.jsx
+│   │   │   │   ├── ControlPanelShared.jsx
+│   │   │   │   ├── ControlPanelShell.jsx
+│   │   │   │   ├── TestnetBetaDashboardRevamp.jsx
+│   │   │   │   └── TestnetBetaNodeDetailRevamp.jsx
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── FutureLabPage.jsx
+│   │   │   ├── HelpArticlesPage.jsx
+│   │   │   ├── InitialSetupWizard.jsx
+│   │   │   ├── JarvisAgentSetup.jsx
+│   │   │   ├── Layout.jsx
+│   │   │   ├── LogsPage.jsx
+│   │   │   ├── LogsViewer.jsx
+│   │   │   ├── MultiNodeDashboard.jsx
+│   │   │   ├── NetworkMonitorDashboard.jsx
+│   │   │   ├── NetworkMonitorNodePage.jsx
+│   │   │   ├── NodeSetupWizard.jsx
+│   │   │   ├── OperatorConfigurationPage.jsx
+│   │   │   ├── SettingsPage.jsx
+│   │   │   ├── SetupWizard.jsx
+│   │   │   ├── StartupLoadingScreen.jsx
+│   │   │   ├── SXCPDashboard.jsx
+│   │   │   ├── TestnetBetaDashboard.jsx
+│   │   │   ├── TestnetBetaJarvisSetup.jsx
+│   │   │   ├── TestnetBetaNodeDetail.jsx
+│   │   │   └── TestTransactionsPage.jsx
+│   │   ├── lib
+│   │   │   ├── appUpdater.js
+│   │   │   ├── desktopClient.js
+│   │   │   ├── developerMode.js
+│   │   │   ├── helpWindow.js
+│   │   │   ├── panelViewMode.js
+│   │   │   ├── runtimeAssets.js
+│   │   │   ├── testnetBetaBootstrap.js
+│   │   │   ├── testnetBetaPageData.js
+│   │   │   └── testnetBetaPeerInfo.js
+│   │   ├── main.jsx
+│   │   ├── platform
+│   │   │   └── tauri
+│   │   ├── styles
+│   │   │   ├── animations.css
+│   │   │   ├── ComingSoon.css
+│   │   │   ├── controlPanelRevamp.css
+│   │   │   ├── future-lab.css
+│   │   │   ├── monitor.css
+│   │   │   ├── palette.css
+│   │   │   ├── SNRGButton.jsx
+│   │   │   ├── SNRGButtonEffects.css
+│   │   │   ├── sxcp.css
+│   │   │   ├── synergy.css
+│   │   │   └── typography.css
+│   │   └── styles.css
+│   ├── Synergy_Protocol_Naming_Encoding_Standards.docx
+│   ├── synergy-address-engine
+│   │   ├── Cargo.toml
+│   │   └── src
+│   │       ├── lib.rs
+│   │       └── main.rs
+│   ├── templates
+│   │   ├── ai-inference.toml
+│   │   ├── archive-validator.toml
+│   │   ├── audit-validator.toml
+│   │   ├── committee.toml
+│   │   ├── compute.toml
+│   │   ├── cross-chain-verifier.toml
+│   │   ├── data-availability.toml
+│   │   ├── governance-auditor.toml
+│   │   ├── indexer.toml
+│   │   ├── observer.toml
+│   │   ├── oracle.toml
+│   │   ├── pqc-crypto.toml
+│   │   ├── relayer.toml
+│   │   ├── rpc-gateway.toml
+│   │   ├── rpc.toml
+│   │   ├── security-council.toml
+│   │   ├── treasury-controller.toml
+│   │   ├── uma-coordinator.toml
+│   │   ├── validator.toml
+│   │   └── witness.toml
+│   ├── testbeta
+│   │   └── runtime
+│   │       ├── .gitignore
+│   │       ├── configs
+│   │       │   ├── genesis
+│   │       │   │   └── genesis.json
+│   │       │   ├── GenVal-01.toml
+│   │       │   ├── GenVal-02.toml
+│   │       │   ├── GenVal-03.toml
+│   │       │   ├── GenVal-04.toml
+│   │       │   ├── GenVal-05.toml
+│   │       │   ├── Node-EXP.toml
+│   │       │   └── Node-RPC.toml
+│   │       ├── hosts.env
+│   │       ├── hosts.env.bak.20260304T043937Z
+│   │       ├── hosts.env.bak.20260306T121012Z
+│   │       ├── hosts.env.bak.20260402T170940Z
+│   │       ├── hosts.env.bak.20260402T171004Z
+│   │       ├── hosts.env.bak.20260402T171029Z
+│   │       ├── hosts.env.bak.20260409T025904Z
+│   │       ├── hosts.env.bak.20260409T170637Z
+│   │       ├── hosts.env.bak.20260409T175451Z
+│   │       ├── hosts.env.bak.20260409T232305Z
+│   │       ├── hosts.env.bak.20260412T144014Z
+│   │       ├── hosts.env.example
+│   │       ├── installers
+│   │       │   ├── GenVal-01
+│   │       │   │   ├── BINARY_STATUS.txt
+│   │       │   │   ├── COMMANDS.txt
+│   │       │   │   ├── config
+│   │       │   │   │   ├── genesis.json
+│   │       │   │   │   ├── node.toml
+│   │       │   │   │   └── peers.toml
+│   │       │   │   ├── install_and_start.ps1
+│   │       │   │   ├── install_and_start.sh
+│   │       │   │   ├── keys
+│   │       │   │   │   ├── address.txt
+│   │       │   │   │   ├── identity.json
+│   │       │   │   │   ├── identity.toml
+│   │       │   │   │   ├── node.env
+│   │       │   │   │   ├── private.key
+│   │       │   │   │   ├── public.key
+│   │       │   │   │   └── setup-package.json
+│   │       │   │   ├── node.env
+│   │       │   │   ├── nodectl.ps1
+│   │       │   │   ├── nodectl.sh
+│   │       │   │   └── README.txt
+│   │       │   ├── GenVal-02
+│   │       │   │   ├── BINARY_STATUS.txt
+│   │       │   │   ├── COMMANDS.txt
+│   │       │   │   ├── config
+│   │       │   │   │   ├── genesis.json
+│   │       │   │   │   ├── node.toml
+│   │       │   │   │   └── peers.toml
+│   │       │   │   ├── install_and_start.ps1
+│   │       │   │   ├── install_and_start.sh
+│   │       │   │   ├── keys
+│   │       │   │   │   ├── address.txt
+│   │       │   │   │   ├── identity.json
+│   │       │   │   │   ├── identity.toml
+│   │       │   │   │   ├── node.env
+│   │       │   │   │   ├── private.key
+│   │       │   │   │   ├── public.key
+│   │       │   │   │   └── setup-package.json
+│   │       │   │   ├── node.env
+│   │       │   │   ├── nodectl.ps1
+│   │       │   │   ├── nodectl.sh
+│   │       │   │   └── README.txt
+│   │       │   ├── GenVal-03
+│   │       │   │   ├── BINARY_STATUS.txt
+│   │       │   │   ├── COMMANDS.txt
+│   │       │   │   ├── config
+│   │       │   │   │   ├── genesis.json
+│   │       │   │   │   ├── node.toml
+│   │       │   │   │   └── peers.toml
+│   │       │   │   ├── install_and_start.ps1
+│   │       │   │   ├── install_and_start.sh
+│   │       │   │   ├── keys
+│   │       │   │   │   ├── address.txt
+│   │       │   │   │   ├── identity.json
+│   │       │   │   │   ├── identity.toml
+│   │       │   │   │   ├── node.env
+│   │       │   │   │   ├── private.key
+│   │       │   │   │   ├── public.key
+│   │       │   │   │   └── setup-package.json
+│   │       │   │   ├── node.env
+│   │       │   │   ├── nodectl.ps1
+│   │       │   │   ├── nodectl.sh
+│   │       │   │   └── README.txt
+│   │       │   ├── GenVal-04
+│   │       │   │   ├── BINARY_STATUS.txt
+│   │       │   │   ├── COMMANDS.txt
+│   │       │   │   ├── config
+│   │       │   │   │   ├── genesis.json
+│   │       │   │   │   ├── node.toml
+│   │       │   │   │   └── peers.toml
+│   │       │   │   ├── install_and_start.ps1
+│   │       │   │   ├── install_and_start.sh
+│   │       │   │   ├── keys
+│   │       │   │   │   ├── address.txt
+│   │       │   │   │   ├── identity.json
+│   │       │   │   │   ├── identity.toml
+│   │       │   │   │   ├── node.env
+│   │       │   │   │   ├── private.key
+│   │       │   │   │   ├── public.key
+│   │       │   │   │   └── setup-package.json
+│   │       │   │   ├── node.env
+│   │       │   │   ├── nodectl.ps1
+│   │       │   │   ├── nodectl.sh
+│   │       │   │   └── README.txt
+│   │       │   ├── GenVal-05
+│   │       │   │   ├── BINARY_STATUS.txt
+│   │       │   │   ├── COMMANDS.txt
+│   │       │   │   ├── config
+│   │       │   │   │   ├── genesis.json
+│   │       │   │   │   ├── node.toml
+│   │       │   │   │   └── peers.toml
+│   │       │   │   ├── install_and_start.ps1
+│   │       │   │   ├── install_and_start.sh
+│   │       │   │   ├── keys
+│   │       │   │   │   ├── address.txt
+│   │       │   │   │   ├── identity.json
+│   │       │   │   │   ├── identity.toml
+│   │       │   │   │   ├── node.env
+│   │       │   │   │   ├── private.key
+│   │       │   │   │   ├── public.key
+│   │       │   │   │   └── setup-package.json
+│   │       │   │   ├── node.env
+│   │       │   │   ├── nodectl.ps1
+│   │       │   │   ├── nodectl.sh
+│   │       │   │   └── README.txt
+│   │       │   ├── Node-EXP
+│   │       │   │   ├── BINARY_STATUS.txt
+│   │       │   │   ├── COMMANDS.txt
+│   │       │   │   ├── config
+│   │       │   │   │   ├── genesis.json
+│   │       │   │   │   ├── node.toml
+│   │       │   │   │   └── peers.toml
+│   │       │   │   ├── explorer-app
+│   │       │   │   │   ├── backend
+│   │       │   │   │   │   ├── .env.example
+│   │       │   │   │   │   ├── migrations
+│   │       │   │   │   │   │   ├── 001_init.sql
+│   │       │   │   │   │   │   ├── 002_synergy_native_schema.sql
+│   │       │   │   │   │   │   └── 003_contracts.sql
+│   │       │   │   │   │   ├── package-lock.json
+│   │       │   │   │   │   ├── package.json
+│   │       │   │   │   │   └── scripts
+│   │       │   │   │   │       └── migrate.js
+│   │       │   │   │   └── indexer
+│   │       │   │   │       ├── .env.example
+│   │       │   │   │       ├── migrations
+│   │       │   │   │       │   ├── 001_init.sql
+│   │       │   │   │       │   └── 002_synergy_native_schema.sql
+│   │       │   │   │       ├── package-lock.json
+│   │       │   │   │       ├── package.json
+│   │       │   │   │       └── scripts
+│   │       │   │   │           └── migrate.js
+│   │       │   │   ├── install_and_start.ps1
+│   │       │   │   ├── install_and_start.sh
+│   │       │   │   ├── keys
+│   │       │   │   │   ├── address.txt
+│   │       │   │   │   ├── identity.json
+│   │       │   │   │   ├── identity.toml
+│   │       │   │   │   ├── node.env
+│   │       │   │   │   ├── private.key
+│   │       │   │   │   └── public.key
+│   │       │   │   ├── nginx.conf
+│   │       │   │   ├── node.env
+│   │       │   │   ├── nodectl.ps1
+│   │       │   │   ├── nodectl.sh
+│   │       │   │   └── README.txt
+│   │       │   └── Node-RPC
+│   │       │       ├── BINARY_STATUS.txt
+│   │       │       ├── COMMANDS.txt
+│   │       │       ├── config
+│   │       │       │   ├── genesis.json
+│   │       │       │   ├── node.toml
+│   │       │       │   └── peers.toml
+│   │       │       ├── install_and_start.ps1
+│   │       │       ├── install_and_start.sh
+│   │       │       ├── keys
+│   │       │       │   ├── address.txt
+│   │       │       │   ├── identity.json
+│   │       │       │   ├── identity.toml
+│   │       │       │   ├── node.env
+│   │       │       │   ├── private.key
+│   │       │       │   └── public.key
+│   │       │       ├── nginx.conf
+│   │       │       ├── node.env
+│   │       │       ├── nodectl.ps1
+│   │       │       ├── nodectl.sh
+│   │       │       └── README.txt
+│   │       ├── keys
+│   │       │   ├── GenVal-01
+│   │       │   │   ├── address.txt
+│   │       │   │   ├── identity.json
+│   │       │   │   ├── identity.toml
+│   │       │   │   ├── node.env
+│   │       │   │   ├── private.key
+│   │       │   │   └── public.key
+│   │       │   ├── GenVal-02
+│   │       │   │   ├── address.txt
+│   │       │   │   ├── identity.json
+│   │       │   │   ├── identity.toml
+│   │       │   │   ├── node.env
+│   │       │   │   ├── private.key
+│   │       │   │   └── public.key
+│   │       │   ├── GenVal-03
+│   │       │   │   ├── address.txt
+│   │       │   │   ├── identity.json
+│   │       │   │   ├── identity.toml
+│   │       │   │   ├── node.env
+│   │       │   │   ├── private.key
+│   │       │   │   └── public.key
+│   │       │   ├── GenVal-04
+│   │       │   │   ├── address.txt
+│   │       │   │   ├── identity.json
+│   │       │   │   ├── identity.toml
+│   │       │   │   ├── node.env
+│   │       │   │   ├── private.key
+│   │       │   │   └── public.key
+│   │       │   ├── GenVal-05
+│   │       │   │   ├── address.txt
+│   │       │   │   ├── identity.json
+│   │       │   │   ├── identity.toml
+│   │       │   │   ├── node.env
+│   │       │   │   ├── private.key
+│   │       │   │   └── public.key
+│   │       │   ├── Node-0A
+│   │       │   ├── node-addresses.csv
+│   │       │   ├── Node-EXP
+│   │       │   │   ├── address.txt
+│   │       │   │   ├── identity.json
+│   │       │   │   ├── identity.toml
+│   │       │   │   ├── node.env
+│   │       │   │   ├── private.key
+│   │       │   │   └── public.key
+│   │       │   └── Node-RPC
+│   │       │       ├── address.txt
+│   │       │       ├── identity.json
+│   │       │       ├── identity.toml
+│   │       │       ├── node.env
+│   │       │       ├── private.key
+│   │       │       └── public.key
+│   │       ├── node-inventory.csv
+│   │       ├── observability
+│   │       │   ├── docker-compose.yml
+│   │       │   ├── exporters
+│   │       │   │   └── synergy_rpc_exporter.py
+│   │       │   ├── grafana
+│   │       │   │   ├── dashboards
+│   │       │   │   │   └── synergy-devnet-overview.json
+│   │       │   │   └── provisioning
+│   │       │   │       ├── dashboards
+│   │       │   │       │   └── dashboards.yml
+│   │       │   │       └── datasources
+│   │       │   │           └── datasources.yml
+│   │       │   ├── loki
+│   │       │   │   └── config.yml
+│   │       │   ├── prometheus
+│   │       │   │   ├── prometheus.yml
+│   │       │   │   └── rules.yml
+│   │       │   ├── promtail
+│   │       │   │   └── config.yml
+│   │       │   └── README.md
+│   │       ├── README.md
+│   │       ├── reports
+│   │       │   ├── sxcp-external-infra-audit-20260209T135545Z.txt
+│   │       │   ├── sxcp-external-infra-audit-20260210T145457Z.txt
+│   │       │   └── sxcp-external-infra-audit-20260226T200414Z.txt
+│   │       ├── SXCP_PPA_Specification_v2.extracted.txt
+│   │       └── workspace-manifest.json
+│   ├── testbeta-issues-report.cjs
+│   ├── uninstall.sh
+│   └── vite.config.js
+├── OOM_DIAGNOSIS.md
+├── package.json
+├── PoSy_TechSpec.docx
+├── README.md
+├── reset-testbeta.sh
+├── rpc-methods-todo.docx
+├── rpc-methods-todo.md
+├── rpc-methods.docx
+├── rpc-methods.md
+├── scripts
+│   ├── add-evm-rpc-to-certificate.sh
+│   ├── build-all.sh
+│   ├── build-macos-binary.sh
+│   ├── expand-ssl-certificate.sh
+│   ├── fix-nginx-permissions.sh
+│   ├── get-ssl-certificate-simple.sh
+│   ├── get-ssl-certificate.sh
+│   ├── list-validators.sh
+│   ├── register-validator.sh
+│   ├── reset-testbeta.sh
+│   ├── reset-testnet-beta.sh
+│   ├── send-tokens.sh
+│   ├── send-tokens.sh.bak
+│   ├── setup-gpt-oss.sh
+│   ├── start-testbeta.sh
+│   ├── start-testnet.sh
+│   ├── stop-testbeta.sh
+│   ├── stop-testnet-beta.sh
+│   ├── testbeta
+│   │   ├── bootstrap-sxcp-testnet-beta.sh
+│   │   ├── build-canonical-release-bundle.sh
+│   │   ├── build-machine2-bootstrap-macos-package.sh
+│   │   ├── chaos-node.sh
+│   │   ├── check-determinism.sh
+│   │   ├── check-sxcp-external-infra.sh
+│   │   ├── clean-launch-testbeta.sh
+│   │   ├── clear-seed-peers.sh
+│   │   ├── generate-monitor-hosts-env.sh
+│   │   ├── generate-node-keys.sh
+│   │   ├── generate-testnet-beta-genesis.sh
+│   │   ├── load-generator.sh
+│   │   ├── remote-node-orchestrator.sh
+│   │   ├── render-configs.sh
+│   │   ├── reset-testnet-beta.sh
+│   │   ├── restart-machine2-bootstrap-macos.sh
+│   │   ├── run-node.sh
+│   │   ├── run-testnet-beta-test-phases.sh
+│   │   ├── seed_service.py
+│   │   ├── send-launch-block1-transaction.sh
+│   │   ├── smoke-local-validator-mesh.sh
+│   │   ├── start-observability.sh
+│   │   ├── stop-observability.sh
+│   │   ├── sxcp-smoke-test.sh
+│   │   ├── sxcp-test-phases.sh
+│   │   ├── synergy-seed-service@.service
+│   │   ├── testbeta-env-overrides.sh
+│   │   ├── transaction-runner.sh
+│   │   ├── transaction-scenarios.canonical.json
+│   │   ├── transaction-scenarios.example.json
+│   │   ├── validate-testnet-beta.sh
+│   │   └── verify-node-installers.sh
+│   └── update-binary-distribution.sh
+├── services
+│   └── sxcp-relayer
+│       ├── .env.example
+│       ├── keys
+│       ├── package.json
+│       ├── QUICK_START.md
+│       ├── README.md
+│       └── src
+│           ├── coordinator.js
+│           ├── index.js
+│           ├── reporter.js
+│           ├── store.js
+│           ├── submitter.js
+│           └── watcher.js
+├── src
+│   ├── address.rs
+│   ├── aivm
+│   │   ├── chat_interface.rs
+│   │   ├── distributed_ai.rs
+│   │   ├── interoperability.rs
+│   │   ├── mod.rs
+│   │   ├── model_registry.rs
+│   │   ├── provider.rs
+│   │   ├── runtime.rs
+│   │   ├── verifier.rs
+│   │   └── wasm_vm.rs
+│   ├── block.rs
+│   ├── broadcast.rs
+│   ├── Cargo.toml
+│   ├── config
+│   │   └── mod.rs
+│   ├── consensus
+│   │   ├── cartel_detection.rs
+│   │   ├── consensus_algorithm.rs
+│   │   ├── dao_governance.rs
+│   │   ├── dual_quorum.rs
+│   │   ├── mod.rs
+│   │   ├── synergy_score.rs
+│   │   ├── tests.rs
+│   │   └── vrf.rs
+│   ├── contracts.rs
+│   ├── crypto
+│   │   ├── mod.rs
+│   │   └── pqc.rs
+│   ├── gas
+│   │   └── mod.rs
+│   ├── genesis.rs
+│   ├── lib.rs
+│   ├── logging.rs
+│   ├── main.rs
+│   ├── node
+│   │   ├── mod.rs
+│   │   └── synergyd.rs
+│   ├── p2p
+│   │   ├── identity.rs
+│   │   ├── messages.rs
+│   │   ├── mod.rs
+│   │   └── networking.rs
+│   ├── role_profiles.rs
+│   ├── role_runtime.rs
+│   ├── rpc
+│   │   ├── mod.rs
+│   │   └── rpc_server.rs
+│   ├── sxcp
+│   │   └── mod.rs
+│   ├── sync
+│   │   ├── fast_sync.rs
+│   │   ├── full_sync.rs
+│   │   ├── manager.rs
+│   │   ├── mod.rs
+│   │   ├── state_sync.rs
+│   │   └── validation.rs
+│   ├── synergy-address-engine
+│   │   ├── Cargo.toml
+│   │   ├── devnet_generator.rs
+│   │   ├── readme_doc.md
+│   │   └── src
+│   │       └── main.rs
+│   ├── synq
+│   │   ├── compiler.rs
+│   │   ├── interpreter.rs
+│   │   └── mod.rs
+│   ├── telemetry.rs
+│   ├── token.rs
+│   ├── transaction.rs
+│   ├── utils.rs
+│   ├── validator.rs
+│   └── wallet.rs
+├── sxcp
+│   ├── network-configurations.pdf
+│   ├── rpc-methods.md
+│   ├── snrg-denominatioons.md
+│   └── sxcp_external_chains
+│       ├── bitcoin
+│       │   ├── claim_tx_template.txt
+│       │   ├── htlc_lock_script_template.txt
+│       │   ├── intent_marker_template.txt
+│       │   └── refund_tx_template.txt
+│       ├── cosmos
+│       │   ├── audit_logger_wasm
+│       │   │   └── src
+│       │   │       └── lib.rs
+│       │   ├── comp_pool_wasm
+│       │   │   └── src
+│       │   │       └── lib.rs
+│       │   ├── finality_checker_wasm
+│       │   │   └── src
+│       │   │       └── lib.rs
+│       │   ├── governance_wasm
+│       │   │   └── src
+│       │   │       └── lib.rs
+│       │   ├── native
+│       │   │   └── x
+│       │   │       └── sxcp
+│       │   │           └── module.go
+│       │   ├── relayer_registry_wasm
+│       │   │   └── src
+│       │   │       └── lib.rs
+│       │   ├── signature_verifier_wasm
+│       │   │   └── src
+│       │   │       └── lib.rs
+│       │   ├── state_proof_validator_wasm
+│       │   │   └── src
+│       │   │       └── lib.rs
+│       │   ├── sxcp_vault_wasm
+│       │   │   └── src
+│       │   │       └── lib.rs
+│       │   └── witness_registry_wasm
+│       │       └── src
+│       │           └── lib.rs
+│       ├── evm
+│       │   ├── .env.example
+│       │   ├── .gitignore
+│       │   ├── artifacts
+│       │   │   ├── @openzeppelin
+│       │   │   │   └── contracts
+│       │   │   │       ├── access
+│       │   │   │       │   ├── Ownable.sol
+│       │   │   │       │   │   ├── Ownable.dbg.json
+│       │   │   │       │   │   └── Ownable.json
+│       │   │   │       │   └── Ownable2Step.sol
+│       │   │   │       │       ├── Ownable2Step.dbg.json
+│       │   │   │       │       └── Ownable2Step.json
+│       │   │   │       └── utils
+│       │   │   │           ├── Bytes.sol
+│       │   │   │           │   ├── Bytes.dbg.json
+│       │   │   │           │   └── Bytes.json
+│       │   │   │           ├── Context.sol
+│       │   │   │           │   ├── Context.dbg.json
+│       │   │   │           │   └── Context.json
+│       │   │   │           ├── cryptography
+│       │   │   │           │   ├── ECDSA.sol
+│       │   │   │           │   │   ├── ECDSA.dbg.json
+│       │   │   │           │   │   └── ECDSA.json
+│       │   │   │           │   └── MessageHashUtils.sol
+│       │   │   │           │       ├── MessageHashUtils.dbg.json
+│       │   │   │           │       └── MessageHashUtils.json
+│       │   │   │           ├── math
+│       │   │   │           │   ├── Math.sol
+│       │   │   │           │   │   ├── Math.dbg.json
+│       │   │   │           │   │   └── Math.json
+│       │   │   │           │   ├── SafeCast.sol
+│       │   │   │           │   │   ├── SafeCast.dbg.json
+│       │   │   │           │   │   └── SafeCast.json
+│       │   │   │           │   └── SignedMath.sol
+│       │   │   │           │       ├── SignedMath.dbg.json
+│       │   │   │           │       └── SignedMath.json
+│       │   │   │           ├── Panic.sol
+│       │   │   │           │   ├── Panic.dbg.json
+│       │   │   │           │   └── Panic.json
+│       │   │   │           ├── Pausable.sol
+│       │   │   │           │   ├── Pausable.dbg.json
+│       │   │   │           │   └── Pausable.json
+│       │   │   │           └── Strings.sol
+│       │   │   │               ├── Strings.dbg.json
+│       │   │   │               └── Strings.json
+│       │   │   ├── build-info
+│       │   │   │   └── 75f89b047bfaee0e29cd3591c578a70c.json
+│       │   │   └── contracts
+│       │   │       ├── AuditLogger.sol
+│       │   │       │   ├── AuditLogger.dbg.json
+│       │   │       │   └── AuditLogger.json
+│       │   │       ├── CompensationPool.sol
+│       │   │       │   ├── CompensationPool.dbg.json
+│       │   │       │   └── CompensationPool.json
+│       │   │       ├── FinalityChecker.sol
+│       │   │       │   ├── FinalityChecker.dbg.json
+│       │   │       │   └── FinalityChecker.json
+│       │   │       ├── GovernanceModule.sol
+│       │   │       │   ├── GovernanceModule.dbg.json
+│       │   │       │   └── GovernanceModule.json
+│       │   │       ├── RelayerRegistry.sol
+│       │   │       │   ├── RelayerRegistry.dbg.json
+│       │   │       │   └── RelayerRegistry.json
+│       │   │       ├── SignatureVerifier.sol
+│       │   │       │   ├── IWitnessRegistry.dbg.json
+│       │   │       │   ├── IWitnessRegistry.json
+│       │   │       │   ├── SignatureVerifier.dbg.json
+│       │   │       │   └── SignatureVerifier.json
+│       │   │       ├── StateProofValidator.sol
+│       │   │       │   ├── StateProofValidator.dbg.json
+│       │   │       │   └── StateProofValidator.json
+│       │   │       ├── SXCPIntentHub.sol
+│       │   │       │   ├── IAuditLogger.dbg.json
+│       │   │       │   ├── IAuditLogger.json
+│       │   │       │   ├── IFinalityChecker.dbg.json
+│       │   │       │   ├── IFinalityChecker.json
+│       │   │       │   ├── ISignatureVerifier.dbg.json
+│       │   │       │   ├── ISignatureVerifier.json
+│       │   │       │   ├── IStateProofValidator.dbg.json
+│       │   │       │   ├── IStateProofValidator.json
+│       │   │       │   ├── SXCPIntentHub.dbg.json
+│       │   │       │   └── SXCPIntentHub.json
+│       │   │       ├── SXCPVault.sol
+│       │   │       │   ├── SXCPVault.dbg.json
+│       │   │       │   └── SXCPVault.json
+│       │   │       └── WitnessRegistry.sol
+│       │   │           ├── WitnessRegistry.dbg.json
+│       │   │           └── WitnessRegistry.json
+│       │   ├── AuditLogger.sol
+│       │   ├── cache
+│       │   │   └── solidity-files-cache.json
+│       │   ├── CompensationPool.sol
+│       │   ├── contracts
+│       │   │   ├── AuditLogger.sol
+│       │   │   ├── CompensationPool.sol
+│       │   │   ├── FinalityChecker.sol
+│       │   │   ├── GovernanceModule.sol
+│       │   │   ├── RelayerRegistry.sol
+│       │   │   ├── SignatureVerifier.sol
+│       │   │   ├── StateProofValidator.sol
+│       │   │   ├── SXCPIntentHub.sol
+│       │   │   ├── SXCPVault.sol
+│       │   │   └── WitnessRegistry.sol
+│       │   ├── deployments
+│       │   │   └── hardhat.json
+│       │   ├── FinalityChecker.sol
+│       │   ├── GovernanceModule.sol
+│       │   ├── hardhat.config.cjs
+│       │   ├── package-lock.json
+│       │   ├── package.json
+│       │   ├── RelayerRegistry.sol
+│       │   ├── runtime
+│       │   │   └── test-devnet-config.json
+│       │   ├── scripts
+│       │   │   ├── deploy-suite.js
+│       │   │   ├── export-testbeta-relayer-config.js
+│       │   │   ├── lib
+│       │   │   │   └── common.js
+│       │   │   ├── publish-intent.js
+│       │   │   ├── submit-attestation.js
+│       │   │   └── wire-endpoint.js
+│       │   ├── SignatureVerifier.sol
+│       │   ├── StateProofValidator.sol
+│       │   ├── SXCPIntentHub.sol
+│       │   ├── SXCPVault.sol
+│       │   ├── test
+│       │   │   └── sxcp-intent-hub.test.js
+│       │   ├── TESTNET_RUNBOOK.md
+│       │   └── WitnessRegistry.sol
+│       ├── solana
+│       │   ├── audit_logger_program
+│       │   │   └── src
+│       │   │       └── lib.rs
+│       │   ├── comp_pool_program
+│       │   │   └── src
+│       │   │       └── lib.rs
+│       │   ├── finality_checker_program
+│       │   │   └── src
+│       │   │       └── lib.rs
+│       │   ├── governance_program
+│       │   │   └── src
+│       │   │       └── lib.rs
+│       │   ├── relayer_registry_program
+│       │   │   └── src
+│       │   │       └── lib.rs
+│       │   ├── signature_verifier_program
+│       │   │   └── src
+│       │   │       └── lib.rs
+│       │   ├── state_proof_validator_program
+│       │   │   └── src
+│       │   │       └── lib.rs
+│       │   ├── sxcp_vault_program
+│       │   │   └── src
+│       │   │       └── lib.rs
+│       │   └── witness_registry_program
+│       │       └── src
+│       │           └── lib.rs
+│       ├── substrate
+│       │   ├── pallet-sxcp-audit
+│       │   │   └── src
+│       │   │       └── lib.rs
+│       │   ├── pallet-sxcp-comp-pool
+│       │   │   └── src
+│       │   │       └── lib.rs
+│       │   ├── pallet-sxcp-finality
+│       │   │   └── src
+│       │   │       └── lib.rs
+│       │   ├── pallet-sxcp-governance
+│       │   │   └── src
+│       │   │       └── lib.rs
+│       │   ├── pallet-sxcp-proof-validator
+│       │   │   └── src
+│       │   │       └── lib.rs
+│       │   ├── pallet-sxcp-relayer-registry
+│       │   │   └── src
+│       │   │       └── lib.rs
+│       │   ├── pallet-sxcp-signature-verifier
+│       │   │   └── src
+│       │   │       └── lib.rs
+│       │   ├── pallet-sxcp-vault
+│       │   │   └── src
+│       │   │       └── lib.rs
+│       │   └── pallet-sxcp-witness-registry
+│       │       └── src
+│       │           └── lib.rs
+│       └── sxcp-contracts-data
+│           ├── Required External SXCP Infra.pdf
+│           ├── SNRG-token.png
+│           └── sxcp-contracts.png
+├── SXCP_TechSpec.docx
+├── synergy-testbeta-bootnode.service
+├── SynQ
+│   ├── .gitignore
+│   ├── Cargo.toml
+│   ├── cli
+│   │   ├── Cargo.toml
+│   │   ├── src
+│   │   │   └── main.rs
+│   │   └── tests
+│   │       └── integration_test.rs
+│   ├── compiler
+│   │   ├── Cargo.toml
+│   │   ├── src
+│   │   │   ├── ast.rs
+│   │   │   ├── codegen.rs
+│   │   │   ├── lib.rs
+│   │   │   ├── parser.rs
+│   │   │   ├── pqc_integration.rs
+│   │   │   └── synq.pest
+│   │   └── tests
+│   │       └── integration_test.rs
+│   ├── docs
+│   │   ├── Gas-Model.md
+│   │   ├── SynQ-Language-Specification.md
+│   │   ├── SynQ-VM-Specification.md
+│   │   └── SynQDAO_Example.md
+│   ├── pqc-shims
+│   │   ├── Cargo.toml
+│   │   └── src
+│   │       ├── dilithium.rs
+│   │       ├── falcon.rs
+│   │       ├── hqc.rs
+│   │       ├── kyber.rs
+│   │       ├── lib.rs
+│   │       ├── mceliece.rs
+│   │       └── sphincs.rs
+│   ├── README.md
+│   ├── sdk
+│   │   └── src
+│   │       ├── crypto
+│   │       │   └── kyber.ts
+│   │       ├── keys.ts
+│   │       ├── sdk.ts
+│   │       └── tx.ts
+│   ├── specs
+│   │   ├── checklist.md
+│   │   └── synq.dsl
+│   ├── SynQ_project_tree.txt
+│   ├── synq-file-tree.md
+│   └── vm
+│       ├── Cargo.toml
+│       ├── README.md
+│       ├── src
+│       │   ├── assembler.rs
+│       │   ├── lib.rs
+│       │   ├── opcode.rs
+│       │   └── vm.rs
+│       └── tests
+│           └── integration_test.rs
+├── SynQ_TechSpec.docx
+├── templates
+│   ├── ai-inference.toml
+│   ├── archive-validator.toml
+│   ├── audit-validator.toml
+│   ├── committee.toml
+│   ├── compute.toml
+│   ├── cross-chain-verifier.toml
+│   ├── data-availability.toml
+│   ├── governance-auditor.toml
+│   ├── indexer.toml
+│   ├── observer.toml
+│   ├── oracle.toml
+│   ├── pqc-crypto.toml
+│   ├── relayer.toml
+│   ├── rpc-gateway.toml
+│   ├── rpc.toml
+│   ├── security-council.toml
+│   ├── treasury-controller.toml
+│   ├── uma-coordinator.toml
+│   ├── validator.toml
+│   └── witness.toml
+├── testbeta.sh
+├── TESTNET_COMMANDS.md
+├── tests
+│   ├── integration.rs
+│   ├── test_blockchain.rs
+│   ├── test_consensus_algorithm.rs
+│   ├── test_p2p_networking.rs
+│   ├── test_rpc_server.rs
+│   ├── test_smart_contracts.rs
+│   ├── test_synergyd.rs
+│   └── test_transactions.rs
+└── tools
+    ├── generate_node_keys.rs
+    ├── generate_templates.sh
+    └── node-monitor
+        └── server.py
+node-control-panel  [error opening dir]
+
+531 directories, 4715 files

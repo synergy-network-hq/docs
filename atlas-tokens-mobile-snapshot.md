@@ -1,0 +1,23 @@
+- generic [ref=e3] [box=0,0,1920,1274]:
+  - generic [ref=e4] [box=0,0,1920,1274]:
+    - complementary [ref=e5] [box=0,0,288,911]:
+      - link "Atlas overview" [ref=e6] [cursor=pointer] [box=16,18,255,92]:
+        - /url: "#/"
+        - img "Synergy Network Atlas" [ref=e7] [box=25,26,237,76]
+      - navigation "Atlas navigation" [ref=e8] [box=16,128,255,605]:
+        - generic [ref=e9] [box=16,128,253,362]
+        - generic [ref=e49] [box=16,497,253,218]
+        - generic [ref=e86] [box=16,722,253,170]
+        - generic [ref=e114] [box=16,900,253,122]
+      - generic "Network health LIVE" [ref=e267] [box=16,751,255,142]:
+        - generic [ref=e132] [box=46,764,85,31]
+        - generic [ref=e135] [box=29,807,229,73]
+    - generic [ref=e148] [box=288,0,1632,1274]:
+      - banner [ref=e149] [box=288,0,1632,72]:
+        - generic [ref=e150] [box=312,14,1584,42]
+      - main [ref=e156] [box=354,72,1500,1141]:
+        - generic [ref=e357] [box=378,96,1452,1093]
+      - contentinfo [ref=e264] [box=288,1213,1632,61]:
+        - generic [ref=e265] [box=312,1231,493,15]: Atlas Testnet-Beta is a linear explorer until additional data contracts are available.
+        - generic [ref=e266] [box=1745,1231,151,15]: © 2026 Synergy Network
+  - complementary [box=1468,887,430,0]
